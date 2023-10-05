@@ -3,7 +3,7 @@ import matplotlib.pyplot as plt
 import seaborn as sns
 import utility as u
 
-def plot_scatter(DP, L):
+def plot_scatter_PCA(DP, L):
     DP0 = DP[:, L==0] 
     DP1 = DP[:, L==1]  
 
