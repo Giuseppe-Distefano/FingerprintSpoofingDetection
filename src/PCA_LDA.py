@@ -7,7 +7,7 @@ def computeEigenValuesAndEigenVectors(C, D, m):
     #WE COMPUTE EIGEN-DECOMPOSITION
     s, U = np.linalg.eigh(C)
     P = U[:, ::-1][:, 0:m]
-    
+
     DP = np.dot(P.T, D)
     #DP = Data Projection
     return DP
@@ -18,7 +18,6 @@ def compute_sw(D, L): #WITHIN CLASS COVARIANCE
     for i in [0, 1]: #SINCE WE KNOW THAT WE HAVE 2 CLASSES
         SW += (L==i).sum() * u.computeCovarianceMatrix(D[:, L==i]) 
     SW = SW / D.shape[1] #D.shape[1] IS THE NUMBER OF SAMPLES OF THE WHOLE DATASET
-    print(SW)
     return SW
 
 

@@ -34,13 +34,8 @@ def plot_hist(DTR,LTR):
 def plot_hist_LDA(D,LTR):
        labels = ["Spoofed", "Authentic"]
        plt.figure()
-
-       y = D[:, LTR == 0][0]
-       plt.hist(y, bins=60, density=True, alpha=0.5, linewidth=1.0, color='green', edgecolor='black',
-                label=labels[0])
-       y = D[:, LTR == 1][1]
-       plt.hist(y, bins=60, density=True, alpha=0.5, linewidth=1.0, color='red', edgecolor='black',
-                label=labels[1])
+       plt.hist(D[:, LTR == 0][1], bins=40, density=True, alpha=0.5, linewidth=0.5, color='green', edgecolor='black',label=labels[0])
+       plt.hist(D[:, LTR == 1][0], bins=40, density=True, alpha=0.5, linewidth=0.5, color='red', edgecolor='black',label=labels[1])
        plt.legend()
        plt.savefig('./images/hist_LDA'  + '.jpg')
        plt.show()
