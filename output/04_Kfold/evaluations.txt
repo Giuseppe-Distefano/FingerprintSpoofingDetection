@@ -1,0 +1,20 @@
+Multivariate Gaussian classifier without tied covariance
+  Accuracy: 94.452 %
+  Error rate: 5.548 %
+
+Naive Bayes without tied covariance
+  Accuracy: 92.301 %
+  Error rate: 7.699 %
+
+Multivariate Gaussian classifier with tied covariance
+  Accuracy: 90.753 %
+  Error rate: 9.247 %
+
+Naive Bayes with tied covariance
+  Accuracy: 88.473 %
+  Error rate: 11.527 %
+
+Logistic Regression
+  Accuracy: 90.925 %
+  Error rate: 9.075 %
+
