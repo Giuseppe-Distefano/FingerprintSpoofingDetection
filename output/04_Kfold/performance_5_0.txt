@@ -1,0 +1,21 @@
+MVG
+  Accuracy: 94.323%
+  Error rate: 5.677%
+
+Naive Bayes
+  Accuracy: 94.323%
+  Error rate: 5.677%
+
+MVG with tied covariance
+  Accuracy: 90.624%
+  Error rate: 9.376%
+
+Naive Bayes with tied covariance
+  Accuracy: 89.161%
+  Error rate: 10.839%
+
+Linear Logistic Regression
+  Lambda: 1e-06, pi: 0.1
+  Accuracy: 87.484%
+  Error rate: 12.516%
+

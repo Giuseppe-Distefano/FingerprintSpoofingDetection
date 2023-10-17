@@ -11,11 +11,13 @@ import modules.dataset as dataset
 #####################
 #     FUNCTIONS     #
 #####################
-# ----- Plot dataset histograms -----
-def plot_dataset_histograms (D, L):
-    output_folder = "../output/00_histograms"
-    D0 = D[:, L==0]
-    D1 = D[:, L==1]
+# ----- Plot histograms of training set -----
+def plot_dataset_histograms (DTR, LTR, output_folder):
+    # Split according to label
+    D0 = DTR[:, LTR==0]
+    D1 = DTR[:, LTR==1]
+
+    # Plot histograms for each feature
     for x in range(dataset.features):
         plt.figure()
         plt.title("Feature %d" % x)
@@ -26,110 +28,75 @@ def plot_dataset_histograms (D, L):
         plt.close()
 
 
-# ----- Plot dataset heatmaps -----
-def plot_dataset_heatmaps (D, L):
-    output_folder = "../output/01_heatmaps"
-
-    # All samples
+# ----- Plot heatmaps of training set ---
+def plot_dataset_heatmaps (DTR, LTR, output_folder):
+    # Consider all samples
     corr = np.zeros((dataset.features, dataset.features))
     for x in range(dataset.features):
         for y in range(dataset.features):
-            corr[x][y] = utility.compute_correlation(D[x,:], D[y,:])
+            corr[x][y] = utility.compute_correlation(DTR[x,:], DTR[y,:])
     sns.set()
     heatmap = sns.heatmap(np.abs(corr), cmap="YlGnBu", linewidth=0.3, square=True, cbar=False)
     figure = heatmap.get_figure()
     figure.savefig("%s/heatmap_all.png" % (output_folder))
 
-    # Only spoofed fingerprint samples
+    # Consider only samples labeled as spoofed fingerprints
     corr = np.zeros((dataset.features, dataset.features))
     for x in range(dataset.features):
         for y in range(dataset.features):
-            corr[x][y] = utility.compute_correlation(D[x,L==0], D[y,L==0])
+            corr[x][y] = utility.compute_correlation(DTR[x,LTR==0], DTR[y,LTR==0])
     sns.set()
     heatmap = sns.heatmap(np.abs(corr), cmap="coolwarm", linewidth=0.3, square=True, cbar=False)
     figure = heatmap.get_figure()
     figure.savefig("%s/heatmap_spoofed.png" % (output_folder))
 
-    # Only authentic fingerprint samples
+    # Consider only samples labeled as authentic fingerprints
     corr = np.zeros((dataset.features, dataset.features))
     for x in range(dataset.features):
         for y in range(dataset.features):
-            corr[x][y] = utility.compute_correlation(D[x,L==1], D[y,L==1])
+            corr[x][y] = utility.compute_correlation(DTR[x,LTR==1], DTR[y,LTR==1])
     sns.set()
     heatmap = sns.heatmap(np.abs(corr), cmap="BuPu", linewidth=0.3, square=True, cbar=False)
     figure = heatmap.get_figure()
     figure.savefig("%s/heatmap_authentic.png" % (output_folder))
 
 
-# ----- Plot histograms -----
-def plot_histograms (D, L, distinct_classes, bins, output_folder):
+# ----- Plot scatters of data projected after PCA -----
+def plot_pca_scatters (D, L, output_folder):
     D0 = D[:, L==0]
     D1 = D[:, L==1]
-    for x in range(distinct_classes):
-        plt.figure()
-        plt.hist(D0[x,:], bins=bins, density=True, alpha=0.4, edgecolor="black", label="Spoofed")
-        plt.hist(D1[x,:], bins=bins, density=True, alpha=0.4, edgecolor="black", label="Authentic")
-        plt.legend()
-        plt.savefig("%s/histogram_%d.png" % (output_folder, x))
-        plt.close()
 
-
-##### Plot LDA histograms #####
-def plot_lda_histograms (D, L, bins, output_folder):
-    D0 = D[:, L==0]
-    D1 = D[:, L==1]
     plt.figure()
-    plt.hist(D0[0,:], bins=bins, density=True, alpha=0.4, edgecolor="black", label="Spoofed")
-    plt.hist(D1[0,:], bins=bins, density=True, alpha=0.4, edgecolor="black", label="Authentic")
+    plt.scatter(D0[0,:], D0[1,:], label="Spoofed")
+    plt.scatter(D1[0,:], D1[1,:], label="Authentic")
     plt.legend()
-    plt.savefig("%s/lda_histogram.png" % (output_folder))
+    plt.savefig("%s/scatter_pca.png" % (output_folder))
     plt.close()
 
 
-##### Plot heatmaps #####
-def plot_heatmaps (D, L, distinct_classes, output_folder):
-    # All samples
-    corr = np.zeros((distinct_classes, distinct_classes))
-    for x in range(distinct_classes):
-        for y in range(distinct_classes):
-            corr[x][y] = utility.compute_correlation(D[x,:], D[y,:])
-    sns.set()
-    heatmap = sns.heatmap(np.abs(corr), cmap="YlGnBu", linewidth=0.3, square=True, cbar=False)
-    figure = heatmap.get_figure()
-    figure.savefig("%s/heatmap_all.png" % (output_folder))
-    
-    # Only samples labelled with 0 (spoofed fingerprint samples)
-    corr = np.zeros((distinct_classes, distinct_classes))
-    for x in range(distinct_classes):
-        for y in range(distinct_classes):
-            corr[x][y] = utility.compute_correlation(D[x,L==0], D[y,L==0])
-    sns.set()
-    heatmap = sns.heatmap(np.abs(corr), cmap="coolwarm", linewidth=0.3, square=True, cbar=False)
-    figure = heatmap.get_figure()
-    figure.savefig("%s/heatmap_spoofed.png" % (output_folder))
-    
-    # Only samples labelled with 1 (authentic fingerprint samples)
-    corr = np.zeros((distinct_classes, distinct_classes))
-    for x in range(distinct_classes):
-        for y in range(distinct_classes):
-            corr[x][y] = utility.compute_correlation(D[x,L==1], D[y,L==1])
-    sns.set()
-    heatmap = sns.heatmap(np.abs(corr), cmap="BuPu", linewidth=0.3, square=True, cbar=False)
-    figure = heatmap.get_figure()
-    figure.savefig("%s/heatmap_authentic.png" % (output_folder))
-
-
-##### Plot scatters #####
-def plot_scatters (D, L, distinct_classes, output_folder):
+# ----- Plot histograms of data projected after LDA -----
+def plot_lda_histograms (D, L, output_folder):
+    # Split according to label
     D0 = D[:, L==0]
     D1 = D[:, L==1]
 
-    for x1 in range(distinct_classes):
-        for x2 in range(distinct_classes):
-            if (x1>=x2): continue
-            plt.figure()
-            plt.scatter(D0[x1,:], D0[x2,:], label="Spoofed")
-            plt.scatter(D1[x1,:], D1[x2,:], label="Authentic")
-            plt.legend()
-            plt.savefig("%s/scatter_%d_%d.png" % (output_folder, x1, x2))
-            plt.close()
+    # Plot histograms for each feature
+    plt.figure()
+    plt.hist(D0[0,:], bins=40, density=True, alpha=0.4, edgecolor="black", label="Spoofed")
+    plt.hist(D1[0,:], bins=40, density=True, alpha=0.4, edgecolor="black", label="Authentic")
+    plt.legend()
+    plt.savefig("%s/histogram_lda.png" % (output_folder))
+    plt.close()
+
+
+# ----- Plot scatters of data projected after LDA -----
+def plot_lda_scatters (D, L, output_folder):
+    D0 = D[:, L==0]
+    D1 = D[:, L==1]
+
+    plt.figure()
+    plt.scatter(D0[0,:], D0[1,:], label="Spoofed")
+    plt.scatter(D1[0,:], D1[1,:], label="Authentic")
+    plt.legend()
+    plt.savefig("%s/scatter_lda.png" % (output_folder))
+    plt.close()

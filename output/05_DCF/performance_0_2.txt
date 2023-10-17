@@ -1,0 +1,20 @@
+MVG
+  pi: 0.900
+  min DCF: 0.996
+
+Naive Bayes
+  pi: 0.900
+  min DCF: 0.981
+
+MVG with tied covariance
+  pi: 0.900
+  min DCF: 0.933
+
+Naive Bayes with tied covariance
+  pi: 0.900
+  min DCF: 0.976
+
+Linear Logistic Regression
+  pi: 0.900
+  min DCF: 0.208
+

@@ -12,8 +12,6 @@ import modules.utility as utility
 ############################
 features = int(10)
 distinct_classes = int(2)
-training_filename = "../data/Train.txt"
-test_filename = "../data/Test.txt"
 
 
 #####################
@@ -37,12 +35,12 @@ def read_file (filename):
 
 
 # ----- Load training set -----
-def load_training_set ():
+def load_training_set (training_filename):
     DTR,LTR = read_file(training_filename)
     return DTR,LTR
 
 
 # ----- Load test set -----
-def load_test_set ():
+def load_test_set (test_filename):
     DTE,LTE = read_file(test_filename)
     return DTE,LTE

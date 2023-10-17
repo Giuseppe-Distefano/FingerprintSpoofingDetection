@@ -12,38 +12,43 @@ import modules.dataset as dataset
 ####################
 #     FUNCTIONS    #
 ####################
-# ----- Apply Principal Component Analysis -----
-def apply_pca (D, L, m):
-    output_folder = "../output/02_PCA"
-
-    s,U = npla.eigh(utility.compute_covariance(D))
+# ----- Principal Component Analysis -----
+def apply_pca (D, L, m, output_folder=None):
+    # Identify the largest eigenvalues and eigenvectors over to which we project original data
+    _,U = npla.eigh(utility.compute_covariance(D))
     P = U[:, ::-1][:, 0:m]
-    DP = np.dot(P.T, D)
-    plots.plot_scatters(DP, L, m, output_folder)
-
-
-# ----- Apply Linear Discriminant Analysis -----
-def apply_lda (D, L, m):
-    output_folder = "../output/03_LDA"
-
-    # Computation of between- and within-class covariance matrices
-    N = D.shape[1]
-    mu = utility.compute_mean(D)
-    SB = 0
-    SW = 0
-    for i in range(dataset.distinct_classes):
-        Di = D[:, L==i]
-        ni = Di.shape[1]
-        mui = utility.compute_mean(Di)
-        SB += ni/N * np.outer(mui-mu, mui-mu)
-        SW += ni/N * utility.compute_covariance(Di)
     
-    # Projection of data over the new set of directions
-    s,U = spla.eigh(SB,SW)
-    W = U[:, ::-1][:, 0:m]
-    UW, _, _ = spla.svd(W)
-    DP = np.dot(W.T, D)
+    if output_folder!=None:
+        # Project data
+        DP = np.dot(P.T, D)
+        plots.plot_pca_scatters(DP, L, output_folder)
 
-    # Plot projections
-    plots.plot_lda_histograms(DP, L, 40, output_folder)
-    plots.plot_scatters(DP, L, m, output_folder)
+    return P
+
+
+# ----- Linear Discriminant Analysis -----
+def apply_lda (D, L, m, output_folder=None):
+    # Compute between- and within-class covariance matrices
+    D0 = D[:, L==0]
+    D1 = D[:, L==1]
+    diff0 = utility.compute_mean(D0) - utility.compute_mean(D)
+    diff1 = utility.compute_mean(D1) - utility.compute_mean(D)
+    SB = np.outer(diff0,diff0) + np.outer(diff1,diff1)
+    SW = utility.compute_covariance(D0) + utility.compute_covariance(D1)
+    #weight0 = D0.shape[1] / D.shape[1]
+    #weight1 = D1.shape[1] / D.shape[1]
+    #SB = weight0*np.outer(diff0,diff0) + weight1*np.outer(diff1,diff1)
+    #SW = weight0*utility.compute_covariance(D0) + weight1*utility.compute_covariance(D1)
+
+    # Identify the m largest eigenvalues and eigenvectors over to which we project original data
+    U,s,_ = npla.svd(SW)
+    P1 = np.dot(U, utility.row_to_column(1.0/s**0.5)*U.T)
+    SBt = np.dot(P1, np.dot(SB, P1.T))
+    U,_,_ = npla.svd(SBt)
+    P2 = U[:, 0:m]
+    W = np.dot(P1.T, P2)
+
+    if output_folder!=None:
+        # Project data
+        DP = np.dot(W.T, D)
+        plots.plot_lda_histograms(DP, L, output_folder)
