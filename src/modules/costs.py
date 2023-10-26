@@ -7,7 +7,7 @@ import numpy as np
 ####################
 #    FUNCTIONS     #
 ####################
-# ----- Compute unnormalized DCF -----
+# ----- Compute un-normalized Detection Cost Function -----
 def compute_unnormalized_DCF (pi_t, Cfn, Cfp, ll_ratios, LTE, threshold=None, is_effective=False):
     # Define threshold if not previously defined
     if threshold is None:
@@ -31,7 +31,7 @@ def compute_unnormalized_DCF (pi_t, Cfn, Cfp, ll_ratios, LTE, threshold=None, is
     return dcf
 
 
-# ----- Compute normalized DCF -----
+# ----- Compute normalized Detection Cost Function -----
 def compute_normalized_DCF (pi_t, Cfn, Cfp, DCFu):
     dummy_costs = np.array([pi_t*Cfn, (1-pi_t)*Cfp])
     index = np.argmin(dummy_costs)
@@ -39,14 +39,14 @@ def compute_normalized_DCF (pi_t, Cfn, Cfp, DCFu):
     return dcf
 
 
-# ----- Compute actual DCF -----
+# ----- Compute actual Detection Cost Function -----
 def compute_actual_DCF (pi_t, Cfn, Cfp, ll_ratios, LTE, is_effective):
     dcfu = compute_unnormalized_DCF(pi_t, Cfn, Cfp, ll_ratios, LTE, None, is_effective)
     dcf = compute_normalized_DCF(pi_t, Cfn, Cfp, dcfu)
     return dcf
 
 
-# ----- Compute minimum DCF -----
+# ----- Compute minimum Detection Cost Function -----
 def compute_min_DCF (pi_t, Cfn, Cfp, ll_ratios, LTE):
     dcf_collection = np.zeros(ll_ratios.shape)
     sorted = np.sort(ll_ratios)

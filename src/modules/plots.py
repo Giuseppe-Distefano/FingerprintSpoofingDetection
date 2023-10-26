@@ -100,3 +100,4 @@ def plot_lda_scatters (D, L, output_folder):
     plt.legend()
     plt.savefig("%s/scatter_lda.png" % (output_folder))
     plt.close()
+    

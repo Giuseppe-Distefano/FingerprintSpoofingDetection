@@ -36,14 +36,14 @@ def dimensionality_reduction (D, L):
 # ----- Train model -----
 def train_model (D, L):
     K = 5
-    pca_values = [0, 9, 8, 7, 6, 5] # value=0 when we don't apply PCA
-    pi_values = [0.1, 0.5, 0.9]
+    pca_values = [0]#pca_values = [0, 9, 8, 7, 6, 5] # value=0 when we don't apply PCA
+    pi_values = [0.5]#pi_values = [0.1, 0.5, 0.9]
     for i,pca_value in enumerate(pca_values):
         for j,pi_value in enumerate(pi_values):
             output1 = "../output/04_Kfold/performance_" + str(i) + "_" + str(j) + ".txt"
             output2 = "../output/05_DCF/performance_" + str(i) + "_" + str(j) + ".txt"
             # Generative models
-            gen.kfold(D, L, K, pca_value, pi_value, output1, output2)
+            #gen.kfold(D, L, K, pca_value, pi_value, output1, output2)
             # Discriminative models
             dis.kfold(D, L, K, pca_value, pi_value, output1, output2)
 
@@ -53,6 +53,6 @@ def train_model (D, L):
 ###############################
 if __name__ == "__main__":
     (DTR,LTR), (DTE,LTE) = load_dataset()    
-    features__analysis(DTR, LTR)
-    dimensionality_reduction(DTR, LTR)
+    #features__analysis(DTR, LTR)
+    #dimensionality_reduction(DTR, LTR)
     train_model(DTR, LTR)

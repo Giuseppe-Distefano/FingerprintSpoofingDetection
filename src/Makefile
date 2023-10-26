@@ -9,5 +9,5 @@ clean:
 
 run:
 	python3 main.py
-	clear
+	#clear
 	

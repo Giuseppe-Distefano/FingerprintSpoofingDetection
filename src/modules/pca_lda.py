@@ -35,11 +35,7 @@ def apply_lda (D, L, m, output_folder=None):
     diff1 = utility.compute_mean(D1) - utility.compute_mean(D)
     SB = np.outer(diff0,diff0) + np.outer(diff1,diff1)
     SW = utility.compute_covariance(D0) + utility.compute_covariance(D1)
-    #weight0 = D0.shape[1] / D.shape[1]
-    #weight1 = D1.shape[1] / D.shape[1]
-    #SB = weight0*np.outer(diff0,diff0) + weight1*np.outer(diff1,diff1)
-    #SW = weight0*utility.compute_covariance(D0) + weight1*utility.compute_covariance(D1)
-
+    
     # Identify the m largest eigenvalues and eigenvectors over to which we project original data
     U,s,_ = npla.svd(SW)
     P1 = np.dot(U, utility.row_to_column(1.0/s**0.5)*U.T)

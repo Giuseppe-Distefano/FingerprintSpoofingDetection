@@ -6,6 +6,7 @@ import numpy as np
 import scipy.optimize as sopt
 import modules.pca_lda as dr
 import modules.costs as dcf
+import scipy.special as sspec
 
 
 ####################
@@ -20,7 +21,7 @@ def naive_bayes (DTR, LTR, DTE, LTE):
     mu1, cov1 = utility.row_to_column(utility.compute_mean(D1)), utility.compute_covariance(D1)*np.identity(DTR.shape[0])
 
     # Compute likelihoods
-    S = np.zeros((2,DTE.shape[1]))
+    S = np.empty((2,DTE.shape[1]))
     for i in range(DTE.shape[1]):
         S[0,i] = np.exp(utility.logpdf_GAU_ND(utility.row_to_column(DTE[:,i]), mu0, cov0))
         S[1,i] = np.exp(utility.logpdf_GAU_ND(utility.row_to_column(DTE[:,i]), mu1, cov1))
@@ -43,7 +44,7 @@ def tied_naive_bayes (DTR, LTR, DTE, LTE):
     tied_cov = cov0*D0.shape[1]/DTR.shape[1] + cov1*D1.shape[1]/DTR.shape[1]
 
     # Compute likelihoods
-    S = np.zeros((2,DTE.shape[1]))
+    S = np.empty((2,DTE.shape[1]))
     for i in range(DTE.shape[1]):
         S[0,i] = np.exp(utility.logpdf_GAU_ND(utility.row_to_column(DTE[:,i]), mu0, tied_cov))
         S[1,i] = np.exp(utility.logpdf_GAU_ND(utility.row_to_column(DTE[:,i]), mu1, tied_cov))
@@ -65,7 +66,7 @@ def mvg (DTR, LTR, DTE, LTE):
     mu1, cov1 = utility.row_to_column(utility.compute_mean(D1)), utility.compute_covariance(D1)
 
     # Compute likelihoods
-    S = np.zeros((2,DTE.shape[1]))
+    S = np.empty((2,DTE.shape[1]))
     for i in range(DTE.shape[1]):
         S[0,i]=np.exp(utility.logpdf_GAU_ND(utility.row_to_column(DTE[:,i]), mu0, cov0))
         S[1,i]=np.exp(utility.logpdf_GAU_ND(utility.row_to_column(DTE[:,i]), mu1, cov1))
@@ -88,15 +89,16 @@ def tied_mvg (DTR, LTR, DTE, LTE):
     tied_cov = cov0*D0.shape[1]/DTR.shape[1] + cov1*D1.shape[1]/DTR.shape[1]
 
     # Compute likelihoods
-    S = np.zeros((2,DTE.shape[1]))
+    S = np.empty((2,DTE.shape[1]))
     for i in range(DTE.shape[1]):
         S[0,i] = np.exp(utility.logpdf_GAU_ND(utility.row_to_column(DTE[:,i]), mu0, tied_cov))
-        S[1,i] = np.exp(utility.logpdf_GAU_ND(utility.row_to_column(DTE[:,i]), mu1, tied_cov))
+        S[0,i] = np.exp(utility.logpdf_GAU_ND(utility.row_to_column(DTE[:,i]), mu1, tied_cov))
+    #print(S)
     
     # Compute log-likelihood ratio and use it to classify samples
     llr = np.log(S[1,:] / S[0,:])
     predicted = utility.predict_labels(llr, 0)
-    wrong_predictions = utility.count_mispredictions(predicted, LTE)
+    wrong_predictions = np.array(predicted!=LTE).sum()
 
     return wrong_predictions, llr
 
@@ -105,8 +107,8 @@ def tied_mvg (DTR, LTR, DTE, LTE):
 def kfold (D, L, K, pca_value, pi_value, output_filename1, output_filename2):
     classifiers = [
         (mvg, "MVG"),
-        (naive_bayes, "Naive Bayes"),
         (tied_mvg, "MVG with tied covariance"),
+        (naive_bayes, "Naive Bayes"),
         (tied_naive_bayes, "Naive Bayes with tied covariance")
     ]
     output_file1 = open(output_filename1, "w+")
@@ -143,7 +145,7 @@ def kfold (D, L, K, pca_value, pi_value, output_filename1, output_filename2):
             # Apply classifier
             wrong, llr = fun(DTR, LTR, DTE, LTE)
             wrong_predictions += wrong
-            ll_ratios.append(llr)
+            ll_ratios.append(utility.row_to_column(llr))
 
         # Evaluate accuracy and error rate
         error_rate = wrong_predictions / D.shape[1]
@@ -154,8 +156,9 @@ def kfold (D, L, K, pca_value, pi_value, output_filename1, output_filename2):
         output_file1.write("\n")
 
         # Compute min DCF
-        cost = dcf.compute_min_DCF(pi_value, Cfn, Cfp, np.hstack(ll_ratios), LTE)
+        #cost = dcf.compute_min_DCF(pi_value, Cfn, Cfp, np.hstack(ll_ratios), LTE)
+        cost = dcf.compute_min_DCF(pi_value, Cfn, Cfp, np.concatenate(ll_ratios, axis=0), L)
         output_file2.write("%s\n" % (name))
-        output_file2.write("  pi: %.3f\n" % (pi_value))
+        output_file2.write("  PCA: %d, pi: %.3f\n" % (pca_value, pi_value))
         output_file2.write("  min DCF: %.3f\n" % (cost))
         output_file2.write("\n")

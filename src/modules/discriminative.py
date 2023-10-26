@@ -66,7 +66,7 @@ def linear_logistic_regression (DTR, LTR, DTE, LTE, lam, pi):
 def kfold (D, L, K, pca_value, pi_value, output_filename1, output_filename2):
     output_file1 = open(output_filename1, "a")
     output_file2 = open(output_filename2, "a")
-    #lambda_values = [1e-6, 1e-4, 1e-3, 0.1, 1.0]
+    #lambda_values = [1e-6, 1e-4, 1e-3, 1e-1, 1e+0, 1e+1, 1e+2]
     lambda_values = [1e-6]
     Cfn = 1
     Cfp = 10
@@ -113,7 +113,7 @@ def kfold (D, L, K, pca_value, pi_value, output_filename1, output_filename2):
         output_file1.write("\n")
 
         # Compute min DCF
-        cost = dcf.compute_min_DCF(pi_value, Cfn, Cfp, np.hstack(scores), LTE)
-        output_file2.write("  pi: %.3f\n" % (pi_value))
+        cost = dcf.compute_min_DCF(pi_value, Cfn, Cfp, np.concatenate(ll_ratios, axis=0), L)
+        output_file2.write("  PCA: %d, Lambda: %.6f, pi: %.3f\n" % (pca_value, lam, pi_value))
         output_file2.write("  min DCF: %.3f\n" % (cost))
         output_file2.write("\n")
