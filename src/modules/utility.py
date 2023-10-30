@@ -56,7 +56,8 @@ def logpdf_GAU_ND (X, mu, C):
 
     term1 = -0.5 * X.shape[0] * np.log(2*np.pi)
     term2 = -0.5 * det
-    term3 = -0.5 * ((X-mu) * np.dot(inv, (X-mu))).sum(0)
+    #term3 = -0.5 * ((X-mu) * np.dot(inv, (X-mu))).sum(0)
+    term3 = -0.5 * np.dot((X-mu).T, np.dot(inv, (X-mu))).sum(0)
 
     return (term1+term2+term3)
 
@@ -75,3 +76,10 @@ def count_mispredictions (predicted, LTE):
     for i in range(len(LTE)):
         if (predicted[i]!=LTE[i]): wrong += 1
     return wrong
+
+
+# ----- Square a matrix and transpose it -----
+def square_and_transpose (matrix):
+    x = matrix[:, None]
+    xxT = x.dot(x.T).reshape((x.size)**2, order='F')
+    return xxT

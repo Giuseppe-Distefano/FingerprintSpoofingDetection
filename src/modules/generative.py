@@ -28,8 +28,10 @@ def naive_bayes (DTR, LTR, DTE, LTE):
 
     # Compute log-likelihood ratio and use it to classify samples
     llr = np.log(S[1,:] / S[0,:])
-    predicted = utility.predict_labels(llr, 0)
-    wrong_predictions = utility.count_mispredictions(predicted, LTE)
+    #predicted = utility.predict_labels(llr, 0)
+    #wrong_predictions = utility.count_mispredictions(predicted, LTE)
+    predicted_labels = np.log(S).argmax(axis=0)
+    wrong_predictions = len(LTE) - np.array(predicted_labels == LTE).sum()
 
     return wrong_predictions, llr
 
@@ -41,7 +43,7 @@ def tied_naive_bayes (DTR, LTR, DTE, LTE):
     D1 = DTR[:, LTR==1]
     mu0, cov0 = utility.row_to_column(utility.compute_mean(D0)), utility.compute_covariance(D0)*np.identity(DTR.shape[0])
     mu1, cov1 = utility.row_to_column(utility.compute_mean(D1)), utility.compute_covariance(D1)*np.identity(DTR.shape[0])
-    tied_cov = cov0*D0.shape[1]/DTR.shape[1] + cov1*D1.shape[1]/DTR.shape[1]
+    tied_cov = (cov0*D0.shape[1] + cov1*D1.shape[1]) / DTR.shape[1]
 
     # Compute likelihoods
     S = np.empty((2,DTE.shape[1]))
@@ -51,8 +53,10 @@ def tied_naive_bayes (DTR, LTR, DTE, LTE):
     
     # Compute log-likelihood ratio and use it to classify samples
     llr = np.log(S[1,:] / S[0,:])
-    predicted = utility.predict_labels(llr, 0)
-    wrong_predictions = utility.count_mispredictions(predicted, LTE)
+    #predicted = utility.predict_labels(llr, 0)
+    #wrong_predictions = utility.count_mispredictions(predicted, LTE)
+    predicted_labels = np.log(S).argmax(axis=0)
+    wrong_predictions = len(LTE) - np.array(predicted_labels == LTE).sum()
 
     return wrong_predictions, llr
 
@@ -68,13 +72,15 @@ def mvg (DTR, LTR, DTE, LTE):
     # Compute likelihoods
     S = np.empty((2,DTE.shape[1]))
     for i in range(DTE.shape[1]):
-        S[0,i]=np.exp(utility.logpdf_GAU_ND(utility.row_to_column(DTE[:,i]), mu0, cov0))
-        S[1,i]=np.exp(utility.logpdf_GAU_ND(utility.row_to_column(DTE[:,i]), mu1, cov1))
+        S[0,i] = np.exp(utility.logpdf_GAU_ND(utility.row_to_column(DTE[:,i]), mu0, cov0))
+        S[1,i] = np.exp(utility.logpdf_GAU_ND(utility.row_to_column(DTE[:,i]), mu1, cov1))
     
     # Compute log-likelihood ratio and use it to classify samples
     llr = np.log(S[1,:] / S[0,:])
-    predicted = utility.predict_labels(llr, 0)
-    wrong_predictions = utility.count_mispredictions(predicted, LTE)
+    #predicted = utility.predict_labels(llr, 0)
+    #wrong_predictions = utility.count_mispredictions(predicted, LTE)
+    predicted_labels = np.log(S).argmax(axis=0)
+    wrong_predictions = len(LTE) - np.array(predicted_labels == LTE).sum()
 
     return wrong_predictions, llr
 
@@ -86,19 +92,20 @@ def tied_mvg (DTR, LTR, DTE, LTE):
     D1 = DTR[:, LTR==1]
     mu0, cov0 = utility.row_to_column(utility.compute_mean(D0)), utility.compute_covariance(D0)
     mu1, cov1 = utility.row_to_column(utility.compute_mean(D1)), utility.compute_covariance(D1)
-    tied_cov = cov0*D0.shape[1]/DTR.shape[1] + cov1*D1.shape[1]/DTR.shape[1]
+    tied_cov = (cov0*D0.shape[1] + cov1*D1.shape[1]) / DTR.shape[1]
 
     # Compute likelihoods
     S = np.empty((2,DTE.shape[1]))
     for i in range(DTE.shape[1]):
         S[0,i] = np.exp(utility.logpdf_GAU_ND(utility.row_to_column(DTE[:,i]), mu0, tied_cov))
-        S[0,i] = np.exp(utility.logpdf_GAU_ND(utility.row_to_column(DTE[:,i]), mu1, tied_cov))
-    #print(S)
+        S[1,i] = np.exp(utility.logpdf_GAU_ND(utility.row_to_column(DTE[:,i]), mu1, tied_cov))
     
     # Compute log-likelihood ratio and use it to classify samples
     llr = np.log(S[1,:] / S[0,:])
-    predicted = utility.predict_labels(llr, 0)
-    wrong_predictions = np.array(predicted!=LTE).sum()
+    #predicted = utility.predict_labels(llr, 0)
+    #wrong_predictions = np.array(predicted!=LTE).sum()
+    predicted_labels = np.log(S).argmax(axis=0)
+    wrong_predictions = len(LTE) - np.array(predicted_labels == LTE).sum()
 
     return wrong_predictions, llr
 
@@ -115,13 +122,16 @@ def kfold (D, L, K, pca_value, pi_value, output_filename1, output_filename2):
     output_file2 = open(output_filename2, "w+")
     Cfn = 1
     Cfp = 10
+    N = int(D.shape[1]/K)
     
     for j,(fun,name) in enumerate(classifiers):
         wrong_predictions = 0
         np.random.seed(j)
         ll_ratios = []
+        labels = []
         indexes = np.random.permutation(D.shape[1])
-        N = int(D.shape[1]/K)
+
+        print("%s \t PCA %.3f \t pi_t %.3f \n" % (name, pca_value, pi_value))
 
         for i in range(K):
             # Select which subset to use for evaluation
@@ -145,7 +155,10 @@ def kfold (D, L, K, pca_value, pi_value, output_filename1, output_filename2):
             # Apply classifier
             wrong, llr = fun(DTR, LTR, DTE, LTE)
             wrong_predictions += wrong
-            ll_ratios.append(utility.row_to_column(llr))
+            #ll_ratios.append(utility.row_to_column(llr))
+            ll_ratios.append(llr)
+            #labels.append(utility.row_to_column(LTE))
+            labels.append(LTE)
 
         # Evaluate accuracy and error rate
         error_rate = wrong_predictions / D.shape[1]
@@ -156,9 +169,10 @@ def kfold (D, L, K, pca_value, pi_value, output_filename1, output_filename2):
         output_file1.write("\n")
 
         # Compute min DCF
-        #cost = dcf.compute_min_DCF(pi_value, Cfn, Cfp, np.hstack(ll_ratios), LTE)
-        cost = dcf.compute_min_DCF(pi_value, Cfn, Cfp, np.concatenate(ll_ratios, axis=0), L)
+        cost = dcf.compute_min_DCF(pi_value, Cfn, Cfp, np.hstack(ll_ratios), np.hstack(labels))
         output_file2.write("%s\n" % (name))
         output_file2.write("  PCA: %d, pi: %.3f\n" % (pca_value, pi_value))
         output_file2.write("  min DCF: %.3f\n" % (cost))
         output_file2.write("\n")
+
+        print("  Accuracy %.3f \t Error rate %.3f \t minDCF %.5f \n" % ((100.0*accuracy), (100.0*error_rate), cost))

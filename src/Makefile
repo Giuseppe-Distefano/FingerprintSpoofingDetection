@@ -1,13 +1,14 @@
 clean:
-	rm ../output/00_histograms/*.png
-	rm ../output/01_heatmaps/*.png
-	rm ../output/02_PCA/*.png
-	rm ../output/03_LDA/*.png
-	rm ../output/04_Kfold/*.txt
-	rm ../output/05_DCF/*.txt
+	rm -rf ../output/00_histograms/*.png || true
+	rm -rf ../output/01_heatmaps/*.png || true
+	rm -rf ../output/02_PCA/*.png || true
+	rm -rf ../output/03_LDA/*.png || true
+	rm -rf ../output/04_Kfold/*.txt || true
+	rm -rf ../output/05_DCF/*.txt || true
+	rm -rf ./modules/__pycache__ || true
 	clear
 
 run:
-	python3 main.py
-	#clear
+	python3 main.py > temp.txt
+	clear
 	

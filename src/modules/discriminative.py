@@ -62,58 +62,87 @@ def linear_logistic_regression (DTR, LTR, DTE, LTE, lam, pi):
     return wrong_predictions, scores
 
 
+# ----- Quadratic Logistic Regression -----
+def quadratic_logistic_regression (DTR, LTR, DTE, LTE, lam, pi):
+    DTRe= np.apply_along_axis(utility.square_and_transpose, 0, DTR)
+    DTEe = np.apply_along_axis(utility.square_and_transpose, 0, DTE)
+    phi_R = np.array(np.vstack([DTRe, DTR]))
+    phi_E = np.array(np.vstack([DTEe, DTE]))
+        
+    x0=np.zeros(phi_R.shape[0] + 1)
+    lr_obj = lr_obj_wrap(phi_R, LTR, lam, pi)
+    (x,_,_) = sopt.fmin_l_bfgs_b(lr_obj, x0, approx_grad=True)    
+
+    scores = lr_compute_scores(phi_E, x)
+    wrong_predictions = utility.count_mispredictions(scores, LTE)
+
+    return wrong_predictions, scores
+
+
 # ----- Compare classifiers using K-Fold -----
 def kfold (D, L, K, pca_value, pi_value, output_filename1, output_filename2):
+    classifiers = [
+        (linear_logistic_regression, "Linear Logistic Regression"),
+        (quadratic_logistic_regression, "Quadratic Logistic Regression")
+    ]
     output_file1 = open(output_filename1, "a")
     output_file2 = open(output_filename2, "a")
-    #lambda_values = [1e-6, 1e-4, 1e-3, 1e-1, 1e+0, 1e+1, 1e+2]
-    lambda_values = [1e-6]
+    lambda_values = [1e-6, 1e-4, 1e-3, 1e-1, 1e+0, 1e+1, 1e+2]
+    #lambda_values = [1e-3]
     Cfn = 1
     Cfp = 10
+    N = int(D.shape[1]/K)
     
-    output_file1.write("Linear Logistic Regression\n")
-    output_file2.write("Linear Logistic Regression\n")
-    for j,lam in enumerate(lambda_values):
-        wrong_predictions = 0
-        np.random.seed(j)
-        ll_ratios = []
-        indexes = np.random.permutation(D.shape[1])
-        N = int(D.shape[1]/K)
+    for j,(fun,name) in enumerate(classifiers):
+        output_file1.write(name + "\n")
+        output_file2.write(name + "\n")
+        for j,lam in enumerate(lambda_values):
+            wrong_predictions = 0
+            np.random.seed(j)
+            ll_ratios = []
+            labels = []
+            indexes = np.random.permutation(D.shape[1])
 
-        for i in range(K):
-            # Select which subset to use for evaluation
-            idxTest = indexes[i*N:(i+1)*N]
-            if i>0: idxTrainLeft = indexes[0:i*N]
-            elif (i+1)<K: idxTrainRight = indexes[(i+1)*N:]
-            if i==0: idxTrain = idxTrainRight
-            elif (i+1)==K: idxTrain = idxTrainLeft
-            else: idxTrain = np.hstack([idxTrainLeft, idxTrainRight])
-            DTR = D[:,idxTrain]
-            LTR = L[idxTrain]
-            DTE = D[:,idxTest]
-            LTE = L[idxTest]
+            print("%s \t PCA %.3f \t pi_t %.3f \t lambda %.7f" % (name, pca_value, pi_value, lam))
 
-            # Apply PCA if necessary
-            if pca_value!=0:
-                P = dr.apply_pca(DTR, LTR, pca_value)
-                DTR = np.dot(P.T, DTR)
-                DTE = np.dot(P.T, DTE)
+            for i in range(K):
+                # Select which subset to use for evaluation
+                idxTest = indexes[i*N:(i+1)*N]
+                if i>0: idxTrainLeft = indexes[0:i*N]
+                elif (i+1)<K: idxTrainRight = indexes[(i+1)*N:]
+                if i==0: idxTrain = idxTrainRight
+                elif (i+1)==K: idxTrain = idxTrainLeft
+                else: idxTrain = np.hstack([idxTrainLeft, idxTrainRight])
+                DTR = D[:,idxTrain]
+                LTR = L[idxTrain]
+                DTE = D[:,idxTest]
+                LTE = L[idxTest]
 
-            # Apply classifier
-            wrong, scores = linear_logistic_regression(DTR, LTR, DTE, LTE, lam, pi_value)
-            wrong_predictions += wrong
-            ll_ratios.append(scores)
+                # Apply PCA if necessary
+                if pca_value!=0:
+                    P = dr.apply_pca(DTR, LTR, pca_value)
+                    DTR = np.dot(P.T, DTR)
+                    DTE = np.dot(P.T, DTE)
 
-        # Evaluate accuracy and error rate
-        error_rate = wrong_predictions / D.shape[1]
-        accuracy = 1 - error_rate
-        output_file1.write("  Lambda: " + str(lam) + ", pi: " + str(pi_value) + "\n")
-        output_file1.write("  Accuracy: %.3f%%\n" % (100.0*accuracy))
-        output_file1.write("  Error rate: %.3f%%\n" % (100.0*error_rate))
-        output_file1.write("\n")
+                # Apply classifier
+                wrong, scores = fun(DTR, LTR, DTE, LTE, lam, pi_value)
+                wrong_predictions += wrong
+                ll_ratios.append(scores)
+                labels.append(LTE)
 
-        # Compute min DCF
-        cost = dcf.compute_min_DCF(pi_value, Cfn, Cfp, np.concatenate(ll_ratios, axis=0), L)
-        output_file2.write("  PCA: %d, Lambda: %.6f, pi: %.3f\n" % (pca_value, lam, pi_value))
-        output_file2.write("  min DCF: %.3f\n" % (cost))
-        output_file2.write("\n")
+            # Evaluate accuracy and error rate
+            error_rate = wrong_predictions / D.shape[1]
+            accuracy = 1 - error_rate
+            output_file1.write("  Lambda: " + str(lam) + ", pi: " + str(pi_value) + "\n")
+            output_file1.write("  Accuracy: %.3f%%\n" % (100.0*accuracy))
+            output_file1.write("  Error rate: %.3f%%\n" % (100.0*error_rate))
+            output_file1.write("\n")
+
+            # Compute min DCF
+            cost = dcf.compute_min_DCF(pi_value, Cfn, Cfp, np.hstack(ll_ratios), np.hstack(labels))
+            print(accuracy, cost)
+            output_file2.write("  PCA: %d, Lambda: %.6f, pi: %.3f\n" % (pca_value, lam, pi_value))
+            output_file2.write("  min DCF: %.3f\n" % (cost))
+            output_file2.write("\n")
+
+            print("  Accuracy %.3f \t Error rate %.3f \t minDCF %.5f \n" % ((100.0*accuracy), (100.0*error_rate), cost))
