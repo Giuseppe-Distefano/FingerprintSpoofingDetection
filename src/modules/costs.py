@@ -1,7 +1,7 @@
 ################################
 #     MODULES IMPORTATIONS     #
 ################################
-import numpy as np
+import numpy
 
 
 ####################
@@ -15,11 +15,11 @@ def compute_unnormalized_DCF (pi_t, Cfn, Cfp, ll_ratios, LTE, threshold=None, is
             effective_prior = (pi_t*Cfn) / (pi_t*Cfn + (1-pi_t)*Cfp)
         else:
             effective_prior = pi_t
-        threshold = -np.log(effective_prior / (1-effective_prior))
+        threshold = -numpy.log(effective_prior / (1-effective_prior))
     
     # Build confusion matrix
     predicted = (ll_ratios>threshold).astype(int)
-    confusion_matrix = np.zeros((2,2))
+    confusion_matrix = numpy.zeros((2,2))
     for i in range(len(LTE)):
         confusion_matrix[predicted[i], LTE[i].astype(int)] += 1
     
@@ -33,8 +33,8 @@ def compute_unnormalized_DCF (pi_t, Cfn, Cfp, ll_ratios, LTE, threshold=None, is
 
 # ----- Compute normalized Detection Cost Function -----
 def compute_normalized_DCF (pi_t, Cfn, Cfp, DCFu):
-    dummy_costs = np.array([pi_t*Cfn, (1-pi_t)*Cfp])
-    index = np.argmin(dummy_costs)
+    dummy_costs = numpy.array([pi_t*Cfn, (1-pi_t)*Cfp])
+    index = numpy.argmin(dummy_costs)
     dcf = DCFu / dummy_costs[index]
     return dcf
 
@@ -48,11 +48,11 @@ def compute_actual_DCF (pi_t, Cfn, Cfp, ll_ratios, LTE, is_effective):
 
 # ----- Compute minimum Detection Cost Function -----
 def compute_min_DCF (pi_t, Cfn, Cfp, ll_ratios, LTE):
-    dcf_collection = np.zeros(ll_ratios.shape)
-    sorted = np.sort(ll_ratios)
+    dcf_collection = numpy.zeros(ll_ratios.shape)
+    sorted = numpy.sort(ll_ratios)
 
     for i in range(len(ll_ratios)):
         threshold = sorted[i]
         unnormalized = compute_unnormalized_DCF(pi_t, Cfn, Cfp, ll_ratios, LTE, threshold)
         dcf_collection[i] = compute_normalized_DCF(pi_t, Cfn, Cfp, unnormalized)
-    return np.min(dcf_collection)
+    return numpy.min(dcf_collection)
