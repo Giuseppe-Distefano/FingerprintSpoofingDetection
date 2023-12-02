@@ -13,6 +13,8 @@ import numpy.linalg
 # GLOBAL VARIABLES #
 ####################
 discriminative_training_output = "../output/04_Training/Discriminative.txt"
+Cfn = 1
+Cfp = 10
 
 
 ####################
@@ -125,15 +127,13 @@ def quadratic_logistic_regression (DTR, LTR, DTE, LTE, lam, pi):
     return wrong_predictions, scores
 
 
-# ----- Compare classifiers using K-Fold -----
-def kfold (D, L, K, pca_value, pi_value, lambda_value):
+# ----- Train model using K-Fold -----
+def dis_kfold (D, L, K, pca_value, pi_value, lambda_value):
     classifiers = [
         (linear_logistic_regression, "Linear Logistic Regression"),
         (quadratic_logistic_regression, "Quadratic Logistic Regression")
     ]
     output_file = open(discriminative_training_output, "a")
-    Cfn = 1
-    Cfp = 10
     N = int(D.shape[1]/K)
 
     if pca_value==0:

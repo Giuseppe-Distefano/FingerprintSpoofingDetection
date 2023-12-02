@@ -1,0 +1,14 @@
+No PCA
+No PCA
+No PCA
+  Quadratic SVM
+    Accuracy: 83.140%
+    Error rate: 16.860%
+    min DCF: 0.407
+
+PCA: 9
+  Quadratic SVM
+    Accuracy: 79.828%
+    Error rate: 20.172%
+    min DCF: 0.491
+

@@ -11,6 +11,8 @@ import modules.costs as dcf
 # GLOBAL VARIABLES #
 ####################
 generative_training_output = "../output/04_Training/Generative.txt"
+Cfn = 1
+Cfp = 10
 
 
 ####################
@@ -106,7 +108,7 @@ def tied_mvg (DTR, LTR, DTE, LTE):
     return wrong_predictions, llr
 
 
-# ----- Compare classifiers using K-Fold -----
+# ----- Train model using K-Fold -----
 def gen_kfold (D, L, K, pca_value, pi_value):
     classifiers = [
         (mvg, "MVG"),
@@ -115,9 +117,8 @@ def gen_kfold (D, L, K, pca_value, pi_value):
         (tied_naive_bayes, "Naive Bayes with tied covariance")
     ]
     output_file = open(generative_training_output, "a")
-    Cfn = 1
-    Cfp = 10
     N = int(D.shape[1]/K)
+    C = 1
 
     if pca_value==0:
         output_file.write("No PCA, pi: %.3f\n" % (pi_value))
@@ -150,7 +151,7 @@ def gen_kfold (D, L, K, pca_value, pi_value):
                 DTR,DTE = numpy.dot(P.T, DTR), numpy.dot(P.T, DTE)
 
             # Apply classifier
-            wrong, llr = fun(DTR, LTR, DTE, LTE)
+            wrong, llr = fun(DTR, LTR, DTE, LTE, K, C)
             wrong_predictions += wrong
             ll_ratios.append(llr)
             labels.append(LTE)

@@ -6,6 +6,7 @@ import modules.generative as gen
 import modules.discriminative as dis
 import modules.dataset as dataset
 import modules.pca_lda as dr
+import modules.svm as svm
 import numpy as np
 
 
@@ -35,15 +36,22 @@ def dimensionality_reduction (D, L):
 # ----- Train model -----
 def train_model (D, L):
     K = 5
-    pca_values = [0, 9] #[0, 9, 8, 7, 6, 5] # value=0 when we don't apply PCA
-    pi_values = [0.1, 0.5] #[0.1, 0.5, 0.9]
-    lambda_values = [1e-6, 1e-1] #[1e-6, 1e-4, 1e-3, 1e-1, 1e+0, 1e+1, 1e+2]
+    pca_values = [0, 9, 8, 7, 6, 5] # value=0 when we don't apply PCA
+    pi_values = [0.1, 0.5, 0.9]
+    lambda_values = [1e-6, 1e-4, 1e-3, 1e-1, 1e+0, 1e+1, 1e+2]
+#    pca_values = [0, 9] # value=0 when we don't apply PCA
+#    pi_values = [0.1, 0.5]
+#    lambda_values = [1e-6, 1e-1]
 
     for pca_value in pca_values:
         for pi_value in pi_values:
+            # Generative models
             gen.gen_kfold(D, L, K, pca_value, pi_value)
+            # Discriminative models
             for lambda_value in lambda_values:
-                dis.kfold(D, L, K, pca_value, pi_value, lambda_value)
+                dis.dis_kfold(D, L, K, pca_value, pi_value, lambda_value)
+        # SVM
+        svm.svm_kfold(D, L, K, pca_value)
 
 
 ###############################
