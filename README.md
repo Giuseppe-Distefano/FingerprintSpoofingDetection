@@ -23,3 +23,62 @@ The proposed solution must be evaluated on the evaluation set. The evaluation sa
 ### Post-evaluation analysis
 
 The choices made during model training should be analyzed to verify that the selected model is indeed competitive for the task. This requires comparing on the evaluation set alternative models that were analyzed and trained, but discarded, in the first phase, to verify whether the proposed solution is indeed optimal or close to optimal with respect to possible alternatives (e.g., the chosen models is effective, the chosen hyperparameters are optimal, etc.).
+
+## Project structure
+
+Folder named *data* contains two text files, *Training.txt* and *Test.txt* , containing samples for the training set and for the evaluation set.
+
+Folder named *output* contains output generated from code. Outputs are divided in sub-classes according to project steps.
+
+Folder named *report* contains the final report that has to be delivered.
+
+Folder named *src* contains the code of the project. *main.py* is the main file for the project, while other functions are stored into specific files in the *modules* sub-folder. A *Makefile* is also included to run and manage project easily.
+
+Folder named *teacher* contains all material that professor uploaded for this project.
+
+## Usage
+
+To remove existent output data use
+
+```bash
+    cd src/
+    make clean
+```
+
+To run code use
+
+```bash
+    cd src/
+    make run
+```
+
+## Project timeline
+
+- [x] Features Analysis
+  - [x] Histograms
+  - [x] Heatmaps
+- [x] Dimensionality Reduction
+  - [x] PCA (Principal Component Analysis)
+  - [x] LDA (Linear Discriminant Analysis)
+- [ ] Training
+  - [X] Generative models
+    - [x] Multi-Variate Gaussian
+    - [x] Multi-Variate Gaussian with Tied Covariance
+    - [x] Naive Bayes
+    - [X] Naive Bayes with Tied Covariance
+  - [x] Discriminative models
+    - [x] Linear Logistic Regression
+    - [x] Quadratic Logistic Regression
+  - [ ] Support Vector Machine
+    - [x] Linear SVM
+    - [x] Quadratic SVM
+    - [ ] Polynomial Kernel SVM
+    - [ ] Raial Basis Function Kernel SVM
+  - [ ] Gaussian Mixture Models
+    - [ ] Full Covariance
+    - [ ] Diagonal Covariance
+    - [ ] Tied Covariance
+    - [ ] Tied Diagonal Covariance
+- [ ] Calibration
+- [ ] Fusion
+- [ ] Evaluation

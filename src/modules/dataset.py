@@ -14,8 +14,8 @@ features = int(10)
 distinct_classes = int(2)
 training_input = "../data/Train.txt"
 test_input = "../data/Test.txt"
-histograms_folder = "../output/00_Histograms"
-heatmaps_folder = "../output/01_Heatmaps"
+histograms_folder = "../output/FeaturesAnalysis/Histograms"
+heatmaps_folder = "../output/FeaturesAnalysis/Heatmaps"
 
 
 #####################

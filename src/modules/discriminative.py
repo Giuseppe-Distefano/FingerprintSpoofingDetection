@@ -12,7 +12,7 @@ import numpy.linalg
 ####################
 # GLOBAL VARIABLES #
 ####################
-discriminative_training_output = "../output/04_Training/Discriminative.txt"
+discriminative_training_output = "../output/Training/Discriminative.txt"
 Cfn = 1
 Cfp = 10
 

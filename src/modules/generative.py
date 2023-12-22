@@ -10,7 +10,7 @@ import modules.costs as dcf
 ####################
 # GLOBAL VARIABLES #
 ####################
-generative_training_output = "../output/04_Training/Generative.txt"
+generative_training_output = "../output/Training/Generative.txt"
 Cfn = 1
 Cfp = 10
 

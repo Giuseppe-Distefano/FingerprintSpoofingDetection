@@ -11,7 +11,7 @@ import modules.pca_lda as dr
 ####################
 # GLOBAL VARIABLES #
 ####################
-svm_training_output = "../output/04_Training/SVM.txt"
+svm_training_output = "../output/Training/SVM.txt"
 pi_value = 0.5
 Cfn = 1
 Cfp = 10

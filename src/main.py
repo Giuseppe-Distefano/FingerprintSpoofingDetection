@@ -7,7 +7,16 @@ import modules.discriminative as dis
 import modules.dataset as dataset
 import modules.pca_lda as dr
 import modules.svm as svm
-import numpy as np
+import modules.gmm as gmm
+
+
+####################
+# GLOBAL VARIABLES #
+####################
+pi_t = 0.5
+Cfn = 1
+Cfp = 10
+effective_prior = (pi_t*Cfn) / (pi_t*Cfn + (1-pi_t)*Cfp)
 
 
 #####################
@@ -29,19 +38,21 @@ def features__analysis (DTR, LTR):
 # ----- Dimensionality reduction -----
 def dimensionality_reduction (D, L):
     m = 2
-    dr.apply_pca(D, L, m, "../output/02_PCA")
-    dr.apply_lda(D, L, m, "../output/03_LDA")
+    dr.apply_pca(D, L, m, "../output/DimensionalityReduction/PCA")
+    dr.apply_lda(D, L, m, "../output/DimensionalityReduction/LDA")
 
 
 # ----- Train model -----
 def train_model (D, L):
     K = 5
-    pca_values = [0, 9, 8, 7, 6, 5] # value=0 when we don't apply PCA
-    pi_values = [0.1, 0.5, 0.9]
+    
+    pca_values = [0, 9, 8, 7, 6, 5]         # value=0 when we don't apply PCA
+    pi_values = [0.1, 0.5, 0.9, effective_prior]
     lambda_values = [1e-6, 1e-4, 1e-3, 1e-1, 1e+0, 1e+1, 1e+2]
-#    pca_values = [0, 9] # value=0 when we don't apply PCA
-#    pi_values = [0.1, 0.5]
-#    lambda_values = [1e-6, 1e-1]
+    
+    pca_values = [0, 9]                     # value=0 when we don't apply PCA
+    pi_values = [0.1, 0.5]
+    lambda_values = [1e-6, 1e-1]
 
     for pca_value in pca_values:
         for pi_value in pi_values:
@@ -50,8 +61,10 @@ def train_model (D, L):
             # Discriminative models
             for lambda_value in lambda_values:
                 dis.dis_kfold(D, L, K, pca_value, pi_value, lambda_value)
-        # SVM
+        # Support Vector Machine
         svm.svm_kfold(D, L, K, pca_value)
+        # Gaussian Mixture Models
+        gmm.gmm_kfold(D, L, K, pca_value, True, False, 8, 2)
 
 
 ###############################
