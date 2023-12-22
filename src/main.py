@@ -49,22 +49,35 @@ def train_model (D, L):
     pca_values = [0, 9, 8, 7, 6, 5]         # value=0 when we don't apply PCA
     pi_values = [0.1, 0.5, 0.9, effective_prior]
     lambda_values = [1e-6, 1e-4, 1e-3, 1e-1, 1e+0, 1e+1, 1e+2]
+    gmm_values = [1, 2, 4, 8]
+    C_values = [1e-4, 1e-3, 1e-2, 1e-1, 1e+0]
+    gamma_values = [1e-4, 1e-3, 1e-2, 1e-1, 1e+0]
     
     pca_values = [0, 9]                     # value=0 when we don't apply PCA
     pi_values = [0.1, 0.5]
     lambda_values = [1e-6, 1e-1]
+    gmm_values = [2, 8]
+    C_values = [1e-2, 1e+0]
+    gamma_values = [1e-3, 1e-1]
 
     for pca_value in pca_values:
         for pi_value in pi_values:
             # Generative models
             gen.gen_kfold(D, L, K, pca_value, pi_value)
+
             # Discriminative models
             for lambda_value in lambda_values:
                 dis.dis_kfold(D, L, K, pca_value, pi_value, lambda_value)
-        # Support Vector Machine
-        svm.svm_kfold(D, L, K, pca_value)
+        
+        # Support Vector Machines
+        for C_value in C_values:
+            for gamma_value in gamma_values:
+                svm.svm_kfold(D, L, K, pca_value, C_value, gamma_value)
+        
         # Gaussian Mixture Models
-        gmm.gmm_kfold(D, L, K, pca_value, True, False, 8, 2)
+        for g0_value in gmm_values:
+            for g1_value in gmm_values:
+                gmm.gmm_kfold(D, L, K, pca_value, g0_value, g1_value)
 
 
 ###############################

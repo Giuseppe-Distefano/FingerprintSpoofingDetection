@@ -13,6 +13,7 @@ import numpy.linalg
 # GLOBAL VARIABLES #
 ####################
 discriminative_training_output = "../output/Training/Discriminative.txt"
+output_csv_name = "../output/Training/Results.csv"
 Cfn = 1
 Cfp = 10
 
@@ -134,6 +135,7 @@ def dis_kfold (D, L, K, pca_value, pi_value, lambda_value):
         (quadratic_logistic_regression, "Quadratic Logistic Regression")
     ]
     output_file = open(discriminative_training_output, "a")
+    output_csv = open(output_csv_name, "a")
     N = int(D.shape[1]/K)
 
     if pca_value==0:
@@ -184,6 +186,9 @@ def dis_kfold (D, L, K, pca_value, pi_value, lambda_value):
         output_file.write("    min DCF: %.3f\n" % (cost))
         output_file.write("\n")
 
+        # Save results in CSV format
+        output_csv.write("%s,%d,%.3f,%.7f,_,_,_,_,%.3f,%.3f,%.5f\n" % (name, pca_value, pi_value, lambda_value, 100.0*accuracy, 100.0*error_rate, cost))
+
         # Print results to console
         print("  %s" % (name))
         print("    Accuracy: %.3f%%" % (100.0*accuracy))
@@ -192,3 +197,5 @@ def dis_kfold (D, L, K, pca_value, pi_value, lambda_value):
         print("\n")
     
     output_file.close()
+    output_csv.close()
+    

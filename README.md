@@ -36,6 +36,22 @@ Folder named *src* contains the code of the project. *main.py* is the main file 
 
 Folder named *teacher* contains all material that professor uploaded for this project.
 
+The file named *output/Training/Results.csv* collects results from all experiments, in order to identify best models and best parameters for training. Columns respect the following schema:
+
+| Hyperparameter | Note |
+|---|---|
+| Name of the model |  |
+| PCA value | 0 if we don't want to apply PCA |
+| &pi; value | Only for generative and discriminative models |
+| &lambda; value | Only for discriminative models |
+| *C* value | Only for SVMs |
+| &gamma; value | Only for SVMs |
+| G0 value | Only for GMMs |
+| G1 value | Only for GMMs |
+| Accuracy |  |
+| Error rate |  |
+| minDCF |  |
+
 ## Usage
 
 To remove existent output data use
@@ -60,7 +76,7 @@ To run code use
 - [x] Dimensionality Reduction
   - [x] PCA (Principal Component Analysis)
   - [x] LDA (Linear Discriminant Analysis)
-- [ ] Training
+- [x] Training
   - [X] Generative models
     - [x] Multi-Variate Gaussian
     - [x] Multi-Variate Gaussian with Tied Covariance
@@ -69,16 +85,16 @@ To run code use
   - [x] Discriminative models
     - [x] Linear Logistic Regression
     - [x] Quadratic Logistic Regression
-  - [ ] Support Vector Machine
+  - [x] Support Vector Machine
     - [x] Linear SVM
     - [x] Quadratic SVM
-    - [ ] Polynomial Kernel SVM
-    - [ ] Raial Basis Function Kernel SVM
-  - [ ] Gaussian Mixture Models
-    - [ ] Full Covariance
-    - [ ] Diagonal Covariance
-    - [ ] Tied Covariance
-    - [ ] Tied Diagonal Covariance
+    - [x] Polynomial Kernel SVM
+    - [x] Radial Basis Function Kernel SVM
+  - [x] Gaussian Mixture Models
+    - [x] Full Covariance
+    - [x] Diagonal Covariance
+    - [x] Tied Covariance
+    - [x] Tied Diagonal Covariance
 - [ ] Calibration
 - [ ] Fusion
 - [ ] Evaluation

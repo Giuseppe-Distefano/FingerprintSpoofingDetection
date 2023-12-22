@@ -4,6 +4,7 @@ clean:
 	rm -rf ../output/DimensionalityReduction/PCA/*.png || true
 	rm -rf ../output/DimensionalityReduction/LDA/*.png || true
 	rm -rf ../output/Training/*.txt || true
+	rm -rf ../output/Training/*.csv || true
 	rm -rf ./modules/__pycache__ || true
 	rm ./tmp.txt || true
 	clear

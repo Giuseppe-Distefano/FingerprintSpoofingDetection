@@ -12,6 +12,7 @@ import modules.pca_lda as dr
 #     GLOBAL VARIABLES    #
 ###########################
 gmm_training_output = "../output/Training/GMM.txt"
+output_csv_name = "../output/Training/Results.csv"
 pi_value = 0.5
 Cfn = 1
 Cfp = 10
@@ -113,44 +114,156 @@ def ML_GMM_LBG (D, weights, means, sigma, num_components, diag, tied):
     return newGMM
 
 
-# ----- GMM classifier -----
-def gmm_classifier (DTR, LTR, DTE, LTE, diag, tied, l0, l1):
+# ----- GMM classifier - Full covariance -----
+def gmm_full_covariance (DTR, LTR, DTE, LTE, g0, g1):
     # Consider only labels=0
     D0 = DTR[:,LTR==0]
-    num_components_0 = len(D0)
     w0 = 1.0
     mu0 = utility.row_to_column(utility.compute_mean(D0))
-    sigma0 = compute_covariance(D0)
-    if diag: sigma0 *= numpy.eye(sigma0.shape[0])
+    sigma0 = utility.compute_covariance(D0)
     U,s,_ = numpy.linalg.svd(sigma0)
     s[s<0.01] = 0.01
     C0 = numpy.dot(U, utility.row_to_column(s)*U.T)
-    gmm0 = ML_GMM_LBG(D0, w0, mu0, C0, l0, diag, tied)
+    gmm0 = ML_GMM_LBG(D0, w0, mu0, C0, g0, False, False)
     _,score0 = logpdf_GMM(DTE, gmm0)
 
     # Consider only labels=1
     D1 = DTR[:,LTR==1]
     w1 = 1.0
     mu1 = utility.row_to_column(utility.compute_mean(D1))
-    sigma1 = compute_covariance(D1)
-    if diag: sigma1 *= numpy.eye(sigma1.shape[0])
+    sigma1 = utility.compute_covariance(D1)
     U,s,_ = numpy.linalg.svd(sigma1)
     s[s<0.01] = 0.01
     C1 = numpy.dot(U, utility.row_to_column(s)*U.T)
-    gmm1 = ML_GMM_LBG(D0, w1, mu1, C1, l1, diag, tied)
+    gmm1 = ML_GMM_LBG(D0, w1, mu1, C1, g1, False, False)
     _,score1 = logpdf_GMM(DTE, gmm1)
 
     # Compute scores and wrong predictions
     scores = numpy.vstack((score0, score1))
     marginals = utility.column_to_row(scipy.special.logsumexp(scores, axis=0))
-    f = np.exp(scores - marginals)
+    f = numpy.exp(scores - marginals)
     wrong_predictions = (f.argmax(0)!=LTE).sum()
     scores = (score1-score0)[0]
 
+    return wrong_predictions, scores
+
+
+# ----- GMM classifier - Diagonal covariance -----
+def gmm_diagonal_covariance (DTR, LTR, DTE, LTE, g0, g1):
+    # Consider only labels=0
+    D0 = DTR[:,LTR==0]
+    w0 = 1.0
+    mu0 = utility.row_to_column(utility.compute_mean(D0))
+    sigma0 = utility.compute_covariance(D0)
+    sigma0 *= numpy.eye(sigma0.shape[0])
+    U,s,_ = numpy.linalg.svd(sigma0)
+    s[s<0.01] = 0.01
+    C0 = numpy.dot(U, utility.row_to_column(s)*U.T)
+    gmm0 = ML_GMM_LBG(D0, w0, mu0, C0, g0, True, False)
+    _,score0 = logpdf_GMM(DTE, gmm0)
+
+    # Consider only labels=1
+    D1 = DTR[:,LTR==1]
+    w1 = 1.0
+    mu1 = utility.row_to_column(utility.compute_mean(D1))
+    sigma1 = utility.compute_covariance(D1)
+    sigma1 *= numpy.eye(sigma1.shape[0])
+    U,s,_ = numpy.linalg.svd(sigma1)
+    s[s<0.01] = 0.01
+    C1 = numpy.dot(U, utility.row_to_column(s)*U.T)
+    gmm1 = ML_GMM_LBG(D0, w1, mu1, C1, g1, True, False)
+    _,score1 = logpdf_GMM(DTE, gmm1)
+
+    # Compute scores and wrong predictions
+    scores = numpy.vstack((score0, score1))
+    marginals = utility.column_to_row(scipy.special.logsumexp(scores, axis=0))
+    f = numpy.exp(scores - marginals)
+    wrong_predictions = (f.argmax(0)!=LTE).sum()
+    scores = (score1-score0)[0]
+
+    return wrong_predictions, scores
+
+
+# ----- GMM classifier - Tied covariance -----
+def gmm_tied_covariance (DTR, LTR, DTE, LTE, g0, g1):
+    # Consider only labels=0
+    D0 = DTR[:,LTR==0]
+    w0 = 1.0
+    mu0 = utility.row_to_column(utility.compute_mean(D0))
+    sigma0 = utility.compute_covariance(D0)
+    U,s,_ = numpy.linalg.svd(sigma0)
+    s[s<0.01] = 0.01
+    C0 = numpy.dot(U, utility.row_to_column(s)*U.T)
+    gmm0 = ML_GMM_LBG(D0, w0, mu0, C0, g0, False, True)
+    _,score0 = logpdf_GMM(DTE, gmm0)
+
+    # Consider only labels=1
+    D1 = DTR[:,LTR==1]
+    w1 = 1.0
+    mu1 = utility.row_to_column(utility.compute_mean(D1))
+    sigma1 = utility.compute_covariance(D1)
+    U,s,_ = numpy.linalg.svd(sigma1)
+    s[s<0.01] = 0.01
+    C1 = numpy.dot(U, utility.row_to_column(s)*U.T)
+    gmm1 = ML_GMM_LBG(D0, w1, mu1, C1, g1, False, True)
+    _,score1 = logpdf_GMM(DTE, gmm1)
+
+    # Compute scores and wrong predictions
+    scores = numpy.vstack((score0, score1))
+    marginals = utility.column_to_row(scipy.special.logsumexp(scores, axis=0))
+    f = numpy.exp(scores - marginals)
+    wrong_predictions = (f.argmax(0)!=LTE).sum()
+    scores = (score1-score0)[0]
+
+    return wrong_predictions, scores
+
+
+# ----- GMM classifier - Tied diagonal covariance -----
+def gmm_tied_diagonal_covariance (DTR, LTR, DTE, LTE, g0, g1):
+    # Consider only labels=0
+    D0 = DTR[:,LTR==0]
+    w0 = 1.0
+    mu0 = utility.row_to_column(utility.compute_mean(D0))
+    sigma0 = utility.compute_covariance(D0)
+    sigma0 *= numpy.eye(sigma0.shape[0])
+    U,s,_ = numpy.linalg.svd(sigma0)
+    s[s<0.01] = 0.01
+    C0 = numpy.dot(U, utility.row_to_column(s)*U.T)
+    gmm0 = ML_GMM_LBG(D0, w0, mu0, C0, g0, True, True)
+    _,score0 = logpdf_GMM(DTE, gmm0)
+
+    # Consider only labels=1
+    D1 = DTR[:,LTR==1]
+    w1 = 1.0
+    mu1 = utility.row_to_column(utility.compute_mean(D1))
+    sigma1 = utility.compute_covariance(D1)
+    sigma1 *= numpy.eye(sigma1.shape[0])
+    U,s,_ = numpy.linalg.svd(sigma1)
+    s[s<0.01] = 0.01
+    C1 = numpy.dot(U, utility.row_to_column(s)*U.T)
+    gmm1 = ML_GMM_LBG(D0, w1, mu1, C1, g1, True, True)
+    _,score1 = logpdf_GMM(DTE, gmm1)
+
+    # Compute scores and wrong predictions
+    scores = numpy.vstack((score0, score1))
+    marginals = utility.column_to_row(scipy.special.logsumexp(scores, axis=0))
+    f = numpy.exp(scores - marginals)
+    wrong_predictions = (f.argmax(0)!=LTE).sum()
+    scores = (score1-score0)[0]
+
+    return wrong_predictions, scores
+
 
 # ----- GMM training -----
-def gmm_kfold (D, L, K, pca_value, diag=False, tied=False, l0=8, l1=2):
+def gmm_kfold (D, L, K, pca_value, g0_value, g1_value):
+    classifiers = [
+        (gmm_full_covariance, "GMM Full Covariance"),
+        (gmm_diagonal_covariance, "GMM Diagonal Covariance"),
+        (gmm_tied_covariance, "GMM Tied Covariance"),
+        (gmm_tied_diagonal_covariance, "GMM Tied Diagonal Covariance")
+    ]
     output_file = open(gmm_training_output, "a")
+    output_csv = open(output_csv_name, "a")
     N = int(D.shape[1]/K)
 
     if pca_value==0:
@@ -160,50 +273,56 @@ def gmm_kfold (D, L, K, pca_value, diag=False, tied=False, l0=8, l1=2):
         output_file.write("PCA: %d" % (pca_value))
         print("PCA: %d" % (pca_value))
 
-    wrong_predictions = 0
-    scores = []
-    labels = []
-    indexes = numpy.random.permutation(D.shape[1])
+    for j,(fun,name) in enumerate(classifiers):
+        wrong_predictions = 0
+        numpy.random.seed(j)
+        scores = []
+        labels = []
+        indexes = numpy.random.permutation(D.shape[1])
 
-    for i in range(K):
-        # Select which subset to use for evaluation
-        idxTest = indexes[i*N:(i+1)*N]
-        if i>0: idxTrainLeft = indexes[0:i*N]
-        elif (i+1)<K: idxTrainRight = indexes[(i+1)*N:]
-        if i==0: idxTrain = idxTrainRight
-        elif (i+1)==K: idxTrain = idxTrainLeft
-        else: idxTrain = numpy.hstack([idxTrainLeft, idxTrainRight])
-        DTR,LTR = D[:,idxTrain], L[idxTrain]
-        DTE,LTE = D[:,idxTest], L[idxTest]
+        for i in range(K):
+            # Select which subset to use for evaluation
+            idxTest = indexes[i*N:(i+1)*N]
+            if i>0: idxTrainLeft = indexes[0:i*N]
+            elif (i+1)<K: idxTrainRight = indexes[(i+1)*N:]
+            if i==0: idxTrain = idxTrainRight
+            elif (i+1)==K: idxTrain = idxTrainLeft
+            else: idxTrain = numpy.hstack([idxTrainLeft, idxTrainRight])
+            DTR,LTR = D[:,idxTrain], L[idxTrain]
+            DTE,LTE = D[:,idxTest], L[idxTest]
 
-        # Apply PCA if necessary
-        if pca_value!=0:
-            P = dr.apply_pca(DTR, LTR, pca_value)
-            DTR,DTE = numpy.dot(P.T, DTR), numpy.dot(P.T, DTE)
+            # Apply PCA if necessary
+            if pca_value!=0:
+                P = dr.apply_pca(DTR, LTR, pca_value)
+                DTR,DTE = numpy.dot(P.T, DTR), numpy.dot(P.T, DTE)
+            
+            # Apply classifier
+            wrong, score = fun(DTR, LTR, DTE, LTE, g0_value, g1_value)
+            wrong_predictions += wrong
+            scores.append(score)
+            labels.append(LTE)
         
-        # Apply classifier
-        wrong, score = gmm_classifier(DTR, LTR, DTE, LTE, diag, tied, l0, l1)
-        wrong_predictions += wrong
-        scores.append(score)
-        labels.append(LTE)
-    
-    # Evaluate accuracy and error rate
-    error_rate = wrong_predictions / D.shape[1]
-    accuracy = 1 - error_rate
-    cost = dcf.compute_min_DCF(pi_value, Cfn, Cfp, numpy.hstack(scores), numpy.hstack(labels))
+        # Evaluate accuracy and error rate
+        error_rate = wrong_predictions / D.shape[1]
+        accuracy = 1 - error_rate
+        cost = dcf.compute_min_DCF(pi_value, Cfn, Cfp, numpy.hstack(scores), numpy.hstack(labels))
 
-    # Save results to file
-    output_file.write("  %s\n" % (name))
-    output_file.write("    Accuracy: %.3f%%\n" % (100.0*accuracy))
-    output_file.write("    Error rate: %.3f%%\n" % (100.0*error_rate))
-    output_file.write("    min DCF: %.3f\n" % (cost))
-    output_file.write("\n")
+        # Save results to file
+        output_file.write("  %s\n" % (name))
+        output_file.write("    Accuracy: %.3f%%\n" % (100.0*accuracy))
+        output_file.write("    Error rate: %.3f%%\n" % (100.0*error_rate))
+        output_file.write("    min DCF: %.3f\n" % (cost))
+        output_file.write("\n")
 
-    # Print results to console
-    print("  %s" % (name))
-    print("    Accuracy: %.3f%%" % (100.0*accuracy))
-    print("    Error rate: %.3f%%" % (100.0*error_rate))
-    print("    min DCF: %.3f\n" % (cost))
-    print("\n")
+        # Save results in CSV format
+        output_csv.write("%s,%d,_,_,_,_,%d,%d,%.3f,%.3f,%.5f\n" % (name, pca_value, g0_value, g1_value, 100.0*accuracy, 100.0*error_rate, cost))
+
+        # Print results to console
+        print("  %s" % (name))
+        print("    Accuracy: %.3f%%" % (100.0*accuracy))
+        print("    Error rate: %.3f%%" % (100.0*error_rate))
+        print("    min DCF: %.3f\n" % (cost))
+        print("\n")
 
     output_file.close()
+    output_csv.close()

@@ -11,6 +11,7 @@ import modules.costs as dcf
 # GLOBAL VARIABLES #
 ####################
 generative_training_output = "../output/Training/Generative.txt"
+output_csv_name = "../output/Training/Results.csv"
 Cfn = 1
 Cfp = 10
 
@@ -117,6 +118,7 @@ def gen_kfold (D, L, K, pca_value, pi_value):
         (tied_naive_bayes, "Naive Bayes with tied covariance")
     ]
     output_file = open(generative_training_output, "a")
+    output_csv = open(output_csv_name, "a")
     N = int(D.shape[1]/K)
     C = 1
 
@@ -168,6 +170,9 @@ def gen_kfold (D, L, K, pca_value, pi_value):
         output_file.write("    min DCF: %.3f\n" % (cost))
         output_file.write("\n")
 
+        # Save results in CSV format
+        output_csv.write("%s,%d,%.3f,_,_,_,_,_,%.3f,%.3f,%.5f\n" % (name, pca_value, pi_value, 100.0*accuracy, 100.0*error_rate, cost))
+
         # Print results to console
         print("  %s" % (name))
         print("    Accuracy: %.3f%%" % (100.0*accuracy))
@@ -176,3 +181,5 @@ def gen_kfold (D, L, K, pca_value, pi_value):
         print("\n")
 
     output_file.close()
+    output_csv.close()
+    

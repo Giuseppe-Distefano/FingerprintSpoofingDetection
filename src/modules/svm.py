@@ -12,10 +12,10 @@ import modules.pca_lda as dr
 # GLOBAL VARIABLES #
 ####################
 svm_training_output = "../output/Training/SVM.txt"
+output_csv_name = "../output/Training/Results.csv"
 pi_value = 0.5
 Cfn = 1
 Cfp = 10
-C = 1
 
 
 ####################
@@ -55,6 +55,39 @@ def compute_kernel_H (D, L, K):
     return z,H
 
 
+# ----- ___ -----
+def compute_polynomial_kernel_H (D, L, c, d, K):
+    # Assign a class label to each sample
+    z = numpy.zeros(len(L))
+    for i in range(len(L)):
+        if (L[i]==0): z[i] = -1
+        else: z[i] = 1
+    
+    ker = (numpy.dot(D.T, D)+c)**d + K**2
+    p1 = numpy.dot(utility.row_to_column(z), utility.column_to_row(z))
+    H = p1 * ker
+
+    return z,H
+
+
+# ----- ___ -----
+def compute_radial_kernel_H (D, L, gamma, K):
+    # Assign a class label to each sample
+    z = numpy.zeros(len(L))
+    for i in range(len(L)):
+        if (L[i]==0): z[i] = -1
+        else: z[i] = 1
+
+    ker = numpy.zeros((D.shape[1], D.shape[1]))
+    for i in range(D.shape[1]):
+        for j in range(D.shape[1]):
+            ker[i,j] = numpy.exp(-gamma * (numpy.linalg.norm(D[:,i]-D[:,j])**2)) + K**2
+    p1 = numpy.dot(utility.row_to_column(z), utility.column_to_row(z))
+    H = p1 * ker
+
+    return z,H
+
+
 # ----- Compute gradient -----
 def compute_gradient (a, H):
     p1 = numpy.dot(H, utility.row_to_column(a))
@@ -64,7 +97,7 @@ def compute_gradient (a, H):
 
 
 # ----- Optimal dual solution -----
-def minimize_dual (D, z, H):
+def minimize_dual (D, z, H, C):
     bounds = [(0,C)] * D.shape[1]
     alpha, dual, _ = scipy.optimize.fmin_l_bfgs_b(compute_gradient, numpy.zeros(D.shape[1]), args=(H,), bounds=bounds, factr=1.0)
     return alpha, -dual
@@ -95,28 +128,57 @@ def primal_model_kernel (DTR, alpha, z, K, DTE, LTE):
 
 
 # ----- Linear SVM ---
-def linear_svm (DTR, LTR, DTE, LTE, K):
+def linear_svm (DTR, LTR, DTE, LTE, K, C, gamma):
     D,z,H = compute_modified_H(DTR, LTR, K)
-    alpha, dual = minimize_dual(D, z, H)
+    alpha, dual = minimize_dual(D, z, H, C)
     wrong, scores = primal_model(D, alpha, z, K, DTE, LTE)
     return wrong, scores
 
 
 # ----- Quadratic SVM -----
-def quadratic_svm (DTR, LTR, DTE, LTE, K):
+def quadratic_svm (DTR, LTR, DTE, LTE, K, C, gamma):
     z,H = compute_kernel_H(DTR, LTR, K)
-    alpha, dual = minimize_dual(DTR, z, H)
+    alpha, dual = minimize_dual(DTR, z, H, C)
     wrong, scores = primal_model_kernel(DTR, alpha, z, K, DTE, LTE)
     return wrong, scores
 
 
+# ----- Polynomial Kernel SVM -----
+def polynomial_kernel_svm (DTR, LTR, DTE, LTE, K, C, gamma):
+    c = 1
+    d = 2
+    z,H = compute_polynomial_kernel_H(DTR, LTR, c, d, K)
+    alpha, dual = minimize_dual(DTR, z, H, C)
+    scores = numpy.sum(numpy.dot(utility.column_to_row(alpha*z), (numpy.dot(DTR.T, DTE)+c)**d+K), axis=0)
+    predicted_labels = 1*(scores>0)
+    wrong = numpy.array(predicted_labels!=LTE).sum()
+    return wrong, scores
+
+
+# ----- Radial Basis Function Kernel SVM -----
+def radial_kernel_svm (DTR, LTR, DTE, LTE, K, C, gamma):
+    z,H = compute_radial_kernel_H(DTR, LTR, gamma, K)
+    alpha, dual = minimize_dual(DTR, z, H, C)
+    ker = numpy.zeros((DTR.shape[1], DTR.shape[1]))
+    for i in range(DTR.shape[1]):
+        for j in range(DTR.shape[1]):
+            ker[i,j] = numpy.exp(-gamma * (numpy.linalg.norm(DTR[:,i]-DTE[:,j])**2)) + K**2
+    scores = numpy.sum(numpy.dot((utility.column_to_row(alpha*z)), ker), axis=0)
+    predicted_labels = 1*(scores>0)
+    wrong = numpy.array(predicted_labels!=LTE).sum()
+    return wrong, scores
+
+
 # ----- Train model using K-Fold -----
-def svm_kfold (D, L, K, pca_value):
+def svm_kfold (D, L, K, pca_value, C_value, gamma_value):
     classifiers = [
         (linear_svm, "Linear SVM"),
-        (quadratic_svm, "Quadratic SVM")
+        (quadratic_svm, "Quadratic SVM"),
+        (polynomial_kernel_svm, "Polynomial Kernel SVM"),
+        (radial_kernel_svm, "Radial Basis Function Kernel SVM")
     ]
     output_file = open(svm_training_output, "a")
+    output_csv = open(output_csv_name, "a")
     N = int(D.shape[1]/K)
 
     if pca_value==0:
@@ -150,7 +212,7 @@ def svm_kfold (D, L, K, pca_value):
                 DTR,DTE = numpy.dot(P.T, DTR), numpy.dot(P.T, DTE)
             
             # Apply classifier
-            wrong, scores = fun(DTR, LTR, DTE, LTE, K)
+            wrong, scores = fun(DTR, LTR, DTE, LTE, K, C_value, gamma_value)
             wrong_predictions += wrong
             ll_ratios.append(scores)
             labels.append(LTE)
@@ -167,6 +229,9 @@ def svm_kfold (D, L, K, pca_value):
         output_file.write("    min DCF: %.3f\n" % (cost))
         output_file.write("\n")
 
+        # Save results in CSV format
+        output_csv.write("%s,%d,_,_,%.5f,%.5f,_,_,%.3f,%.3f,%.5f\n" % (name, pca_value, C_value, gamma_value, 100.0*accuracy, 100.0*error_rate, cost))
+
         # Print results to console
         print("  %s" % (name))
         print("    Accuracy: %.3f%%" % (100.0*accuracy))
@@ -175,3 +240,5 @@ def svm_kfold (D, L, K, pca_value):
         print("\n")
 
     output_file.close()
+    output_csv.close()
+    
