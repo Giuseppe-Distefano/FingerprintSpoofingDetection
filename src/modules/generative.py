@@ -153,7 +153,7 @@ def gen_kfold (D, L, K, pca_value, pi_value):
                 DTR,DTE = numpy.dot(P.T, DTR), numpy.dot(P.T, DTE)
 
             # Apply classifier
-            wrong, llr = fun(DTR, LTR, DTE, LTE, K, C)
+            wrong, llr = fun(DTR, LTR, DTE, LTE)
             wrong_predictions += wrong
             ll_ratios.append(llr)
             labels.append(LTE)

@@ -48,7 +48,7 @@ def ML_GMM_iteration(D, gmm, diag, tied):
         LL = numpy.vstack(componentsLL)
 
         posterior = numpy.exp(LL - scipy.special.logsumexp(LL, axis=0))
-        oldLL = LL
+        oldLL = prevLL
         prevLL = scipy.special.logsumexp(LL, axis=0).sum() / D.shape[1]
         
         if oldLL is not None: deltaLL = prevLL - oldLL
@@ -57,6 +57,7 @@ def ML_GMM_iteration(D, gmm, diag, tied):
         updatedGMM = []
         for i in range(posterior.shape[0]):
             Z = posterior[i].sum()
+            if Z==0: continue
             F = (posterior[i:i+1, :]*D).sum(1)
             S = numpy.dot((posterior[i:i+1, :])*D, D.T)
             new_weight = Z / D.shape[1]
@@ -66,9 +67,10 @@ def ML_GMM_iteration(D, gmm, diag, tied):
             if tied:
                 c = 0
                 for j in range(posterior.shape[0]):
-                    Z = post[j].sum()
-                    F = (post[j:j+1, :]*D).sum(1)
-                    S = numpy.dot((post[j:j+1, :])*D, D.T)
+                    Z = posterior[j].sum()
+                    if Z==0: continue
+                    F = (posterior[j:j+1, :]*D).sum(1)
+                    S = numpy.dot((posterior[j:j+1, :])*D, D.T)
                     c += (Z * (S/Z-numpy.dot(utility.row_to_column(F/Z), utility.row_to_column(F/Z).T)))
                 new_sigma = 1 / D.shape[1] * c
             
@@ -80,13 +82,12 @@ def ML_GMM_iteration(D, gmm, diag, tied):
             updatedGMM.append((new_weight, new_mean, new_sigma))
                 
         gmm = updatedGMM
-        log_LL = []
-        for w,mu,C in gmm:
-            ll = utility.logpdf_GAU_ND(D, mu, C) + numpy.log(w)
-            log_LL.append(utility.column_to_row(ll))
-        LL = numpy.vstack(log_LL)
-        post = LL - scipy.special.logsumexp(LL, axis=0)
-        post = numpy.exp(post)
+        componentsLL = []
+        for weight,mean,sigma in gmm:
+            ll = utility.logpdf_GAU_ND(D, mean, sigma) + numpy.log(weight)
+            componentsLL.append(utility.column_to_row(ll))
+        LL = numpy.vstack(componentsLL)
+        posterior = numpy.exp(LL - scipy.special.logsumexp(LL, axis=0))
         oldLL = prevLL
         prevLL = scipy.special.logsumexp(LL, axis=0).sum() / D.shape[1]
         deltaLL = prevLL - oldLL
@@ -95,14 +96,14 @@ def ML_GMM_iteration(D, gmm, diag, tied):
 
 
 # ----- ___ -----
-def ML_GMM_LBG (D, weights, means, sigma, num_components, diag, tied):
+def ML_GMM_LBG (D, weights, means, sigma, G, diag, tied):
     gmm = [(weights,means,sigma)]
-    newGMM = []
 
-    while len(gmm)<=num_components:
+    while len(gmm)<=G:
         if len(gmm)!=1: gmm = ML_GMM_iteration(D, gmm, diag, tied)
-        if len(gmm)==num_components: break
+        if len(gmm)==G: break
 
+        newGMM = []
         for(weight, mu, sigma) in gmm:
             U,s,_ = numpy.linalg.svd(sigma)
             s[s<0.01] = 0.01
@@ -110,8 +111,9 @@ def ML_GMM_LBG (D, weights, means, sigma, num_components, diag, tied):
             
             newGMM.append((weight*0.5, mu+s[0]**0.5*U[:, 0:1]*0.1, sigma)) 
             newGMM.append((weight*0.5, mu-s[0]**0.5*U[:, 0:1]*0.1, sigma))
+        gmm = newGMM
 
-    return newGMM
+    return gmm
 
 
 # ----- GMM classifier - Full covariance -----
@@ -135,7 +137,7 @@ def gmm_full_covariance (DTR, LTR, DTE, LTE, g0, g1):
     U,s,_ = numpy.linalg.svd(sigma1)
     s[s<0.01] = 0.01
     C1 = numpy.dot(U, utility.row_to_column(s)*U.T)
-    gmm1 = ML_GMM_LBG(D0, w1, mu1, C1, g1, False, False)
+    gmm1 = ML_GMM_LBG(D1, w1, mu1, C1, g1, False, False)
     _,score1 = logpdf_GMM(DTE, gmm1)
 
     # Compute scores and wrong predictions
@@ -171,7 +173,7 @@ def gmm_diagonal_covariance (DTR, LTR, DTE, LTE, g0, g1):
     U,s,_ = numpy.linalg.svd(sigma1)
     s[s<0.01] = 0.01
     C1 = numpy.dot(U, utility.row_to_column(s)*U.T)
-    gmm1 = ML_GMM_LBG(D0, w1, mu1, C1, g1, True, False)
+    gmm1 = ML_GMM_LBG(D1, w1, mu1, C1, g1, True, False)
     _,score1 = logpdf_GMM(DTE, gmm1)
 
     # Compute scores and wrong predictions
@@ -205,7 +207,7 @@ def gmm_tied_covariance (DTR, LTR, DTE, LTE, g0, g1):
     U,s,_ = numpy.linalg.svd(sigma1)
     s[s<0.01] = 0.01
     C1 = numpy.dot(U, utility.row_to_column(s)*U.T)
-    gmm1 = ML_GMM_LBG(D0, w1, mu1, C1, g1, False, True)
+    gmm1 = ML_GMM_LBG(D1, w1, mu1, C1, g1, False, True)
     _,score1 = logpdf_GMM(DTE, gmm1)
 
     # Compute scores and wrong predictions
@@ -241,13 +243,13 @@ def gmm_tied_diagonal_covariance (DTR, LTR, DTE, LTE, g0, g1):
     U,s,_ = numpy.linalg.svd(sigma1)
     s[s<0.01] = 0.01
     C1 = numpy.dot(U, utility.row_to_column(s)*U.T)
-    gmm1 = ML_GMM_LBG(D0, w1, mu1, C1, g1, True, True)
+    gmm1 = ML_GMM_LBG(D1, w1, mu1, C1, g1, True, True)
     _,score1 = logpdf_GMM(DTE, gmm1)
 
     # Compute scores and wrong predictions
-    scores = numpy.vstack((score0, score1))
-    marginals = utility.column_to_row(scipy.special.logsumexp(scores, axis=0))
-    f = numpy.exp(scores - marginals)
+    joint = numpy.vstack((score0, score1))
+    marginals = utility.column_to_row(scipy.special.logsumexp(joint, axis=0))
+    f = numpy.exp(joint - marginals)
     wrong_predictions = (f.argmax(0)!=LTE).sum()
     scores = (score1-score0)[0]
 
@@ -267,11 +269,11 @@ def gmm_kfold (D, L, K, pca_value, g0_value, g1_value):
     N = int(D.shape[1]/K)
 
     if pca_value==0:
-        output_file.write("No PCA")
-        print("No PCA")
+        output_file.write("No PCA, G0: %d, G1: %d\n" % (g0_value, g1_value))
+        print("No PCA, G0: %d, G1: %d\n" % (g0_value, g1_value))
     else:
-        output_file.write("PCA: %d" % (pca_value))
-        print("PCA: %d" % (pca_value))
+        output_file.write("PCA: %d, G0: %d, G1: %d\n" % (pca_value, g0_value, g1_value))
+        print("PCA: %d, G0: %d, G1: %d\n" % (pca_value, g0_value, g1_value))
 
     for j,(fun,name) in enumerate(classifiers):
         wrong_predictions = 0

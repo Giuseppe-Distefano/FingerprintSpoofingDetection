@@ -54,11 +54,25 @@ The file named *output/Training/Results.csv* collects results from all experimen
 
 ## Usage
 
-To remove existent output data use
+To remove existent output files use
 
 ```bash
     cd src/
-    make clean
+    make clean_files
+```
+
+To remove all output use
+
+```bash
+    cd src/
+    make clean_all
+```
+
+To add output folders before running code use
+
+```bash
+    cd src/
+    make setup
 ```
 
 To run code use

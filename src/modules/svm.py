@@ -159,9 +159,9 @@ def polynomial_kernel_svm (DTR, LTR, DTE, LTE, K, C, gamma):
 def radial_kernel_svm (DTR, LTR, DTE, LTE, K, C, gamma):
     z,H = compute_radial_kernel_H(DTR, LTR, gamma, K)
     alpha, dual = minimize_dual(DTR, z, H, C)
-    ker = numpy.zeros((DTR.shape[1], DTR.shape[1]))
+    ker = numpy.zeros((DTR.shape[1], DTE.shape[1]))
     for i in range(DTR.shape[1]):
-        for j in range(DTR.shape[1]):
+        for j in range(DTE.shape[1]):
             ker[i,j] = numpy.exp(-gamma * (numpy.linalg.norm(DTR[:,i]-DTE[:,j])**2)) + K**2
     scores = numpy.sum(numpy.dot((utility.column_to_row(alpha*z)), ker), axis=0)
     predicted_labels = 1*(scores>0)
@@ -182,11 +182,11 @@ def svm_kfold (D, L, K, pca_value, C_value, gamma_value):
     N = int(D.shape[1]/K)
 
     if pca_value==0:
-        output_file.write("No PCA\n")
-        print("No PCA\n")
+        output_file.write("No PCA, C: %.5f, gamma: %.5f\n" % (C_value, gamma_value))
+        print("No PCA, C: %.5f, gamma: %.5f\n" % (C_value, gamma_value))
     else:
-        output_file.write("PCA: %d\n" % (pca_value))
-        print("PCA: %d\n" % (pca_value))
+        output_file.write("PCA: %d, C: %.5f, gamma: %.5f\n" % (pca_value, C_value, gamma_value))
+        print("PCA: %d, C: %.5f, gamma: %.5f\n" % (pca_value, C_value, gamma_value))
 
     for j,(fun,name) in enumerate(classifiers):
         wrong_predictions = 0

@@ -17,6 +17,7 @@ pi_t = 0.5
 Cfn = 1
 Cfp = 10
 effective_prior = (pi_t*Cfn) / (pi_t*Cfn + (1-pi_t)*Cfp)
+output_csv_name = "../output/Training/Results.csv"
 
 
 #####################
@@ -45,6 +46,10 @@ def dimensionality_reduction (D, L):
 # ----- Train model -----
 def train_model (D, L):
     K = 5
+
+    output_csv = open(output_csv_name, "w")
+    output_csv.write("Model,PCA,pi,lambda,C,gamma,G0,G1,Accuracy,Error rate,minDCF")
+    output_csv.close()
     
     pca_values = [0, 9, 8, 7, 6, 5]         # value=0 when we don't apply PCA
     pi_values = [0.1, 0.5, 0.9, effective_prior]
