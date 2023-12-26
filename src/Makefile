@@ -30,5 +30,4 @@ setup:
 
 run:
 	python3 main.py
-	clear
 	

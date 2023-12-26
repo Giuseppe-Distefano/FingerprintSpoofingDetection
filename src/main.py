@@ -8,6 +8,7 @@ import modules.dataset as dataset
 import modules.pca_lda as dr
 import modules.svm as svm
 import modules.gmm as gmm
+import csv
 
 
 ####################
@@ -31,7 +32,7 @@ def load_dataset ():
 
 
 # ----- Analysis of features -----
-def features__analysis (DTR, LTR):
+def features_analysis (DTR, LTR):
     dataset.plot_histograms(DTR, LTR)
     dataset.plot_heatmaps(DTR, LTR)
 
@@ -48,7 +49,7 @@ def train_model (D, L):
     K = 5
 
     output_csv = open(output_csv_name, "w")
-    output_csv.write("Model,PCA,pi,lambda,C,gamma,G0,G1,Accuracy,Error rate,minDCF")
+    output_csv.write("Model,PCA,pi,lambda,C,gamma,G0,G1,Accuracy,Error rate,minDCF\n")
     output_csv.close()
     
     pca_values = [0, 9, 8, 7, 6, 5]         # value=0 when we don't apply PCA
@@ -58,12 +59,12 @@ def train_model (D, L):
     C_values = [1e-4, 1e-3, 1e-2, 1e-1, 1e+0]
     gamma_values = [1e-4, 1e-3, 1e-2, 1e-1, 1e+0]
     
-    pca_values = [0, 9]                     # value=0 when we don't apply PCA
-    pi_values = [0.1, 0.5]
-    lambda_values = [1e-6, 1e-1]
-    gmm_values = [2, 8]
-    C_values = [1e-2, 1e+0]
-    gamma_values = [1e-3, 1e-1]
+    # pca_values = [0, 9]                     # value=0 when we don't apply PCA
+    # pi_values = [0.1, 0.5]
+    # lambda_values = [1e-6, 1e-1]
+    # gmm_values = [2, 8]
+    # C_values = [1e-2, 1e+0]
+    # gamma_values = [1e-3, 1e-1]
 
     for pca_value in pca_values:
         for pi_value in pi_values:
@@ -85,11 +86,36 @@ def train_model (D, L):
                 gmm.gmm_kfold(D, L, K, pca_value, g0_value, g1_value)
 
 
+# ----- Select the three best models and train them -----
+def train_top3_models (D, L):
+    # Sort results basing on minDCF
+    with open("../output/Training/Results.csv", "r") as file:
+        reader = csv.DictReader(file)
+        next(reader)
+        lines = list(reader)
+    sorted_lines = sorted(lines, key=lambda x: float(x["minDCF"]), reverse=False)
+    
+    # Store ranking on a new CSV file
+    fieldnames = ["Model", "PCA", "pi", "lambda", "C", "gamma", "G0", "G1", "Accuracy", "Error rate", "minDCF"]
+    with open("../output/Training/SortedResults.csv", "w+") as file:
+        file.write("Model,PCA,pi,lambda,C,gamma,G0,G1,Accuracy,Error rate,minDCF\n")
+        writer = csv.DictWriter(file, fieldnames=fieldnames)
+        writer.writerows(sorted_lines)
+    
+    best_models = sorted_lines[:3]
+    for model in best_models:
+        print("%s \n" % model)
+
+
 ###############################
 ##### MAIN OF THE PROGRAM #####
 ###############################
 if __name__ == "__main__":
+    # --- Dataset analysis ---
     (DTR,LTR), (DTE,LTE) = load_dataset()    
-    features__analysis(DTR, LTR)
+    features_analysis(DTR, LTR)
     dimensionality_reduction(DTR, LTR)
-    train_model(DTR, LTR)
+
+    # --- Training ---
+    # train_model(DTR, LTR)
+    train_top3_models(DTR, LTR)
