@@ -55,7 +55,7 @@ def train_model (D, L):
     pca_values = [0, 9, 8, 7, 6, 5]         # value=0 when we don't apply PCA
     pi_values = [0.1, 0.5, 0.9, effective_prior]
     lambda_values = [1e-6, 1e-4, 1e-3, 1e-1, 1e+0, 1e+1, 1e+2]
-    gmm_values = [1, 2, 4, 8]
+    gmm_values = [2, 4, 8]
     C_values = [1e-4, 1e-3, 1e-2, 1e-1, 1e+0]
     gamma_values = [1e-4, 1e-3, 1e-2, 1e-1, 1e+0]
     
@@ -81,9 +81,11 @@ def train_model (D, L):
                 svm.svm_kfold(D, L, K, pca_value, C_value, gamma_value)
         
         # Gaussian Mixture Models
-        for g0_value in gmm_values:
-            for g1_value in gmm_values:
-                gmm.gmm_kfold(D, L, K, pca_value, g0_value, g1_value)
+        if pca_value!=8 and pca_value!=6:
+            for g0_value in gmm_values:
+                for g1_value in gmm_values:
+                    if g0_value>g1_value:
+                        gmm.gmm_kfold(D, L, K, pca_value, g0_value, g1_value)
 
 
 # ----- Select the three best models and train them -----

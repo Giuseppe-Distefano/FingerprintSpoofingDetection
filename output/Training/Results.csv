@@ -171,70 +171,6 @@ Linear SVM,0,_,_,1.00000,1.00000,_,_,91.226,8.774,0.47088
 Quadratic SVM,0,_,_,1.00000,1.00000,_,_,79.527,20.473,0.57541
 Polynomial Kernel SVM,0,_,_,1.00000,1.00000,_,_,77.075,22.925,0.38418
 Radial Basis Function Kernel SVM,0,_,_,1.00000,1.00000,_,_,86.280,13.720,0.39000
-GMM Full Covariance,0,_,_,_,_,1,1,89.892,10.108,0.55391
-GMM Diagonal Covariance,0,_,_,_,_,1,1,88.946,11.054,0.57424
-GMM Tied Covariance,0,_,_,_,_,1,1,89.763,10.237,0.55641
-GMM Tied Diagonal Covariance,0,_,_,_,_,1,1,88.774,11.226,0.58201
-GMM Full Covariance,0,_,_,_,_,1,2,79.484,20.516,0.99270
-GMM Diagonal Covariance,0,_,_,_,_,1,2,81.376,18.624,0.97643
-GMM Tied Covariance,0,_,_,_,_,1,2,80.129,19.871,0.95434
-GMM Tied Diagonal Covariance,0,_,_,_,_,1,2,80.688,19.312,0.95650
-GMM Full Covariance,0,_,_,_,_,1,4,75.656,24.344,1.00000
-GMM Diagonal Covariance,0,_,_,_,_,1,4,72.258,27.742,1.00000
-GMM Tied Covariance,0,_,_,_,_,1,4,75.527,24.473,0.99250
-GMM Tied Diagonal Covariance,0,_,_,_,_,1,4,76.903,23.097,1.00000
-GMM Full Covariance,0,_,_,_,_,1,8,67.269,32.731,1.00000
-GMM Diagonal Covariance,0,_,_,_,_,1,8,65.892,34.108,1.00000
-GMM Tied Covariance,0,_,_,_,_,1,8,71.355,28.645,0.99875
-GMM Tied Diagonal Covariance,0,_,_,_,_,1,8,72.602,27.398,1.00000
-GMM Full Covariance,0,_,_,_,_,2,1,92.215,7.785,0.38084
-GMM Diagonal Covariance,0,_,_,_,_,2,1,89.376,10.624,0.56639
-GMM Tied Covariance,0,_,_,_,_,2,1,91.699,8.301,0.46326
-GMM Tied Diagonal Covariance,0,_,_,_,_,2,1,89.204,10.796,0.58480
-GMM Full Covariance,0,_,_,_,_,2,2,87.441,12.559,0.68490
-GMM Diagonal Covariance,0,_,_,_,_,2,2,82.796,17.204,0.83615
-GMM Tied Covariance,0,_,_,_,_,2,2,86.065,13.935,0.72262
-GMM Tied Diagonal Covariance,0,_,_,_,_,2,2,81.806,18.194,0.86678
-GMM Full Covariance,0,_,_,_,_,2,4,83.355,16.645,0.95736
-GMM Diagonal Covariance,0,_,_,_,_,2,4,74.581,25.419,1.00000
-GMM Tied Covariance,0,_,_,_,_,2,4,82.194,17.806,0.87770
-GMM Tied Diagonal Covariance,0,_,_,_,_,2,4,79.097,20.903,0.99467
-GMM Full Covariance,0,_,_,_,_,2,8,70.925,29.075,1.00000
-GMM Diagonal Covariance,0,_,_,_,_,2,8,67.699,32.301,1.00000
-GMM Tied Covariance,0,_,_,_,_,2,8,77.204,22.796,0.93680
-GMM Tied Diagonal Covariance,0,_,_,_,_,2,8,76.301,23.699,0.97711
-GMM Full Covariance,0,_,_,_,_,4,1,93.763,6.237,0.30553
-GMM Diagonal Covariance,0,_,_,_,_,4,1,90.237,9.763,0.54580
-GMM Tied Covariance,0,_,_,_,_,4,1,93.634,6.366,0.31086
-GMM Tied Diagonal Covariance,0,_,_,_,_,4,1,89.419,10.581,0.56828
-GMM Full Covariance,0,_,_,_,_,4,2,87.312,12.688,0.50484
-GMM Diagonal Covariance,0,_,_,_,_,4,2,86.022,13.978,0.72607
-GMM Tied Covariance,0,_,_,_,_,4,2,86.452,13.548,0.53020
-GMM Tied Diagonal Covariance,0,_,_,_,_,4,2,84.344,15.656,0.68490
-GMM Full Covariance,0,_,_,_,_,4,4,84.258,15.742,0.87795
-GMM Diagonal Covariance,0,_,_,_,_,4,4,76.903,23.097,1.00000
-GMM Tied Covariance,0,_,_,_,_,4,4,83.355,16.645,0.72463
-GMM Tied Diagonal Covariance,0,_,_,_,_,4,4,80.129,19.871,0.76584
-GMM Full Covariance,0,_,_,_,_,4,8,72.946,27.054,1.00000
-GMM Diagonal Covariance,0,_,_,_,_,4,8,69.290,30.710,1.00000
-GMM Tied Covariance,0,_,_,_,_,4,8,78.667,21.333,0.79836
-GMM Tied Diagonal Covariance,0,_,_,_,_,4,8,78.280,21.720,0.78027
-GMM Full Covariance,0,_,_,_,_,8,1,93.161,6.839,0.37588
-GMM Diagonal Covariance,0,_,_,_,_,8,1,89.591,10.409,0.57145
-GMM Tied Covariance,0,_,_,_,_,8,1,92.860,7.140,0.35928
-GMM Tied Diagonal Covariance,0,_,_,_,_,8,1,90.366,9.634,0.47832
-GMM Full Covariance,0,_,_,_,_,8,2,87.140,12.860,0.62668
-GMM Diagonal Covariance,0,_,_,_,_,8,2,84.860,15.140,0.88141
-GMM Tied Covariance,0,_,_,_,_,8,2,85.978,14.022,0.61266
-GMM Tied Diagonal Covariance,0,_,_,_,_,8,2,86.065,13.935,0.63803
-GMM Full Covariance,0,_,_,_,_,8,4,84.172,15.828,0.88504
-GMM Diagonal Covariance,0,_,_,_,_,8,4,76.516,23.484,1.00000
-GMM Tied Covariance,0,_,_,_,_,8,4,82.753,17.247,0.79336
-GMM Tied Diagonal Covariance,0,_,_,_,_,8,4,82.151,17.849,0.73053
-GMM Full Covariance,0,_,_,_,_,8,8,72.344,27.656,1.00000
-GMM Diagonal Covariance,0,_,_,_,_,8,8,69.634,30.366,1.00000
-GMM Tied Covariance,0,_,_,_,_,8,8,79.054,20.946,0.84525
-GMM Tied Diagonal Covariance,0,_,_,_,_,8,8,79.957,20.043,0.77111
 MVG,9,0.100,_,_,_,_,_,94.366,5.634,0.60928
 MVG with tied covariance,9,0.100,_,_,_,_,_,90.882,9.118,0.71777
 Naive Bayes,9,0.100,_,_,_,_,_,94.194,5.806,0.74830
@@ -407,70 +343,6 @@ Linear SVM,9,_,_,1.00000,1.00000,_,_,91.226,8.774,0.48994
 Quadratic SVM,9,_,_,1.00000,1.00000,_,_,84.086,15.914,0.40213
 Polynomial Kernel SVM,9,_,_,1.00000,1.00000,_,_,81.118,18.882,0.61287
 Radial Basis Function Kernel SVM,9,_,_,1.00000,1.00000,_,_,86.280,13.720,0.38500
-GMM Full Covariance,9,_,_,_,_,1,1,89.333,10.667,0.55078
-GMM Diagonal Covariance,9,_,_,_,_,1,1,87.140,12.860,0.55984
-GMM Tied Covariance,9,_,_,_,_,1,1,89.720,10.280,0.54205
-GMM Tied Diagonal Covariance,9,_,_,_,_,1,1,87.140,12.860,0.56887
-GMM Full Covariance,9,_,_,_,_,1,2,79.441,20.559,0.99625
-GMM Diagonal Covariance,9,_,_,_,_,1,2,75.914,24.086,0.99750
-GMM Tied Covariance,9,_,_,_,_,1,2,80.301,19.699,0.95734
-GMM Tied Diagonal Covariance,9,_,_,_,_,1,2,76.731,23.269,0.99686
-GMM Full Covariance,9,_,_,_,_,1,4,75.570,24.430,0.99875
-GMM Diagonal Covariance,9,_,_,_,_,1,4,74.323,25.677,1.00000
-GMM Tied Covariance,9,_,_,_,_,1,4,75.183,24.817,0.99875
-GMM Tied Diagonal Covariance,9,_,_,_,_,1,4,75.441,24.559,0.99375
-GMM Full Covariance,9,_,_,_,_,1,8,61.032,38.968,1.00000
-GMM Diagonal Covariance,9,_,_,_,_,1,8,71.269,28.731,1.00000
-GMM Tied Covariance,9,_,_,_,_,1,8,72.559,27.441,0.99750
-GMM Tied Diagonal Covariance,9,_,_,_,_,1,8,75.527,24.473,1.00000
-GMM Full Covariance,9,_,_,_,_,2,1,92.086,7.914,0.40303
-GMM Diagonal Covariance,9,_,_,_,_,2,1,91.183,8.817,0.46738
-GMM Tied Covariance,9,_,_,_,_,2,1,91.656,8.344,0.46584
-GMM Tied Diagonal Covariance,9,_,_,_,_,2,1,90.925,9.075,0.47422
-GMM Full Covariance,9,_,_,_,_,2,2,86.882,13.118,0.67615
-GMM Diagonal Covariance,9,_,_,_,_,2,2,86.065,13.935,0.66861
-GMM Tied Covariance,9,_,_,_,_,2,2,86.409,13.591,0.73166
-GMM Tied Diagonal Covariance,9,_,_,_,_,2,2,86.968,13.032,0.67645
-GMM Full Covariance,9,_,_,_,_,2,4,82.409,17.591,0.94678
-GMM Diagonal Covariance,9,_,_,_,_,2,4,81.677,18.323,1.00000
-GMM Tied Covariance,9,_,_,_,_,2,4,82.366,17.634,0.87803
-GMM Tied Diagonal Covariance,9,_,_,_,_,2,4,83.613,16.387,0.76990
-GMM Full Covariance,9,_,_,_,_,2,8,63.355,36.645,1.00000
-GMM Diagonal Covariance,9,_,_,_,_,2,8,78.409,21.591,1.00000
-GMM Tied Covariance,9,_,_,_,_,2,8,78.925,21.075,0.92057
-GMM Tied Diagonal Covariance,9,_,_,_,_,2,8,83.484,16.516,0.78135
-GMM Full Covariance,9,_,_,_,_,4,1,93.763,6.237,0.30145
-GMM Diagonal Covariance,9,_,_,_,_,4,1,92.645,7.355,0.34018
-GMM Tied Covariance,9,_,_,_,_,4,1,93.376,6.624,0.30240
-GMM Tied Diagonal Covariance,9,_,_,_,_,4,1,93.290,6.710,0.34988
-GMM Full Covariance,9,_,_,_,_,4,2,86.839,13.161,0.51076
-GMM Diagonal Covariance,9,_,_,_,_,4,2,84.989,15.011,0.59131
-GMM Tied Covariance,9,_,_,_,_,4,2,86.280,13.720,0.53209
-GMM Tied Diagonal Covariance,9,_,_,_,_,4,2,86.237,13.763,0.56547
-GMM Full Covariance,9,_,_,_,_,4,4,83.914,16.086,0.88096
-GMM Diagonal Covariance,9,_,_,_,_,4,4,81.634,18.366,1.00000
-GMM Tied Covariance,9,_,_,_,_,4,4,83.312,16.688,0.73963
-GMM Tied Diagonal Covariance,9,_,_,_,_,4,4,84.817,15.183,0.62545
-GMM Full Covariance,9,_,_,_,_,4,8,65.376,34.624,1.00000
-GMM Diagonal Covariance,9,_,_,_,_,4,8,80.215,19.785,1.00000
-GMM Tied Covariance,9,_,_,_,_,4,8,80.860,19.140,0.78990
-GMM Tied Diagonal Covariance,9,_,_,_,_,4,8,85.806,14.194,0.65137
-GMM Full Covariance,9,_,_,_,_,8,1,93.333,6.667,0.37922
-GMM Diagonal Covariance,9,_,_,_,_,8,1,93.591,6.409,0.34801
-GMM Tied Covariance,9,_,_,_,_,8,1,92.946,7.054,0.35553
-GMM Tied Diagonal Covariance,9,_,_,_,_,8,1,93.161,6.839,0.38234
-GMM Full Covariance,9,_,_,_,_,8,2,87.656,12.344,0.59332
-GMM Diagonal Covariance,9,_,_,_,_,8,2,85.462,14.538,0.65293
-GMM Tied Covariance,9,_,_,_,_,8,2,85.849,14.151,0.60395
-GMM Tied Diagonal Covariance,9,_,_,_,_,8,2,85.978,14.022,0.60613
-GMM Full Covariance,9,_,_,_,_,8,4,84.344,15.656,0.85895
-GMM Diagonal Covariance,9,_,_,_,_,8,4,82.194,17.806,1.00000
-GMM Tied Covariance,9,_,_,_,_,8,4,82.237,17.763,0.79791
-GMM Tied Diagonal Covariance,9,_,_,_,_,8,4,85.333,14.667,0.64855
-GMM Full Covariance,9,_,_,_,_,8,8,65.677,34.323,1.00000
-GMM Diagonal Covariance,9,_,_,_,_,8,8,79.484,20.516,1.00000
-GMM Tied Covariance,9,_,_,_,_,8,8,80.172,19.828,0.84086
-GMM Tied Diagonal Covariance,9,_,_,_,_,8,8,85.591,14.409,0.68727
 MVG,8,0.100,_,_,_,_,_,94.409,5.591,0.60250
 MVG with tied covariance,8,0.100,_,_,_,_,_,90.839,9.161,0.71402
 Naive Bayes,8,0.100,_,_,_,_,_,94.280,5.720,0.75455
@@ -643,70 +515,6 @@ Linear SVM,8,_,_,1.00000,1.00000,_,_,91.269,8.731,0.49336
 Quadratic SVM,8,_,_,1.00000,1.00000,_,_,78.753,21.247,0.78965
 Polynomial Kernel SVM,8,_,_,1.00000,1.00000,_,_,82.409,17.591,0.50334
 Radial Basis Function Kernel SVM,8,_,_,1.00000,1.00000,_,_,86.280,13.720,0.34061
-GMM Full Covariance,8,_,_,_,_,1,1,89.247,10.753,0.54986
-GMM Diagonal Covariance,8,_,_,_,_,1,1,87.183,12.817,0.55701
-GMM Tied Covariance,8,_,_,_,_,1,1,89.763,10.237,0.55859
-GMM Tied Diagonal Covariance,8,_,_,_,_,1,1,87.097,12.903,0.56793
-GMM Full Covariance,8,_,_,_,_,1,2,79.269,20.731,0.99625
-GMM Diagonal Covariance,8,_,_,_,_,1,2,75.957,24.043,0.99750
-GMM Tied Covariance,8,_,_,_,_,1,2,80.430,19.570,0.94840
-GMM Tied Diagonal Covariance,8,_,_,_,_,1,2,76.731,23.269,0.99686
-GMM Full Covariance,8,_,_,_,_,1,4,76.817,23.183,0.99875
-GMM Diagonal Covariance,8,_,_,_,_,1,4,74.194,25.806,1.00000
-GMM Tied Covariance,8,_,_,_,_,1,4,75.957,24.043,0.99875
-GMM Tied Diagonal Covariance,8,_,_,_,_,1,4,75.527,24.473,0.99375
-GMM Full Covariance,8,_,_,_,_,1,8,56.516,43.484,1.00000
-GMM Diagonal Covariance,8,_,_,_,_,1,8,70.538,29.462,1.00000
-GMM Tied Covariance,8,_,_,_,_,1,8,73.849,26.151,0.99375
-GMM Tied Diagonal Covariance,8,_,_,_,_,1,8,75.527,24.473,0.99029
-GMM Full Covariance,8,_,_,_,_,2,1,92.215,7.785,0.41174
-GMM Diagonal Covariance,8,_,_,_,_,2,1,91.226,8.774,0.46613
-GMM Tied Covariance,8,_,_,_,_,2,1,91.613,8.387,0.47428
-GMM Tied Diagonal Covariance,8,_,_,_,_,2,1,90.882,9.118,0.47797
-GMM Full Covariance,8,_,_,_,_,2,2,87.140,12.860,0.69549
-GMM Diagonal Covariance,8,_,_,_,_,2,2,86.237,13.763,0.67266
-GMM Tied Covariance,8,_,_,_,_,2,2,86.452,13.548,0.73418
-GMM Tied Diagonal Covariance,8,_,_,_,_,2,2,86.882,13.118,0.67895
-GMM Full Covariance,8,_,_,_,_,2,4,84.086,15.914,0.92834
-GMM Diagonal Covariance,8,_,_,_,_,2,4,81.677,18.323,1.00000
-GMM Tied Covariance,8,_,_,_,_,2,4,83.054,16.946,0.87426
-GMM Tied Diagonal Covariance,8,_,_,_,_,2,4,83.613,16.387,0.75775
-GMM Full Covariance,8,_,_,_,_,2,8,59.828,40.172,1.00000
-GMM Diagonal Covariance,8,_,_,_,_,2,8,78.065,21.935,1.00000
-GMM Tied Covariance,8,_,_,_,_,2,8,79.785,20.215,0.87145
-GMM Tied Diagonal Covariance,8,_,_,_,_,2,8,83.312,16.688,0.77336
-GMM Full Covariance,8,_,_,_,_,4,1,93.505,6.495,0.29363
-GMM Diagonal Covariance,8,_,_,_,_,4,1,92.602,7.398,0.34113
-GMM Tied Covariance,8,_,_,_,_,4,1,93.290,6.710,0.30551
-GMM Tied Diagonal Covariance,8,_,_,_,_,4,1,93.290,6.710,0.34988
-GMM Full Covariance,8,_,_,_,_,4,2,86.882,13.118,0.51016
-GMM Diagonal Covariance,8,_,_,_,_,4,2,84.817,15.183,0.59357
-GMM Tied Covariance,8,_,_,_,_,4,2,86.452,13.548,0.52834
-GMM Tied Diagonal Covariance,8,_,_,_,_,4,2,86.237,13.763,0.56582
-GMM Full Covariance,8,_,_,_,_,4,4,85.333,14.667,0.81102
-GMM Diagonal Covariance,8,_,_,_,_,4,4,81.591,18.409,1.00000
-GMM Tied Covariance,8,_,_,_,_,4,4,84.000,16.000,0.67391
-GMM Tied Diagonal Covariance,8,_,_,_,_,4,4,84.731,15.269,0.61701
-GMM Full Covariance,8,_,_,_,_,4,8,61.290,38.710,1.00000
-GMM Diagonal Covariance,8,_,_,_,_,4,8,80.086,19.914,1.00000
-GMM Tied Covariance,8,_,_,_,_,4,8,80.989,19.011,0.72621
-GMM Tied Diagonal Covariance,8,_,_,_,_,4,8,85.204,14.796,0.64508
-GMM Full Covariance,8,_,_,_,_,8,1,93.376,6.624,0.33273
-GMM Diagonal Covariance,8,_,_,_,_,8,1,93.634,6.366,0.36117
-GMM Tied Covariance,8,_,_,_,_,8,1,93.118,6.882,0.36393
-GMM Tied Diagonal Covariance,8,_,_,_,_,8,1,93.161,6.839,0.38359
-GMM Full Covariance,8,_,_,_,_,8,2,87.527,12.473,0.58137
-GMM Diagonal Covariance,8,_,_,_,_,8,2,85.892,14.108,0.64543
-GMM Tied Covariance,8,_,_,_,_,8,2,85.978,14.022,0.60453
-GMM Tied Diagonal Covariance,8,_,_,_,_,8,2,86.194,13.806,0.60832
-GMM Full Covariance,8,_,_,_,_,8,4,85.376,14.624,0.81754
-GMM Diagonal Covariance,8,_,_,_,_,8,4,82.237,17.763,1.00000
-GMM Tied Covariance,8,_,_,_,_,8,4,83.226,16.774,0.74428
-GMM Tied Diagonal Covariance,8,_,_,_,_,8,4,85.204,14.796,0.64418
-GMM Full Covariance,8,_,_,_,_,8,8,61.935,38.065,1.00000
-GMM Diagonal Covariance,8,_,_,_,_,8,8,79.355,20.645,1.00000
-GMM Tied Covariance,8,_,_,_,_,8,8,80.731,19.269,0.76980
-GMM Tied Diagonal Covariance,8,_,_,_,_,8,8,85.290,14.710,0.67141
 MVG,7,0.100,_,_,_,_,_,94.366,5.634,0.60625
 MVG with tied covariance,7,0.100,_,_,_,_,_,90.882,9.118,0.72527
 Naive Bayes,7,0.100,_,_,_,_,_,94.323,5.677,0.74205
@@ -879,70 +687,6 @@ Linear SVM,7,_,_,1.00000,1.00000,_,_,91.011,8.989,0.48430
 Quadratic SVM,7,_,_,1.00000,1.00000,_,_,82.925,17.075,0.56605
 Polynomial Kernel SVM,7,_,_,1.00000,1.00000,_,_,79.097,20.903,0.66611
 Radial Basis Function Kernel SVM,7,_,_,1.00000,1.00000,_,_,86.280,13.720,0.32059
-GMM Full Covariance,7,_,_,_,_,1,1,89.333,10.667,0.54018
-GMM Diagonal Covariance,7,_,_,_,_,1,1,87.226,12.774,0.55545
-GMM Tied Covariance,7,_,_,_,_,1,1,89.720,10.280,0.55295
-GMM Tied Diagonal Covariance,7,_,_,_,_,1,1,87.183,12.817,0.56705
-GMM Full Covariance,7,_,_,_,_,1,2,79.484,20.516,0.99750
-GMM Diagonal Covariance,7,_,_,_,_,1,2,75.871,24.129,0.99750
-GMM Tied Covariance,7,_,_,_,_,1,2,80.645,19.355,0.95215
-GMM Tied Diagonal Covariance,7,_,_,_,_,1,2,76.774,23.226,0.99561
-GMM Full Covariance,7,_,_,_,_,1,4,71.527,28.473,0.99875
-GMM Diagonal Covariance,7,_,_,_,_,1,4,71.656,28.344,1.00000
-GMM Tied Covariance,7,_,_,_,_,1,4,75.097,24.903,0.99875
-GMM Tied Diagonal Covariance,7,_,_,_,_,1,4,75.570,24.430,0.99375
-GMM Full Covariance,7,_,_,_,_,1,8,43.269,56.731,1.00000
-GMM Diagonal Covariance,7,_,_,_,_,1,8,68.688,31.312,1.00000
-GMM Tied Covariance,7,_,_,_,_,1,8,71.828,28.172,0.99875
-GMM Tied Diagonal Covariance,7,_,_,_,_,1,8,75.269,24.731,0.99277
-GMM Full Covariance,7,_,_,_,_,2,1,92.301,7.699,0.40801
-GMM Diagonal Covariance,7,_,_,_,_,2,1,91.226,8.774,0.46613
-GMM Tied Covariance,7,_,_,_,_,2,1,91.699,8.301,0.47270
-GMM Tied Diagonal Covariance,7,_,_,_,_,2,1,90.925,9.075,0.48176
-GMM Full Covariance,7,_,_,_,_,2,2,87.355,12.645,0.67303
-GMM Diagonal Covariance,7,_,_,_,_,2,2,86.194,13.806,0.67236
-GMM Tied Covariance,7,_,_,_,_,2,2,86.538,13.462,0.70855
-GMM Tied Diagonal Covariance,7,_,_,_,_,2,2,86.882,13.118,0.67365
-GMM Full Covariance,7,_,_,_,_,2,4,78.366,21.634,0.91863
-GMM Diagonal Covariance,7,_,_,_,_,2,4,78.022,21.978,1.00000
-GMM Tied Covariance,7,_,_,_,_,2,4,81.978,18.022,0.85992
-GMM Tied Diagonal Covariance,7,_,_,_,_,2,4,83.656,16.344,0.75336
-GMM Full Covariance,7,_,_,_,_,2,8,47.656,52.344,1.00000
-GMM Diagonal Covariance,7,_,_,_,_,2,8,74.409,25.591,1.00000
-GMM Tied Covariance,7,_,_,_,_,2,8,78.366,21.634,0.88955
-GMM Tied Diagonal Covariance,7,_,_,_,_,2,8,83.527,16.473,0.77330
-GMM Full Covariance,7,_,_,_,_,4,1,93.634,6.366,0.29113
-GMM Diagonal Covariance,7,_,_,_,_,4,1,92.559,7.441,0.34424
-GMM Tied Covariance,7,_,_,_,_,4,1,93.333,6.667,0.32176
-GMM Tied Diagonal Covariance,7,_,_,_,_,4,1,93.204,6.796,0.35238
-GMM Full Covariance,7,_,_,_,_,4,2,87.011,12.989,0.51234
-GMM Diagonal Covariance,7,_,_,_,_,4,2,84.946,15.054,0.59293
-GMM Tied Covariance,7,_,_,_,_,4,2,86.667,13.333,0.52148
-GMM Tied Diagonal Covariance,7,_,_,_,_,4,2,86.065,13.935,0.56705
-GMM Full Covariance,7,_,_,_,_,4,4,80.645,19.355,0.76543
-GMM Diagonal Covariance,7,_,_,_,_,4,4,78.624,21.376,1.00000
-GMM Tied Covariance,7,_,_,_,_,4,4,83.699,16.301,0.71137
-GMM Tied Diagonal Covariance,7,_,_,_,_,4,4,84.602,15.398,0.62076
-GMM Full Covariance,7,_,_,_,_,4,8,50.108,49.892,1.00000
-GMM Diagonal Covariance,7,_,_,_,_,4,8,75.699,24.301,1.00000
-GMM Tied Covariance,7,_,_,_,_,4,8,79.828,20.172,0.70480
-GMM Tied Diagonal Covariance,7,_,_,_,_,4,8,85.290,14.710,0.65383
-GMM Full Covariance,7,_,_,_,_,8,1,93.634,6.366,0.30178
-GMM Diagonal Covariance,7,_,_,_,_,8,1,93.548,6.452,0.36305
-GMM Tied Covariance,7,_,_,_,_,8,1,93.075,6.925,0.37018
-GMM Tied Diagonal Covariance,7,_,_,_,_,8,1,93.118,6.882,0.38514
-GMM Full Covariance,7,_,_,_,_,8,2,87.742,12.258,0.53600
-GMM Diagonal Covariance,7,_,_,_,_,8,2,85.849,14.151,0.64135
-GMM Tied Covariance,7,_,_,_,_,8,2,86.495,13.505,0.59766
-GMM Tied Diagonal Covariance,7,_,_,_,_,8,2,86.280,13.720,0.61238
-GMM Full Covariance,7,_,_,_,_,8,4,81.247,18.753,0.73732
-GMM Diagonal Covariance,7,_,_,_,_,8,4,79.613,20.387,1.00000
-GMM Tied Covariance,7,_,_,_,_,8,4,82.882,17.118,0.78820
-GMM Tied Diagonal Covariance,7,_,_,_,_,8,4,85.032,14.968,0.64947
-GMM Full Covariance,7,_,_,_,_,8,8,50.366,49.634,1.00000
-GMM Diagonal Covariance,7,_,_,_,_,8,8,75.484,24.516,1.00000
-GMM Tied Covariance,7,_,_,_,_,8,8,79.828,20.172,0.77828
-GMM Tied Diagonal Covariance,7,_,_,_,_,8,8,85.204,14.796,0.67859
 MVG,6,0.100,_,_,_,_,_,94.366,5.634,0.59678
 MVG with tied covariance,6,0.100,_,_,_,_,_,90.882,9.118,0.72402
 Naive Bayes,6,0.100,_,_,_,_,_,94.409,5.591,0.73928
@@ -1115,70 +859,6 @@ Linear SVM,6,_,_,1.00000,1.00000,_,_,91.097,8.903,0.46930
 Quadratic SVM,6,_,_,1.00000,1.00000,_,_,77.978,22.022,0.63080
 Polynomial Kernel SVM,6,_,_,1.00000,1.00000,_,_,79.226,20.774,0.62410
 Radial Basis Function Kernel SVM,6,_,_,1.00000,1.00000,_,_,86.280,13.720,0.30811
-GMM Full Covariance,6,_,_,_,_,1,1,89.333,10.667,0.55361
-GMM Diagonal Covariance,6,_,_,_,_,1,1,87.011,12.989,0.55920
-GMM Tied Covariance,6,_,_,_,_,1,1,89.720,10.280,0.53797
-GMM Tied Diagonal Covariance,6,_,_,_,_,1,1,87.140,12.860,0.56955
-GMM Full Covariance,6,_,_,_,_,1,2,79.269,20.731,0.99750
-GMM Diagonal Covariance,6,_,_,_,_,1,2,75.871,24.129,0.99750
-GMM Tied Covariance,6,_,_,_,_,1,2,80.903,19.097,0.94652
-GMM Tied Diagonal Covariance,6,_,_,_,_,1,2,76.473,23.527,0.99436
-GMM Full Covariance,6,_,_,_,_,1,4,71.656,28.344,1.00000
-GMM Diagonal Covariance,6,_,_,_,_,1,4,70.624,29.376,1.00000
-GMM Tied Covariance,6,_,_,_,_,1,4,73.720,26.280,1.00000
-GMM Tied Diagonal Covariance,6,_,_,_,_,1,4,75.398,24.602,0.99500
-GMM Full Covariance,6,_,_,_,_,1,8,51.398,48.602,1.00000
-GMM Diagonal Covariance,6,_,_,_,_,1,8,65.419,34.581,1.00000
-GMM Tied Covariance,6,_,_,_,_,1,8,68.645,31.355,0.99750
-GMM Tied Diagonal Covariance,6,_,_,_,_,1,8,76.602,23.398,0.98684
-GMM Full Covariance,6,_,_,_,_,2,1,92.559,7.441,0.40645
-GMM Diagonal Covariance,6,_,_,_,_,2,1,91.183,8.817,0.47113
-GMM Tied Covariance,6,_,_,_,_,2,1,91.742,8.258,0.48572
-GMM Tied Diagonal Covariance,6,_,_,_,_,2,1,91.054,8.946,0.48270
-GMM Full Covariance,6,_,_,_,_,2,2,87.269,12.731,0.67273
-GMM Diagonal Covariance,6,_,_,_,_,2,2,86.108,13.892,0.67607
-GMM Tied Covariance,6,_,_,_,_,2,2,86.667,13.333,0.70449
-GMM Tied Diagonal Covariance,6,_,_,_,_,2,2,86.796,13.204,0.68801
-GMM Full Covariance,6,_,_,_,_,2,4,76.774,23.226,1.00000
-GMM Diagonal Covariance,6,_,_,_,_,2,4,75.484,24.516,1.00000
-GMM Tied Covariance,6,_,_,_,_,2,4,79.957,20.043,0.89367
-GMM Tied Diagonal Covariance,6,_,_,_,_,2,4,83.398,16.602,0.75836
-GMM Full Covariance,6,_,_,_,_,2,8,55.441,44.559,1.00000
-GMM Diagonal Covariance,6,_,_,_,_,2,8,71.398,28.602,1.00000
-GMM Tied Covariance,6,_,_,_,_,2,8,74.065,25.935,0.89492
-GMM Tied Diagonal Covariance,6,_,_,_,_,2,8,82.882,17.118,0.76273
-GMM Full Covariance,6,_,_,_,_,4,1,93.591,6.409,0.30428
-GMM Diagonal Covariance,6,_,_,_,_,4,1,92.559,7.441,0.34113
-GMM Tied Covariance,6,_,_,_,_,4,1,93.634,6.366,0.32145
-GMM Tied Diagonal Covariance,6,_,_,_,_,4,1,93.247,6.753,0.34893
-GMM Full Covariance,6,_,_,_,_,4,2,86.925,13.075,0.51578
-GMM Diagonal Covariance,6,_,_,_,_,4,2,85.032,14.968,0.59133
-GMM Tied Covariance,6,_,_,_,_,4,2,86.796,13.204,0.53459
-GMM Tied Diagonal Covariance,6,_,_,_,_,4,2,85.978,14.022,0.56828
-GMM Full Covariance,6,_,_,_,_,4,4,79.011,20.989,1.00000
-GMM Diagonal Covariance,6,_,_,_,_,4,4,76.989,23.011,1.00000
-GMM Tied Covariance,6,_,_,_,_,4,4,81.290,18.710,0.72955
-GMM Tied Diagonal Covariance,6,_,_,_,_,4,4,84.387,15.613,0.60609
-GMM Full Covariance,6,_,_,_,_,4,8,57.548,42.452,1.00000
-GMM Diagonal Covariance,6,_,_,_,_,4,8,72.731,27.269,1.00000
-GMM Tied Covariance,6,_,_,_,_,4,8,76.645,23.355,0.81293
-GMM Tied Diagonal Covariance,6,_,_,_,_,4,8,84.903,15.097,0.60109
-GMM Full Covariance,6,_,_,_,_,8,1,93.677,6.323,0.29334
-GMM Diagonal Covariance,6,_,_,_,_,8,1,93.548,6.452,0.36367
-GMM Tied Covariance,6,_,_,_,_,8,1,93.032,6.968,0.36119
-GMM Tied Diagonal Covariance,6,_,_,_,_,8,1,93.161,6.839,0.38172
-GMM Full Covariance,6,_,_,_,_,8,2,87.613,12.387,0.54230
-GMM Diagonal Covariance,6,_,_,_,_,8,2,85.763,14.237,0.65135
-GMM Tied Covariance,6,_,_,_,_,8,2,86.237,13.763,0.59145
-GMM Tied Diagonal Covariance,6,_,_,_,_,8,2,86.151,13.849,0.60982
-GMM Full Covariance,6,_,_,_,_,8,4,79.742,20.258,1.00000
-GMM Diagonal Covariance,6,_,_,_,_,8,4,77.505,22.495,1.00000
-GMM Tied Covariance,6,_,_,_,_,8,4,80.731,19.269,0.82035
-GMM Tied Diagonal Covariance,6,_,_,_,_,8,4,84.989,15.011,0.65107
-GMM Full Covariance,6,_,_,_,_,8,8,57.677,42.323,1.00000
-GMM Diagonal Covariance,6,_,_,_,_,8,8,72.817,27.183,1.00000
-GMM Tied Covariance,6,_,_,_,_,8,8,76.473,23.527,0.87182
-GMM Tied Diagonal Covariance,6,_,_,_,_,8,8,85.032,14.968,0.61357
 MVG,5,0.100,_,_,_,_,_,94.323,5.677,0.67125
 MVG with tied covariance,5,0.100,_,_,_,_,_,90.452,9.548,0.68875
 Naive Bayes,5,0.100,_,_,_,_,_,94.495,5.505,0.78652
@@ -1351,67 +1031,51 @@ Linear SVM,5,_,_,1.00000,1.00000,_,_,90.624,9.376,0.48369
 Quadratic SVM,5,_,_,1.00000,1.00000,_,_,82.237,17.763,0.68297
 Polynomial Kernel SVM,5,_,_,1.00000,1.00000,_,_,73.505,26.495,1.00000
 Radial Basis Function Kernel SVM,5,_,_,1.00000,1.00000,_,_,86.280,13.720,0.33180
-GMM Full Covariance,5,_,_,_,_,1,1,89.376,10.624,0.56449
-GMM Diagonal Covariance,5,_,_,_,_,1,1,87.226,12.774,0.56262
-GMM Tied Covariance,5,_,_,_,_,1,1,89.376,10.624,0.54984
-GMM Tied Diagonal Covariance,5,_,_,_,_,1,1,86.968,13.032,0.56549
-GMM Full Covariance,5,_,_,_,_,1,2,78.710,21.290,0.99875
-GMM Diagonal Covariance,5,_,_,_,_,1,2,75.613,24.387,0.99750
-GMM Tied Covariance,5,_,_,_,_,1,2,79.355,20.645,0.97840
-GMM Tied Diagonal Covariance,5,_,_,_,_,1,2,76.860,23.140,0.99686
-GMM Full Covariance,5,_,_,_,_,1,4,73.548,26.452,0.99875
-GMM Diagonal Covariance,5,_,_,_,_,1,4,70.581,29.419,1.00000
-GMM Tied Covariance,5,_,_,_,_,1,4,72.688,27.312,1.00000
-GMM Tied Diagonal Covariance,5,_,_,_,_,1,4,75.097,24.903,0.99375
-GMM Full Covariance,5,_,_,_,_,1,8,48.473,51.527,1.00000
-GMM Diagonal Covariance,5,_,_,_,_,1,8,58.710,41.290,1.00000
-GMM Tied Covariance,5,_,_,_,_,1,8,74.151,25.849,0.94936
-GMM Tied Diagonal Covariance,5,_,_,_,_,1,8,73.075,26.925,0.92498
-GMM Full Covariance,5,_,_,_,_,2,1,91.785,8.215,0.44459
-GMM Diagonal Covariance,5,_,_,_,_,2,1,90.968,9.032,0.47898
-GMM Tied Covariance,5,_,_,_,_,2,1,91.441,8.559,0.49172
-GMM Tied Diagonal Covariance,5,_,_,_,_,2,1,90.667,9.333,0.48861
-GMM Full Covariance,5,_,_,_,_,2,2,86.581,13.419,0.73852
-GMM Diagonal Covariance,5,_,_,_,_,2,2,85.892,14.108,0.67107
-GMM Tied Covariance,5,_,_,_,_,2,2,86.065,13.935,0.81256
-GMM Tied Diagonal Covariance,5,_,_,_,_,2,2,86.409,13.591,0.67617
-GMM Full Covariance,5,_,_,_,_,2,4,78.624,21.376,0.99750
-GMM Diagonal Covariance,5,_,_,_,_,2,4,74.624,25.376,1.00000
-GMM Tied Covariance,5,_,_,_,_,2,4,77.634,22.366,0.91373
-GMM Tied Diagonal Covariance,5,_,_,_,_,2,4,82.581,17.419,0.75836
-GMM Full Covariance,5,_,_,_,_,2,8,50.538,49.462,1.00000
-GMM Diagonal Covariance,5,_,_,_,_,2,8,65.333,34.667,1.00000
-GMM Tied Covariance,5,_,_,_,_,2,8,77.806,22.194,0.84201
-GMM Tied Diagonal Covariance,5,_,_,_,_,2,8,78.624,21.376,0.74609
-GMM Full Covariance,5,_,_,_,_,4,1,93.634,6.366,0.29395
-GMM Diagonal Covariance,5,_,_,_,_,4,1,92.473,7.527,0.35428
-GMM Tied Covariance,5,_,_,_,_,4,1,93.247,6.753,0.35023
-GMM Tied Diagonal Covariance,5,_,_,_,_,4,1,93.161,6.839,0.35775
-GMM Full Covariance,5,_,_,_,_,4,2,86.796,13.204,0.55045
-GMM Diagonal Covariance,5,_,_,_,_,4,2,84.731,15.269,0.59232
-GMM Tied Covariance,5,_,_,_,_,4,2,85.720,14.280,0.62264
-GMM Tied Diagonal Covariance,5,_,_,_,_,4,2,85.677,14.323,0.57922
-GMM Full Covariance,5,_,_,_,_,4,4,79.785,20.215,0.92982
-GMM Diagonal Covariance,5,_,_,_,_,4,4,76.731,23.269,1.00000
-GMM Tied Covariance,5,_,_,_,_,4,4,79.011,20.989,0.79576
-GMM Tied Diagonal Covariance,5,_,_,_,_,4,4,83.871,16.129,0.62482
-GMM Full Covariance,5,_,_,_,_,4,8,52.473,47.527,1.00000
-GMM Diagonal Covariance,5,_,_,_,_,4,8,67.011,32.989,1.00000
-GMM Tied Covariance,5,_,_,_,_,4,8,78.710,21.290,0.63131
-GMM Tied Diagonal Covariance,5,_,_,_,_,4,8,80.043,19.957,0.61508
-GMM Full Covariance,5,_,_,_,_,8,1,93.548,6.452,0.34051
-GMM Diagonal Covariance,5,_,_,_,_,8,1,93.720,6.280,0.32992
-GMM Tied Covariance,5,_,_,_,_,8,1,92.602,7.398,0.38795
-GMM Tied Diagonal Covariance,5,_,_,_,_,8,1,92.731,7.269,0.37580
-GMM Full Covariance,5,_,_,_,_,8,2,87.312,12.688,0.57016
-GMM Diagonal Covariance,5,_,_,_,_,8,2,86.452,13.548,0.62760
-GMM Tied Covariance,5,_,_,_,_,8,2,84.946,15.054,0.66818
-GMM Tied Diagonal Covariance,5,_,_,_,_,8,2,86.194,13.806,0.63645
-GMM Full Covariance,5,_,_,_,_,8,4,80.516,19.484,0.91393
-GMM Diagonal Covariance,5,_,_,_,_,8,4,77.677,22.323,1.00000
-GMM Tied Covariance,5,_,_,_,_,8,4,79.398,20.602,0.85367
-GMM Tied Diagonal Covariance,5,_,_,_,_,8,4,84.430,15.570,0.67205
-GMM Full Covariance,5,_,_,_,_,8,8,52.602,47.398,1.00000
-GMM Diagonal Covariance,5,_,_,_,_,8,8,68.129,31.871,1.00000
-GMM Tied Covariance,5,_,_,_,_,8,8,78.925,21.075,0.68426
-GMM Tied Diagonal Covariance,5,_,_,_,_,8,8,80.000,20.000,0.61797
+GMM Full Covariance,0,_,_,_,_,4,2,95.785,4.215,0.24961
+GMM Diagonal Covariance,0,_,_,_,_,4,2,95.484,4.516,0.26365
+GMM Tied Covariance,0,_,_,_,_,4,2,95.226,4.774,0.26143
+GMM Tied Diagonal Covariance,0,_,_,_,_,4,2,95.226,4.774,0.28119
+GMM Full Covariance,0,_,_,_,_,8,2,95.699,4.301,0.25211
+GMM Diagonal Covariance,0,_,_,_,_,8,2,95.699,4.301,0.23898
+GMM Tied Covariance,0,_,_,_,_,8,2,95.957,4.043,0.24867
+GMM Tied Diagonal Covariance,0,_,_,_,_,8,2,95.656,4.344,0.24992
+GMM Full Covariance,0,_,_,_,_,8,4,95.742,4.258,0.25180
+GMM Diagonal Covariance,0,_,_,_,_,8,4,95.699,4.301,0.24178
+GMM Tied Covariance,0,_,_,_,_,8,4,96.000,4.000,0.23303
+GMM Tied Diagonal Covariance,0,_,_,_,_,8,4,95.871,4.129,0.24930
+GMM Full Covariance,9,_,_,_,_,4,2,95.398,4.602,0.26432
+GMM Diagonal Covariance,9,_,_,_,_,4,2,95.570,4.430,0.25088
+GMM Tied Covariance,9,_,_,_,_,4,2,95.011,4.989,0.26678
+GMM Tied Diagonal Covariance,9,_,_,_,_,4,2,95.398,4.602,0.27084
+GMM Full Covariance,9,_,_,_,_,8,2,95.613,4.387,0.27400
+GMM Diagonal Covariance,9,_,_,_,_,8,2,95.828,4.172,0.24367
+GMM Tied Covariance,9,_,_,_,_,8,2,95.613,4.387,0.24676
+GMM Tied Diagonal Covariance,9,_,_,_,_,8,2,95.613,4.387,0.24713
+GMM Full Covariance,9,_,_,_,_,8,4,95.699,4.301,0.26338
+GMM Diagonal Covariance,9,_,_,_,_,8,4,95.871,4.129,0.24678
+GMM Tied Covariance,9,_,_,_,_,8,4,95.699,4.301,0.24242
+GMM Tied Diagonal Covariance,9,_,_,_,_,8,4,95.527,4.473,0.24746
+GMM Full Covariance,7,_,_,_,_,4,2,95.441,4.559,0.25215
+GMM Diagonal Covariance,7,_,_,_,_,4,2,95.699,4.301,0.25463
+GMM Tied Covariance,7,_,_,_,_,4,2,95.097,4.903,0.26768
+GMM Tied Diagonal Covariance,7,_,_,_,_,4,2,95.398,4.602,0.27959
+GMM Full Covariance,7,_,_,_,_,8,2,95.656,4.344,0.24773
+GMM Diagonal Covariance,7,_,_,_,_,8,2,95.914,4.086,0.24676
+GMM Tied Covariance,7,_,_,_,_,8,2,95.613,4.387,0.23867
+GMM Tied Diagonal Covariance,7,_,_,_,_,8,2,95.656,4.344,0.25270
+GMM Full Covariance,7,_,_,_,_,8,4,95.742,4.258,0.24645
+GMM Diagonal Covariance,7,_,_,_,_,8,4,95.742,4.258,0.24584
+GMM Tied Covariance,7,_,_,_,_,8,4,95.699,4.301,0.23553
+GMM Tied Diagonal Covariance,7,_,_,_,_,8,4,95.570,4.430,0.25650
+GMM Full Covariance,5,_,_,_,_,4,2,95.484,4.516,0.26645
+GMM Diagonal Covariance,5,_,_,_,_,4,2,95.570,4.430,0.26520
+GMM Tied Covariance,5,_,_,_,_,4,2,95.140,4.860,0.28990
+GMM Tied Diagonal Covariance,5,_,_,_,_,4,2,95.011,4.989,0.29770
+GMM Full Covariance,5,_,_,_,_,8,2,95.699,4.301,0.26457
+GMM Diagonal Covariance,5,_,_,_,_,8,2,95.785,4.215,0.24992
+GMM Tied Covariance,5,_,_,_,_,8,2,95.355,4.645,0.25584
+GMM Tied Diagonal Covariance,5,_,_,_,_,8,2,95.484,4.516,0.26523
+GMM Full Covariance,5,_,_,_,_,8,4,96.043,3.957,0.25645
+GMM Diagonal Covariance,5,_,_,_,_,8,4,96.043,3.957,0.25775
+GMM Tied Covariance,5,_,_,_,_,8,4,95.484,4.516,0.25209
+GMM Tied Diagonal Covariance,5,_,_,_,_,8,4,95.656,4.344,0.25807

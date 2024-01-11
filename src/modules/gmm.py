@@ -6,6 +6,7 @@ import numpy
 import scipy.optimize
 import modules.costs as dcf
 import modules.pca_lda as dr
+import math
 
 
 ###########################
@@ -21,11 +22,26 @@ Cfp = 10
 ####################
 #     FUNCTIONS    #
 ####################
+# ----- ___ -----
+def logpdf_GAU_ND_GMM(X, mu, C):
+    M,N = X.shape[0], X.shape[1]
+    Y = numpy.empty([1,N])
+    
+    for i in range(N):
+        x = X[:,i:i+1]
+        _,det = numpy.linalg.slogdet(C)
+        inv = numpy.linalg.inv(C)
+        density = -(M/2)*numpy.log(2*math.pi) - 1/2*det - 1/2*numpy.dot((x-mu).T, numpy.dot(inv, (x-mu)))
+        Y[:,i]=density
+        
+    return Y.ravel()
+
+
 # ----- Compute log-density of a GMM for a set of samples contained in matrix X -----
 def logpdf_GMM (x, gmm):    
     y = []
     for weight,mu,sigma in gmm:
-        lc = utility.logpdf_GAU_ND(x, mu, sigma) + numpy.log(weight)
+        lc = logpdf_GAU_ND_GMM(x, mu, sigma) + numpy.log(weight)
         y.append(utility.column_to_row(lc))
     S = numpy.vstack(y)
     logdensity = scipy.special.logsumexp(y, axis=0)
@@ -38,16 +54,14 @@ def ML_GMM_iteration(D, gmm, diag, tied):
     oldLL = None
     deltaLL = 1.0
     iteration = 0
-    
+
     while deltaLL>1e-6:
         componentsLL = []
-
-        for weight,mean,sigma in gmm:
-            ll = utility.logpdf_GAU_ND(D, mean, sigma) + numpy.log(weight)
+        for w, mu, C in gmm:
+            ll = logpdf_GAU_ND_GMM(D, mu, C) + numpy.log(w)
             componentsLL.append(utility.column_to_row(ll))
         LL = numpy.vstack(componentsLL)
-
-        posterior = numpy.exp(LL - scipy.special.logsumexp(LL, axis=0))
+        post = numpy.exp(LL - scipy.special.logsumexp(LL, axis=0))
         oldLL = prevLL
         prevLL = scipy.special.logsumexp(LL, axis=0).sum() / D.shape[1]
         
@@ -55,43 +69,42 @@ def ML_GMM_iteration(D, gmm, diag, tied):
         iteration += 1
         psi = 0.01
         updatedGMM = []
-        for i in range(posterior.shape[0]):
-            Z = posterior[i].sum()
-            if Z==0: continue
-            F = (posterior[i:i+1, :]*D).sum(1)
-            S = numpy.dot((posterior[i:i+1, :])*D, D.T)
+        for i in range(post.shape[0]):
+            Z = post[i].sum()
+            F = (post[i:i+1, :]*D).sum(1)
+            S = numpy.dot((post[i:i+1, :])*D, D.T)
             new_weight = Z / D.shape[1]
             new_mean = utility.row_to_column(F/Z)
             new_sigma = S/Z - numpy.dot(new_mean, new_mean.T)
             
             if tied:
                 c = 0
-                for j in range(posterior.shape[0]):
-                    Z = posterior[j].sum()
-                    if Z==0: continue
-                    F = (posterior[j:j+1, :]*D).sum(1)
-                    S = numpy.dot((posterior[j:j+1, :])*D, D.T)
-                    c += (Z * (S/Z-numpy.dot(utility.row_to_column(F/Z), utility.row_to_column(F/Z).T)))
-                new_sigma = 1 / D.shape[1] * c
+                for j in range(post.shape[0]):
+                    Z = post[j].sum()
+                    F = (post[j:j+1, :]*D).sum(1)
+                    S = numpy.dot((post[j:j+1, :])*D, D.T)
+                    c += Z * (S/Z - numpy.dot(utility.row_to_column(F/Z), utility.row_to_column(F/Z).T))
+                new_sigma = c / D.shape[1]
             
-            if diag: new_sigma *= numpy.eye(new_sigma.shape[0])
+            if diag: new_sigma = new_sigma * numpy.eye(new_sigma.shape[0])
             
-            U,s,_ = numpy.linalg.svd(new_sigma)
+            U, s, _ = numpy.linalg.svd(new_sigma)
             s[s<psi] = psi
-            new_sigma = numpy.dot(U, utility.row_to_column(s)*U.T)
+            new_sigma=numpy.dot(U, utility.row_to_column(s)*U.T)
             updatedGMM.append((new_weight, new_mean, new_sigma))
-                
+
         gmm = updatedGMM
         componentsLL = []
-        for weight,mean,sigma in gmm:
-            ll = utility.logpdf_GAU_ND(D, mean, sigma) + numpy.log(weight)
+        for w, mu, C in gmm:
+            ll = logpdf_GAU_ND_GMM(D, mu, C) + numpy.log(w)
             componentsLL.append(utility.column_to_row(ll))
         LL = numpy.vstack(componentsLL)
-        posterior = numpy.exp(LL - scipy.special.logsumexp(LL, axis=0))
+        post = LL - scipy.special.logsumexp(LL, axis=0)
+        post = numpy.exp(post)
         oldLL = prevLL
         prevLL = scipy.special.logsumexp(LL, axis=0).sum() / D.shape[1]
         deltaLL = prevLL - oldLL
-            
+    
     return gmm
 
 
@@ -328,3 +341,4 @@ def gmm_kfold (D, L, K, pca_value, g0_value, g1_value):
 
     output_file.close()
     output_csv.close()
+    

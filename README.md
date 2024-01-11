@@ -115,14 +115,4 @@ To run code use
 
 ## Notes
 
-At the moment, results of training say that the following ones are the best models:
-
-| Name of the model | PCA | &pi; | &lambda; | Accuracy | Error rate | minDCF |
-|---|---|---|---|---|---|---|
-| Quadratic Logistic Regression | 0 | 0.9 | 1e-3 | 93.118% | 6.882% | 0.09382 |
-| Quadratic Logistic Regression | 0 | 0.9 | 1e-4 | 93.075% | 6.925% | 0.09434 |
-| Quadratic Logistic Regression | 0 | 0.9 | 1e-6 | 93.118% | 6.882% | 0.09632 |
-
-These results differ from the expected ones. GMM needs particular attention.
-
 Training lasted about 40 hours.
