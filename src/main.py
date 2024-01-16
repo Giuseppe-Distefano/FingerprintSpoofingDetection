@@ -8,7 +8,9 @@ import modules.dataset as dataset
 import modules.pca_lda as dr
 import modules.svm as svm
 import modules.gmm as gmm
+import modules.calibration_fusion as calfus
 import csv
+import os
 
 
 ####################
@@ -24,6 +26,20 @@ output_csv_name = "../output/Training/Results.csv"
 #####################
 ##### FUNCTIONS #####
 #####################
+# ----- Setup folders and environment -----
+def setup_environment ():
+    if not os.path.exists('../output'): os.makedirs('../output')
+    if not os.path.exists('../output/FeaturesAnalysis'): os.makedirs('../output/FeaturesAnalysis')
+    if not os.path.exists('../output/FeaturesAnalysis/Histograms'): os.makedirs('../output/FeaturesAnalysis/Histograms')
+    if not os.path.exists('../output/FeaturesAnalysis/Heatmaps'): os.makedirs('../output/FeaturesAnalysis/Heatmaps')
+    if not os.path.exists('../output/DimensionalityReduction'): os.makedirs('../output/DimensionalityReduction')
+    if not os.path.exists('../output/DimensionalityReduction/PCA'): os.makedirs('../output/DimensionalityReduction/PCA')
+    if not os.path.exists('../output/DimensionalityReduction/LDA'): os.makedirs('../output/DimensionalityReduction/LDA')
+    if not os.path.exists('../output/Training'): os.makedirs('../output/Training')
+    if not os.path.exists('../output/Calibration_Fusion'): os.makedirs('../output/Calibration_Fusion')
+    if not os.path.exists('../output/Evaluation'): os.makedirs('../output/Evaluation')
+
+
 # ----- Load dataset -----
 def load_dataset ():
     DTR, LTR = dataset.load_training_set()
@@ -88,8 +104,8 @@ def train_model (D, L):
                         gmm.gmm_kfold(D, L, K, pca_value, g0_value, g1_value)
 
 
-# ----- Select the three best models and train them -----
-def train_top3_models (D, L):
+# ----- Sort training results with respect to minDCF -----
+def sort_training_results ():
     # Sort results basing on minDCF
     with open("../output/Training/Results.csv", "r") as file:
         reader = csv.DictReader(file)
@@ -108,16 +124,70 @@ def train_top3_models (D, L):
     for model in best_models:
         print("%s \n" % model)
 
+                        
+# ----- Select the three best models and train them -----
+def train_top3_models (D, L):
+    #train_model(D, L)
+    #sort_training_results()
+
+    # ---- Quadratic Logistic Regression ----
+    # PCA=8, pi=effective_prior, lambda=1e-2
+    qlr_scores = dis.train_qlr(D, L, 5, 8, effective_prior, 1e-2)
+    
+    # ---- Polynomial Kernel SVM ----
+    # No PCA, C=1, gamma=1e-3
+    svm_scores = svm.train_pol_svm(D, L, 5, 0, 1e+0, 1e-3)
+
+    # ---- Diagonal Gaussian Mixture Model ----
+    # No PCA, G0=8, G1=2
+    gmm_scores = gmm.train_diagonal_gmm(D, L, 5, 0, 8, 2)
+
+    return qlr_scores, svm_scores, gmm_scores
+
+
+# ----- Calibrate scores -----
+def scores_calibration (L, qlr_scores, svm_scores, gmm_scores):
+    qlr_scores = calfus.calibrate_scores(qlr_scores, L, 'QLR')
+    svm_scores = calfus.calibrate_scores(svm_scores, L, 'SVM')
+    gmm_scores = calfus.calibrate_scores(gmm_scores, L, 'GMM')
+
+    return qlr_scores, svm_scores, gmm_scores
+
+
+# ----- Fuse top3 models -----
+def models_fusion (L, qlr_scores, svm_scores, gmm_scores):
+    qlr_svm_scores = calfus.fuse_models('QLR', qlr_scores, 'SVM', svm_scores, L)
+    qlr_gmm_scores = calfus.fuse_models('QLR', qlr_scores, 'GMM', gmm_scores, L)
+    svm_gmm_scores = calfus.fuse_models('SVM', svm_scores, 'GMM', gmm_scores, L)
+    
+    return qlr_svm_scores, qlr_gmm_scores, svm_gmm_scores
+
+
+# ----- Evaluate model -----
+def model_evaluation (DTR, LTR, DTE, LTE):
+    pass
+
 
 ###############################
 ##### MAIN OF THE PROGRAM #####
 ###############################
 if __name__ == "__main__":
-    # --- Dataset analysis ---
-    (DTR,LTR), (DTE,LTE) = load_dataset()    
+    # ---- Setup environment ----
+    setup_environment()
+
+    # ---- Dataset analysis ----
+    (DTR,LTR), (DTE,LTE) = load_dataset()
     features_analysis(DTR, LTR)
     dimensionality_reduction(DTR, LTR)
 
-    # --- Training ---
-    # train_model(DTR, LTR)
-    train_top3_models(DTR, LTR)
+    # ---- Training ----
+    qlr_scores, svm_scores, gmm_scores = train_top3_models(DTR, LTR)
+
+    # ---- Scores calibration ----
+    qlr_scores_cal, svm_scores_cal, gmm_scores_cal = scores_calibration(LTR, qlr_scores, svm_scores, gmm_scores)
+
+    # ---- Models fusion ----
+    qlr_svm_scores, qlr_gmm_scores, svm_gmm_scores = models_fusion(LTR, qlr_scores_cal, svm_scores_cal, gmm_scores_cal)
+
+    # ---- Evaluation ----
+    model_evaluation(DTR, LTR, DTE, LTE)

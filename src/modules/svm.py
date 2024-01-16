@@ -241,4 +241,39 @@ def svm_kfold (D, L, K, pca_value, C_value, gamma_value):
 
     output_file.close()
     output_csv.close()
+
+
+# ----- Train a specific model -----
+def train_pol_svm (D, L, K, pca_value, C_value, gamma_value):
+    N = int(D.shape[1]/K)
+
+    wrong_predictions = 0
+    numpy.random.seed(1)
+    ll_ratios = []
+    labels = []
+    indexes = numpy.random.permutation(D.shape[1])
+
+    for i in range(K):
+        # Select which subset to use for evaluation
+        idxTest = indexes[i*N:(i+1)*N]
+        if i>0: idxTrainLeft = indexes[0:i*N]
+        elif (i+1)<K: idxTrainRight = indexes[(i+1)*N:]
+        if i==0: idxTrain = idxTrainRight
+        elif (i+1)==K: idxTrain = idxTrainLeft
+        else: idxTrain = numpy.hstack([idxTrainLeft, idxTrainRight])
+        DTR,LTR = D[:,idxTrain], L[idxTrain]
+        DTE,LTE = D[:,idxTest], L[idxTest]
+
+        # Apply PCA if necessary
+        if pca_value!=0:
+            P = dr.apply_pca(DTR, LTR, pca_value)
+            DTR,DTE = numpy.dot(P.T, DTR), numpy.dot(P.T, DTE)
+            
+        # Apply classifier
+        wrong, scores = polynomial_kernel_svm(DTR, LTR, DTE, LTE, K, C_value, gamma_value)
+        wrong_predictions += wrong
+        ll_ratios.append(scores)
+        labels.append(LTE)
+
+    return numpy.hstack(ll_ratios)
     
