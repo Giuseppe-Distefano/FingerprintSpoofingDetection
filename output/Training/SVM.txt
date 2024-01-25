@@ -1,0 +1,3150 @@
+No PCA, C: 0.00010, gamma: 0.00010
+  Linear SVM
+    Accuracy: 88.989%
+    Error rate: 11.011%
+    min DCF: 0.551
+
+  Quadratic SVM
+    Accuracy: 95.183%
+    Error rate: 4.817%
+    min DCF: 0.290
+
+  Polynomial Kernel SVM
+    Accuracy: 95.226%
+    Error rate: 4.774%
+    min DCF: 0.295
+
+  Radial Basis Function Kernel SVM
+    Accuracy: 65.591%
+    Error rate: 34.409%
+    min DCF: 0.926
+
+No PCA, C: 0.00010, gamma: 0.00100
+  Linear SVM
+    Accuracy: 88.989%
+    Error rate: 11.011%
+    min DCF: 0.551
+
+  Quadratic SVM
+    Accuracy: 95.183%
+    Error rate: 4.817%
+    min DCF: 0.290
+
+  Polynomial Kernel SVM
+    Accuracy: 95.226%
+    Error rate: 4.774%
+    min DCF: 0.295
+
+  Radial Basis Function Kernel SVM
+    Accuracy: 65.591%
+    Error rate: 34.409%
+    min DCF: 0.437
+
+No PCA, C: 0.00010, gamma: 0.01000
+  Linear SVM
+    Accuracy: 88.989%
+    Error rate: 11.011%
+    min DCF: 0.551
+
+  Quadratic SVM
+    Accuracy: 95.183%
+    Error rate: 4.817%
+    min DCF: 0.290
+
+  Polynomial Kernel SVM
+    Accuracy: 95.226%
+    Error rate: 4.774%
+    min DCF: 0.295
+
+  Radial Basis Function Kernel SVM
+    Accuracy: 65.591%
+    Error rate: 34.409%
+    min DCF: 0.380
+
+No PCA, C: 0.00010, gamma: 0.10000
+  Linear SVM
+    Accuracy: 88.989%
+    Error rate: 11.011%
+    min DCF: 0.551
+
+  Quadratic SVM
+    Accuracy: 95.183%
+    Error rate: 4.817%
+    min DCF: 0.290
+
+  Polynomial Kernel SVM
+    Accuracy: 95.226%
+    Error rate: 4.774%
+    min DCF: 0.295
+
+  Radial Basis Function Kernel SVM
+    Accuracy: 65.591%
+    Error rate: 34.409%
+    min DCF: 0.303
+
+No PCA, C: 0.00010, gamma: 1.00000
+  Linear SVM
+    Accuracy: 88.989%
+    Error rate: 11.011%
+    min DCF: 0.551
+
+  Quadratic SVM
+    Accuracy: 95.183%
+    Error rate: 4.817%
+    min DCF: 0.290
+
+  Polynomial Kernel SVM
+    Accuracy: 95.226%
+    Error rate: 4.774%
+    min DCF: 0.295
+
+  Radial Basis Function Kernel SVM
+    Accuracy: 65.591%
+    Error rate: 34.409%
+    min DCF: 0.390
+
+No PCA, C: 0.00100, gamma: 0.00010
+  Linear SVM
+    Accuracy: 90.882%
+    Error rate: 9.118%
+    min DCF: 0.490
+
+  Quadratic SVM
+    Accuracy: 95.656%
+    Error rate: 4.344%
+    min DCF: 0.285
+
+  Polynomial Kernel SVM
+    Accuracy: 95.570%
+    Error rate: 4.430%
+    min DCF: 0.287
+
+  Radial Basis Function Kernel SVM
+    Accuracy: 65.591%
+    Error rate: 34.409%
+    min DCF: 0.588
+
+No PCA, C: 0.00100, gamma: 0.00100
+  Linear SVM
+    Accuracy: 90.882%
+    Error rate: 9.118%
+    min DCF: 0.490
+
+  Quadratic SVM
+    Accuracy: 95.656%
+    Error rate: 4.344%
+    min DCF: 0.285
+
+  Polynomial Kernel SVM
+    Accuracy: 95.570%
+    Error rate: 4.430%
+    min DCF: 0.287
+
+  Radial Basis Function Kernel SVM
+    Accuracy: 65.591%
+    Error rate: 34.409%
+    min DCF: 0.473
+
+No PCA, C: 0.00100, gamma: 0.01000
+  Linear SVM
+    Accuracy: 90.882%
+    Error rate: 9.118%
+    min DCF: 0.490
+
+  Quadratic SVM
+    Accuracy: 95.656%
+    Error rate: 4.344%
+    min DCF: 0.285
+
+  Polynomial Kernel SVM
+    Accuracy: 95.570%
+    Error rate: 4.430%
+    min DCF: 0.287
+
+  Radial Basis Function Kernel SVM
+    Accuracy: 65.591%
+    Error rate: 34.409%
+    min DCF: 0.435
+
+No PCA, C: 0.00100, gamma: 0.10000
+  Linear SVM
+    Accuracy: 90.882%
+    Error rate: 9.118%
+    min DCF: 0.490
+
+  Quadratic SVM
+    Accuracy: 95.656%
+    Error rate: 4.344%
+    min DCF: 0.285
+
+  Polynomial Kernel SVM
+    Accuracy: 95.570%
+    Error rate: 4.430%
+    min DCF: 0.287
+
+  Radial Basis Function Kernel SVM
+    Accuracy: 65.591%
+    Error rate: 34.409%
+    min DCF: 0.286
+
+No PCA, C: 0.00100, gamma: 1.00000
+  Linear SVM
+    Accuracy: 90.882%
+    Error rate: 9.118%
+    min DCF: 0.490
+
+  Quadratic SVM
+    Accuracy: 95.656%
+    Error rate: 4.344%
+    min DCF: 0.285
+
+  Polynomial Kernel SVM
+    Accuracy: 95.570%
+    Error rate: 4.430%
+    min DCF: 0.287
+
+  Radial Basis Function Kernel SVM
+    Accuracy: 65.591%
+    Error rate: 34.409%
+    min DCF: 0.389
+
+No PCA, C: 0.01000, gamma: 0.00010
+  Linear SVM
+    Accuracy: 91.011%
+    Error rate: 8.989%
+    min DCF: 0.469
+
+  Quadratic SVM
+    Accuracy: 92.129%
+    Error rate: 7.871%
+    min DCF: 0.247
+
+  Polynomial Kernel SVM
+    Accuracy: 91.699%
+    Error rate: 8.301%
+    min DCF: 0.283
+
+  Radial Basis Function Kernel SVM
+    Accuracy: 65.591%
+    Error rate: 34.409%
+    min DCF: 0.566
+
+No PCA, C: 0.01000, gamma: 0.00100
+  Linear SVM
+    Accuracy: 91.011%
+    Error rate: 8.989%
+    min DCF: 0.469
+
+  Quadratic SVM
+    Accuracy: 92.129%
+    Error rate: 7.871%
+    min DCF: 0.247
+
+  Polynomial Kernel SVM
+    Accuracy: 91.699%
+    Error rate: 8.301%
+    min DCF: 0.283
+
+  Radial Basis Function Kernel SVM
+    Accuracy: 88.258%
+    Error rate: 11.742%
+    min DCF: 0.403
+
+No PCA, C: 0.01000, gamma: 0.01000
+  Linear SVM
+    Accuracy: 91.011%
+    Error rate: 8.989%
+    min DCF: 0.469
+
+  Quadratic SVM
+    Accuracy: 92.129%
+    Error rate: 7.871%
+    min DCF: 0.247
+
+  Polynomial Kernel SVM
+    Accuracy: 91.699%
+    Error rate: 8.301%
+    min DCF: 0.283
+
+  Radial Basis Function Kernel SVM
+    Accuracy: 67.097%
+    Error rate: 32.903%
+    min DCF: 0.439
+
+No PCA, C: 0.01000, gamma: 0.10000
+  Linear SVM
+    Accuracy: 91.011%
+    Error rate: 8.989%
+    min DCF: 0.469
+
+  Quadratic SVM
+    Accuracy: 92.129%
+    Error rate: 7.871%
+    min DCF: 0.247
+
+  Polynomial Kernel SVM
+    Accuracy: 91.699%
+    Error rate: 8.301%
+    min DCF: 0.283
+
+  Radial Basis Function Kernel SVM
+    Accuracy: 65.591%
+    Error rate: 34.409%
+    min DCF: 0.286
+
+No PCA, C: 0.01000, gamma: 1.00000
+  Linear SVM
+    Accuracy: 91.011%
+    Error rate: 8.989%
+    min DCF: 0.469
+
+  Quadratic SVM
+    Accuracy: 92.129%
+    Error rate: 7.871%
+    min DCF: 0.247
+
+  Polynomial Kernel SVM
+    Accuracy: 91.699%
+    Error rate: 8.301%
+    min DCF: 0.283
+
+  Radial Basis Function Kernel SVM
+    Accuracy: 65.591%
+    Error rate: 34.409%
+    min DCF: 0.390
+
+No PCA, C: 0.10000, gamma: 0.00010
+  Linear SVM
+    Accuracy: 91.355%
+    Error rate: 8.645%
+    min DCF: 0.475
+
+  Quadratic SVM
+    Accuracy: 84.473%
+    Error rate: 15.527%
+    min DCF: 0.282
+
+  Polynomial Kernel SVM
+    Accuracy: 85.591%
+    Error rate: 14.409%
+    min DCF: 0.292
+
+  Radial Basis Function Kernel SVM
+    Accuracy: 89.892%
+    Error rate: 10.108%
+    min DCF: 0.437
+
+No PCA, C: 0.10000, gamma: 0.00100
+  Linear SVM
+    Accuracy: 91.355%
+    Error rate: 8.645%
+    min DCF: 0.475
+
+  Quadratic SVM
+    Accuracy: 84.473%
+    Error rate: 15.527%
+    min DCF: 0.282
+
+  Polynomial Kernel SVM
+    Accuracy: 85.591%
+    Error rate: 14.409%
+    min DCF: 0.292
+
+  Radial Basis Function Kernel SVM
+    Accuracy: 94.409%
+    Error rate: 5.591%
+    min DCF: 0.328
+
+No PCA, C: 0.10000, gamma: 0.01000
+  Linear SVM
+    Accuracy: 91.355%
+    Error rate: 8.645%
+    min DCF: 0.475
+
+  Quadratic SVM
+    Accuracy: 84.473%
+    Error rate: 15.527%
+    min DCF: 0.282
+
+  Polynomial Kernel SVM
+    Accuracy: 85.591%
+    Error rate: 14.409%
+    min DCF: 0.292
+
+  Radial Basis Function Kernel SVM
+    Accuracy: 92.731%
+    Error rate: 7.269%
+    min DCF: 0.353
+
+No PCA, C: 0.10000, gamma: 0.10000
+  Linear SVM
+    Accuracy: 91.355%
+    Error rate: 8.645%
+    min DCF: 0.475
+
+  Quadratic SVM
+    Accuracy: 84.473%
+    Error rate: 15.527%
+    min DCF: 0.282
+
+  Polynomial Kernel SVM
+    Accuracy: 85.591%
+    Error rate: 14.409%
+    min DCF: 0.292
+
+  Radial Basis Function Kernel SVM
+    Accuracy: 65.591%
+    Error rate: 34.409%
+    min DCF: 0.287
+
+No PCA, C: 0.10000, gamma: 1.00000
+  Linear SVM
+    Accuracy: 91.355%
+    Error rate: 8.645%
+    min DCF: 0.475
+
+  Quadratic SVM
+    Accuracy: 84.473%
+    Error rate: 15.527%
+    min DCF: 0.282
+
+  Polynomial Kernel SVM
+    Accuracy: 85.591%
+    Error rate: 14.409%
+    min DCF: 0.292
+
+  Radial Basis Function Kernel SVM
+    Accuracy: 65.591%
+    Error rate: 34.409%
+    min DCF: 0.390
+
+No PCA, C: 1.00000, gamma: 0.00010
+  Linear SVM
+    Accuracy: 91.226%
+    Error rate: 8.774%
+    min DCF: 0.471
+
+  Quadratic SVM
+    Accuracy: 79.527%
+    Error rate: 20.473%
+    min DCF: 0.575
+
+  Polynomial Kernel SVM
+    Accuracy: 77.075%
+    Error rate: 22.925%
+    min DCF: 0.384
+
+  Radial Basis Function Kernel SVM
+    Accuracy: 92.774%
+    Error rate: 7.226%
+    min DCF: 0.402
+
+No PCA, C: 1.00000, gamma: 0.00100
+  Linear SVM
+    Accuracy: 91.226%
+    Error rate: 8.774%
+    min DCF: 0.471
+
+  Quadratic SVM
+    Accuracy: 79.527%
+    Error rate: 20.473%
+    min DCF: 0.575
+
+  Polynomial Kernel SVM
+    Accuracy: 77.075%
+    Error rate: 22.925%
+    min DCF: 0.384
+
+  Radial Basis Function Kernel SVM
+    Accuracy: 95.527%
+    Error rate: 4.473%
+    min DCF: 0.275
+
+No PCA, C: 1.00000, gamma: 0.01000
+  Linear SVM
+    Accuracy: 91.226%
+    Error rate: 8.774%
+    min DCF: 0.471
+
+  Quadratic SVM
+    Accuracy: 79.527%
+    Error rate: 20.473%
+    min DCF: 0.575
+
+  Polynomial Kernel SVM
+    Accuracy: 77.075%
+    Error rate: 22.925%
+    min DCF: 0.384
+
+  Radial Basis Function Kernel SVM
+    Accuracy: 96.731%
+    Error rate: 3.269%
+    min DCF: 0.232
+
+No PCA, C: 1.00000, gamma: 0.10000
+  Linear SVM
+    Accuracy: 91.226%
+    Error rate: 8.774%
+    min DCF: 0.471
+
+  Quadratic SVM
+    Accuracy: 79.527%
+    Error rate: 20.473%
+    min DCF: 0.575
+
+  Polynomial Kernel SVM
+    Accuracy: 77.075%
+    Error rate: 22.925%
+    min DCF: 0.384
+
+  Radial Basis Function Kernel SVM
+    Accuracy: 86.280%
+    Error rate: 13.720%
+    min DCF: 0.332
+
+No PCA, C: 1.00000, gamma: 1.00000
+  Linear SVM
+    Accuracy: 91.226%
+    Error rate: 8.774%
+    min DCF: 0.471
+
+  Quadratic SVM
+    Accuracy: 79.527%
+    Error rate: 20.473%
+    min DCF: 0.575
+
+  Polynomial Kernel SVM
+    Accuracy: 77.075%
+    Error rate: 22.925%
+    min DCF: 0.384
+
+  Radial Basis Function Kernel SVM
+    Accuracy: 86.280%
+    Error rate: 13.720%
+    min DCF: 0.390
+
+PCA: 9, C: 0.00010, gamma: 0.00010
+  Linear SVM
+    Accuracy: 88.430%
+    Error rate: 11.570%
+    min DCF: 0.553
+
+  Quadratic SVM
+    Accuracy: 94.968%
+    Error rate: 5.032%
+    min DCF: 0.297
+
+  Polynomial Kernel SVM
+    Accuracy: 95.097%
+    Error rate: 4.903%
+    min DCF: 0.294
+
+  Radial Basis Function Kernel SVM
+    Accuracy: 65.591%
+    Error rate: 34.409%
+    min DCF: 0.922
+
+PCA: 9, C: 0.00010, gamma: 0.00100
+  Linear SVM
+    Accuracy: 88.430%
+    Error rate: 11.570%
+    min DCF: 0.553
+
+  Quadratic SVM
+    Accuracy: 94.968%
+    Error rate: 5.032%
+    min DCF: 0.297
+
+  Polynomial Kernel SVM
+    Accuracy: 95.097%
+    Error rate: 4.903%
+    min DCF: 0.294
+
+  Radial Basis Function Kernel SVM
+    Accuracy: 65.591%
+    Error rate: 34.409%
+    min DCF: 0.865
+
+PCA: 9, C: 0.00010, gamma: 0.01000
+  Linear SVM
+    Accuracy: 88.430%
+    Error rate: 11.570%
+    min DCF: 0.553
+
+  Quadratic SVM
+    Accuracy: 94.968%
+    Error rate: 5.032%
+    min DCF: 0.297
+
+  Polynomial Kernel SVM
+    Accuracy: 95.097%
+    Error rate: 4.903%
+    min DCF: 0.294
+
+  Radial Basis Function Kernel SVM
+    Accuracy: 65.591%
+    Error rate: 34.409%
+    min DCF: 0.396
+
+PCA: 9, C: 0.00010, gamma: 0.10000
+  Linear SVM
+    Accuracy: 88.430%
+    Error rate: 11.570%
+    min DCF: 0.553
+
+  Quadratic SVM
+    Accuracy: 94.968%
+    Error rate: 5.032%
+    min DCF: 0.297
+
+  Polynomial Kernel SVM
+    Accuracy: 95.097%
+    Error rate: 4.903%
+    min DCF: 0.294
+
+  Radial Basis Function Kernel SVM
+    Accuracy: 65.591%
+    Error rate: 34.409%
+    min DCF: 0.243
+
+PCA: 9, C: 0.00010, gamma: 1.00000
+  Linear SVM
+    Accuracy: 88.430%
+    Error rate: 11.570%
+    min DCF: 0.553
+
+  Quadratic SVM
+    Accuracy: 94.968%
+    Error rate: 5.032%
+    min DCF: 0.297
+
+  Polynomial Kernel SVM
+    Accuracy: 95.097%
+    Error rate: 4.903%
+    min DCF: 0.294
+
+  Radial Basis Function Kernel SVM
+    Accuracy: 65.591%
+    Error rate: 34.409%
+    min DCF: 0.381
+
+PCA: 9, C: 0.00100, gamma: 0.00010
+  Linear SVM
+    Accuracy: 90.624%
+    Error rate: 9.376%
+    min DCF: 0.498
+
+  Quadratic SVM
+    Accuracy: 95.312%
+    Error rate: 4.688%
+    min DCF: 0.283
+
+  Polynomial Kernel SVM
+    Accuracy: 95.054%
+    Error rate: 4.946%
+    min DCF: 0.263
+
+  Radial Basis Function Kernel SVM
+    Accuracy: 65.591%
+    Error rate: 34.409%
+    min DCF: 0.600
+
+PCA: 9, C: 0.00100, gamma: 0.00100
+  Linear SVM
+    Accuracy: 90.624%
+    Error rate: 9.376%
+    min DCF: 0.498
+
+  Quadratic SVM
+    Accuracy: 95.312%
+    Error rate: 4.688%
+    min DCF: 0.283
+
+  Polynomial Kernel SVM
+    Accuracy: 95.054%
+    Error rate: 4.946%
+    min DCF: 0.263
+
+  Radial Basis Function Kernel SVM
+    Accuracy: 65.591%
+    Error rate: 34.409%
+    min DCF: 0.463
+
+PCA: 9, C: 0.00100, gamma: 0.01000
+  Linear SVM
+    Accuracy: 90.624%
+    Error rate: 9.376%
+    min DCF: 0.498
+
+  Quadratic SVM
+    Accuracy: 95.312%
+    Error rate: 4.688%
+    min DCF: 0.283
+
+  Polynomial Kernel SVM
+    Accuracy: 95.054%
+    Error rate: 4.946%
+    min DCF: 0.263
+
+  Radial Basis Function Kernel SVM
+    Accuracy: 65.591%
+    Error rate: 34.409%
+    min DCF: 0.430
+
+PCA: 9, C: 0.00100, gamma: 0.10000
+  Linear SVM
+    Accuracy: 90.624%
+    Error rate: 9.376%
+    min DCF: 0.498
+
+  Quadratic SVM
+    Accuracy: 95.312%
+    Error rate: 4.688%
+    min DCF: 0.283
+
+  Polynomial Kernel SVM
+    Accuracy: 95.054%
+    Error rate: 4.946%
+    min DCF: 0.263
+
+  Radial Basis Function Kernel SVM
+    Accuracy: 65.591%
+    Error rate: 34.409%
+    min DCF: 0.252
+
+PCA: 9, C: 0.00100, gamma: 1.00000
+  Linear SVM
+    Accuracy: 90.624%
+    Error rate: 9.376%
+    min DCF: 0.498
+
+  Quadratic SVM
+    Accuracy: 95.312%
+    Error rate: 4.688%
+    min DCF: 0.283
+
+  Polynomial Kernel SVM
+    Accuracy: 95.054%
+    Error rate: 4.946%
+    min DCF: 0.263
+
+  Radial Basis Function Kernel SVM
+    Accuracy: 65.591%
+    Error rate: 34.409%
+    min DCF: 0.384
+
+PCA: 9, C: 0.01000, gamma: 0.00010
+  Linear SVM
+    Accuracy: 91.097%
+    Error rate: 8.903%
+    min DCF: 0.475
+
+  Quadratic SVM
+    Accuracy: 91.527%
+    Error rate: 8.473%
+    min DCF: 0.284
+
+  Polynomial Kernel SVM
+    Accuracy: 91.355%
+    Error rate: 8.645%
+    min DCF: 0.265
+
+  Radial Basis Function Kernel SVM
+    Accuracy: 65.591%
+    Error rate: 34.409%
+    min DCF: 0.561
+
+PCA: 9, C: 0.01000, gamma: 0.00100
+  Linear SVM
+    Accuracy: 91.097%
+    Error rate: 8.903%
+    min DCF: 0.475
+
+  Quadratic SVM
+    Accuracy: 91.527%
+    Error rate: 8.473%
+    min DCF: 0.284
+
+  Polynomial Kernel SVM
+    Accuracy: 91.355%
+    Error rate: 8.645%
+    min DCF: 0.265
+
+  Radial Basis Function Kernel SVM
+    Accuracy: 88.903%
+    Error rate: 11.097%
+    min DCF: 0.393
+
+PCA: 9, C: 0.01000, gamma: 0.01000
+  Linear SVM
+    Accuracy: 91.097%
+    Error rate: 8.903%
+    min DCF: 0.475
+
+  Quadratic SVM
+    Accuracy: 91.527%
+    Error rate: 8.473%
+    min DCF: 0.284
+
+  Polynomial Kernel SVM
+    Accuracy: 91.355%
+    Error rate: 8.645%
+    min DCF: 0.265
+
+  Radial Basis Function Kernel SVM
+    Accuracy: 69.935%
+    Error rate: 30.065%
+    min DCF: 0.431
+
+PCA: 9, C: 0.01000, gamma: 0.10000
+  Linear SVM
+    Accuracy: 91.097%
+    Error rate: 8.903%
+    min DCF: 0.475
+
+  Quadratic SVM
+    Accuracy: 91.527%
+    Error rate: 8.473%
+    min DCF: 0.284
+
+  Polynomial Kernel SVM
+    Accuracy: 91.355%
+    Error rate: 8.645%
+    min DCF: 0.265
+
+  Radial Basis Function Kernel SVM
+    Accuracy: 65.591%
+    Error rate: 34.409%
+    min DCF: 0.252
+
+PCA: 9, C: 0.01000, gamma: 1.00000
+  Linear SVM
+    Accuracy: 91.097%
+    Error rate: 8.903%
+    min DCF: 0.475
+
+  Quadratic SVM
+    Accuracy: 91.527%
+    Error rate: 8.473%
+    min DCF: 0.284
+
+  Polynomial Kernel SVM
+    Accuracy: 91.355%
+    Error rate: 8.645%
+    min DCF: 0.265
+
+  Radial Basis Function Kernel SVM
+    Accuracy: 65.591%
+    Error rate: 34.409%
+    min DCF: 0.376
+
+PCA: 9, C: 0.10000, gamma: 0.00010
+  Linear SVM
+    Accuracy: 91.140%
+    Error rate: 8.860%
+    min DCF: 0.487
+
+  Quadratic SVM
+    Accuracy: 85.763%
+    Error rate: 14.237%
+    min DCF: 0.294
+
+  Polynomial Kernel SVM
+    Accuracy: 84.387%
+    Error rate: 15.613%
+    min DCF: 0.305
+
+  Radial Basis Function Kernel SVM
+    Accuracy: 90.022%
+    Error rate: 9.978%
+    min DCF: 0.434
+
+PCA: 9, C: 0.10000, gamma: 0.00100
+  Linear SVM
+    Accuracy: 91.140%
+    Error rate: 8.860%
+    min DCF: 0.487
+
+  Quadratic SVM
+    Accuracy: 85.763%
+    Error rate: 14.237%
+    min DCF: 0.294
+
+  Polynomial Kernel SVM
+    Accuracy: 84.387%
+    Error rate: 15.613%
+    min DCF: 0.305
+
+  Radial Basis Function Kernel SVM
+    Accuracy: 94.022%
+    Error rate: 5.978%
+    min DCF: 0.323
+
+PCA: 9, C: 0.10000, gamma: 0.01000
+  Linear SVM
+    Accuracy: 91.140%
+    Error rate: 8.860%
+    min DCF: 0.487
+
+  Quadratic SVM
+    Accuracy: 85.763%
+    Error rate: 14.237%
+    min DCF: 0.294
+
+  Polynomial Kernel SVM
+    Accuracy: 84.387%
+    Error rate: 15.613%
+    min DCF: 0.305
+
+  Radial Basis Function Kernel SVM
+    Accuracy: 93.548%
+    Error rate: 6.452%
+    min DCF: 0.343
+
+PCA: 9, C: 0.10000, gamma: 0.10000
+  Linear SVM
+    Accuracy: 91.140%
+    Error rate: 8.860%
+    min DCF: 0.487
+
+  Quadratic SVM
+    Accuracy: 85.763%
+    Error rate: 14.237%
+    min DCF: 0.294
+
+  Polynomial Kernel SVM
+    Accuracy: 84.387%
+    Error rate: 15.613%
+    min DCF: 0.305
+
+  Radial Basis Function Kernel SVM
+    Accuracy: 65.591%
+    Error rate: 34.409%
+    min DCF: 0.252
+
+PCA: 9, C: 0.10000, gamma: 1.00000
+  Linear SVM
+    Accuracy: 91.140%
+    Error rate: 8.860%
+    min DCF: 0.487
+
+  Quadratic SVM
+    Accuracy: 85.763%
+    Error rate: 14.237%
+    min DCF: 0.294
+
+  Polynomial Kernel SVM
+    Accuracy: 84.387%
+    Error rate: 15.613%
+    min DCF: 0.305
+
+  Radial Basis Function Kernel SVM
+    Accuracy: 65.591%
+    Error rate: 34.409%
+    min DCF: 0.385
+
+PCA: 9, C: 1.00000, gamma: 0.00010
+  Linear SVM
+    Accuracy: 91.226%
+    Error rate: 8.774%
+    min DCF: 0.490
+
+  Quadratic SVM
+    Accuracy: 84.086%
+    Error rate: 15.914%
+    min DCF: 0.402
+
+  Polynomial Kernel SVM
+    Accuracy: 81.118%
+    Error rate: 18.882%
+    min DCF: 0.613
+
+  Radial Basis Function Kernel SVM
+    Accuracy: 92.774%
+    Error rate: 7.226%
+    min DCF: 0.397
+
+PCA: 9, C: 1.00000, gamma: 0.00100
+  Linear SVM
+    Accuracy: 91.226%
+    Error rate: 8.774%
+    min DCF: 0.490
+
+  Quadratic SVM
+    Accuracy: 84.086%
+    Error rate: 15.914%
+    min DCF: 0.402
+
+  Polynomial Kernel SVM
+    Accuracy: 81.118%
+    Error rate: 18.882%
+    min DCF: 0.613
+
+  Radial Basis Function Kernel SVM
+    Accuracy: 95.570%
+    Error rate: 4.430%
+    min DCF: 0.274
+
+PCA: 9, C: 1.00000, gamma: 0.01000
+  Linear SVM
+    Accuracy: 91.226%
+    Error rate: 8.774%
+    min DCF: 0.490
+
+  Quadratic SVM
+    Accuracy: 84.086%
+    Error rate: 15.914%
+    min DCF: 0.402
+
+  Polynomial Kernel SVM
+    Accuracy: 81.118%
+    Error rate: 18.882%
+    min DCF: 0.613
+
+  Radial Basis Function Kernel SVM
+    Accuracy: 96.430%
+    Error rate: 3.570%
+    min DCF: 0.235
+
+PCA: 9, C: 1.00000, gamma: 0.10000
+  Linear SVM
+    Accuracy: 91.226%
+    Error rate: 8.774%
+    min DCF: 0.490
+
+  Quadratic SVM
+    Accuracy: 84.086%
+    Error rate: 15.914%
+    min DCF: 0.402
+
+  Polynomial Kernel SVM
+    Accuracy: 81.118%
+    Error rate: 18.882%
+    min DCF: 0.613
+
+  Radial Basis Function Kernel SVM
+    Accuracy: 86.452%
+    Error rate: 13.548%
+    min DCF: 0.252
+
+PCA: 9, C: 1.00000, gamma: 1.00000
+  Linear SVM
+    Accuracy: 91.226%
+    Error rate: 8.774%
+    min DCF: 0.490
+
+  Quadratic SVM
+    Accuracy: 84.086%
+    Error rate: 15.914%
+    min DCF: 0.402
+
+  Polynomial Kernel SVM
+    Accuracy: 81.118%
+    Error rate: 18.882%
+    min DCF: 0.613
+
+  Radial Basis Function Kernel SVM
+    Accuracy: 86.280%
+    Error rate: 13.720%
+    min DCF: 0.385
+
+PCA: 8, C: 0.00010, gamma: 0.00010
+  Linear SVM
+    Accuracy: 88.387%
+    Error rate: 11.613%
+    min DCF: 0.564
+
+  Quadratic SVM
+    Accuracy: 95.097%
+    Error rate: 4.903%
+    min DCF: 0.281
+
+  Polynomial Kernel SVM
+    Accuracy: 95.226%
+    Error rate: 4.774%
+    min DCF: 0.291
+
+  Radial Basis Function Kernel SVM
+    Accuracy: 65.591%
+    Error rate: 34.409%
+    min DCF: 0.924
+
+PCA: 8, C: 0.00010, gamma: 0.00100
+  Linear SVM
+    Accuracy: 88.387%
+    Error rate: 11.613%
+    min DCF: 0.564
+
+  Quadratic SVM
+    Accuracy: 95.097%
+    Error rate: 4.903%
+    min DCF: 0.281
+
+  Polynomial Kernel SVM
+    Accuracy: 95.226%
+    Error rate: 4.774%
+    min DCF: 0.291
+
+  Radial Basis Function Kernel SVM
+    Accuracy: 65.591%
+    Error rate: 34.409%
+    min DCF: 0.447
+
+PCA: 8, C: 0.00010, gamma: 0.01000
+  Linear SVM
+    Accuracy: 88.387%
+    Error rate: 11.613%
+    min DCF: 0.564
+
+  Quadratic SVM
+    Accuracy: 95.097%
+    Error rate: 4.903%
+    min DCF: 0.281
+
+  Polynomial Kernel SVM
+    Accuracy: 95.226%
+    Error rate: 4.774%
+    min DCF: 0.291
+
+  Radial Basis Function Kernel SVM
+    Accuracy: 65.591%
+    Error rate: 34.409%
+    min DCF: 0.399
+
+PCA: 8, C: 0.00010, gamma: 0.10000
+  Linear SVM
+    Accuracy: 88.387%
+    Error rate: 11.613%
+    min DCF: 0.564
+
+  Quadratic SVM
+    Accuracy: 95.097%
+    Error rate: 4.903%
+    min DCF: 0.281
+
+  Polynomial Kernel SVM
+    Accuracy: 95.226%
+    Error rate: 4.774%
+    min DCF: 0.291
+
+  Radial Basis Function Kernel SVM
+    Accuracy: 65.591%
+    Error rate: 34.409%
+    min DCF: 0.702
+
+PCA: 8, C: 0.00010, gamma: 1.00000
+  Linear SVM
+    Accuracy: 88.387%
+    Error rate: 11.613%
+    min DCF: 0.564
+
+  Quadratic SVM
+    Accuracy: 95.097%
+    Error rate: 4.903%
+    min DCF: 0.281
+
+  Polynomial Kernel SVM
+    Accuracy: 95.226%
+    Error rate: 4.774%
+    min DCF: 0.291
+
+  Radial Basis Function Kernel SVM
+    Accuracy: 65.591%
+    Error rate: 34.409%
+    min DCF: 0.370
+
+PCA: 8, C: 0.00100, gamma: 0.00010
+  Linear SVM
+    Accuracy: 90.710%
+    Error rate: 9.290%
+    min DCF: 0.482
+
+  Quadratic SVM
+    Accuracy: 95.140%
+    Error rate: 4.860%
+    min DCF: 0.291
+
+  Polynomial Kernel SVM
+    Accuracy: 95.355%
+    Error rate: 4.645%
+    min DCF: 0.275
+
+  Radial Basis Function Kernel SVM
+    Accuracy: 65.591%
+    Error rate: 34.409%
+    min DCF: 0.575
+
+PCA: 8, C: 0.00100, gamma: 0.00100
+  Linear SVM
+    Accuracy: 90.710%
+    Error rate: 9.290%
+    min DCF: 0.482
+
+  Quadratic SVM
+    Accuracy: 95.140%
+    Error rate: 4.860%
+    min DCF: 0.291
+
+  Polynomial Kernel SVM
+    Accuracy: 95.355%
+    Error rate: 4.645%
+    min DCF: 0.275
+
+  Radial Basis Function Kernel SVM
+    Accuracy: 65.591%
+    Error rate: 34.409%
+    min DCF: 0.460
+
+PCA: 8, C: 0.00100, gamma: 0.01000
+  Linear SVM
+    Accuracy: 90.710%
+    Error rate: 9.290%
+    min DCF: 0.482
+
+  Quadratic SVM
+    Accuracy: 95.140%
+    Error rate: 4.860%
+    min DCF: 0.291
+
+  Polynomial Kernel SVM
+    Accuracy: 95.355%
+    Error rate: 4.645%
+    min DCF: 0.275
+
+  Radial Basis Function Kernel SVM
+    Accuracy: 65.591%
+    Error rate: 34.409%
+    min DCF: 0.440
+
+PCA: 8, C: 0.00100, gamma: 0.10000
+  Linear SVM
+    Accuracy: 90.710%
+    Error rate: 9.290%
+    min DCF: 0.482
+
+  Quadratic SVM
+    Accuracy: 95.140%
+    Error rate: 4.860%
+    min DCF: 0.291
+
+  Polynomial Kernel SVM
+    Accuracy: 95.355%
+    Error rate: 4.645%
+    min DCF: 0.275
+
+  Radial Basis Function Kernel SVM
+    Accuracy: 65.591%
+    Error rate: 34.409%
+    min DCF: 0.216
+
+PCA: 8, C: 0.00100, gamma: 1.00000
+  Linear SVM
+    Accuracy: 90.710%
+    Error rate: 9.290%
+    min DCF: 0.482
+
+  Quadratic SVM
+    Accuracy: 95.140%
+    Error rate: 4.860%
+    min DCF: 0.291
+
+  Polynomial Kernel SVM
+    Accuracy: 95.355%
+    Error rate: 4.645%
+    min DCF: 0.275
+
+  Radial Basis Function Kernel SVM
+    Accuracy: 65.591%
+    Error rate: 34.409%
+    min DCF: 0.365
+
+PCA: 8, C: 0.01000, gamma: 0.00010
+  Linear SVM
+    Accuracy: 91.269%
+    Error rate: 8.731%
+    min DCF: 0.477
+
+  Quadratic SVM
+    Accuracy: 91.226%
+    Error rate: 8.774%
+    min DCF: 0.263
+
+  Polynomial Kernel SVM
+    Accuracy: 91.269%
+    Error rate: 8.731%
+    min DCF: 0.266
+
+  Radial Basis Function Kernel SVM
+    Accuracy: 65.591%
+    Error rate: 34.409%
+    min DCF: 0.573
+
+PCA: 8, C: 0.01000, gamma: 0.00100
+  Linear SVM
+    Accuracy: 91.269%
+    Error rate: 8.731%
+    min DCF: 0.477
+
+  Quadratic SVM
+    Accuracy: 91.226%
+    Error rate: 8.774%
+    min DCF: 0.263
+
+  Polynomial Kernel SVM
+    Accuracy: 91.269%
+    Error rate: 8.731%
+    min DCF: 0.266
+
+  Radial Basis Function Kernel SVM
+    Accuracy: 90.151%
+    Error rate: 9.849%
+    min DCF: 0.377
+
+PCA: 8, C: 0.01000, gamma: 0.01000
+  Linear SVM
+    Accuracy: 91.269%
+    Error rate: 8.731%
+    min DCF: 0.477
+
+  Quadratic SVM
+    Accuracy: 91.226%
+    Error rate: 8.774%
+    min DCF: 0.263
+
+  Polynomial Kernel SVM
+    Accuracy: 91.269%
+    Error rate: 8.731%
+    min DCF: 0.266
+
+  Radial Basis Function Kernel SVM
+    Accuracy: 74.538%
+    Error rate: 25.462%
+    min DCF: 0.440
+
+PCA: 8, C: 0.01000, gamma: 0.10000
+  Linear SVM
+    Accuracy: 91.269%
+    Error rate: 8.731%
+    min DCF: 0.477
+
+  Quadratic SVM
+    Accuracy: 91.226%
+    Error rate: 8.774%
+    min DCF: 0.263
+
+  Polynomial Kernel SVM
+    Accuracy: 91.269%
+    Error rate: 8.731%
+    min DCF: 0.266
+
+  Radial Basis Function Kernel SVM
+    Accuracy: 65.591%
+    Error rate: 34.409%
+    min DCF: 0.217
+
+PCA: 8, C: 0.01000, gamma: 1.00000
+  Linear SVM
+    Accuracy: 91.269%
+    Error rate: 8.731%
+    min DCF: 0.477
+
+  Quadratic SVM
+    Accuracy: 91.226%
+    Error rate: 8.774%
+    min DCF: 0.263
+
+  Polynomial Kernel SVM
+    Accuracy: 91.269%
+    Error rate: 8.731%
+    min DCF: 0.266
+
+  Radial Basis Function Kernel SVM
+    Accuracy: 65.591%
+    Error rate: 34.409%
+    min DCF: 0.360
+
+PCA: 8, C: 0.10000, gamma: 0.00010
+  Linear SVM
+    Accuracy: 91.312%
+    Error rate: 8.688%
+    min DCF: 0.490
+
+  Quadratic SVM
+    Accuracy: 85.677%
+    Error rate: 14.323%
+    min DCF: 0.290
+
+  Polynomial Kernel SVM
+    Accuracy: 85.505%
+    Error rate: 14.495%
+    min DCF: 0.284
+
+  Radial Basis Function Kernel SVM
+    Accuracy: 89.892%
+    Error rate: 10.108%
+    min DCF: 0.435
+
+PCA: 8, C: 0.10000, gamma: 0.00100
+  Linear SVM
+    Accuracy: 91.312%
+    Error rate: 8.688%
+    min DCF: 0.490
+
+  Quadratic SVM
+    Accuracy: 85.677%
+    Error rate: 14.323%
+    min DCF: 0.290
+
+  Polynomial Kernel SVM
+    Accuracy: 85.505%
+    Error rate: 14.495%
+    min DCF: 0.284
+
+  Radial Basis Function Kernel SVM
+    Accuracy: 94.280%
+    Error rate: 5.720%
+    min DCF: 0.311
+
+PCA: 8, C: 0.10000, gamma: 0.01000
+  Linear SVM
+    Accuracy: 91.312%
+    Error rate: 8.688%
+    min DCF: 0.490
+
+  Quadratic SVM
+    Accuracy: 85.677%
+    Error rate: 14.323%
+    min DCF: 0.290
+
+  Polynomial Kernel SVM
+    Accuracy: 85.505%
+    Error rate: 14.495%
+    min DCF: 0.284
+
+  Radial Basis Function Kernel SVM
+    Accuracy: 94.538%
+    Error rate: 5.462%
+    min DCF: 0.330
+
+PCA: 8, C: 0.10000, gamma: 0.10000
+  Linear SVM
+    Accuracy: 91.312%
+    Error rate: 8.688%
+    min DCF: 0.490
+
+  Quadratic SVM
+    Accuracy: 85.677%
+    Error rate: 14.323%
+    min DCF: 0.290
+
+  Polynomial Kernel SVM
+    Accuracy: 85.505%
+    Error rate: 14.495%
+    min DCF: 0.284
+
+  Radial Basis Function Kernel SVM
+    Accuracy: 65.591%
+    Error rate: 34.409%
+    min DCF: 0.216
+
+PCA: 8, C: 0.10000, gamma: 1.00000
+  Linear SVM
+    Accuracy: 91.312%
+    Error rate: 8.688%
+    min DCF: 0.490
+
+  Quadratic SVM
+    Accuracy: 85.677%
+    Error rate: 14.323%
+    min DCF: 0.290
+
+  Polynomial Kernel SVM
+    Accuracy: 85.505%
+    Error rate: 14.495%
+    min DCF: 0.284
+
+  Radial Basis Function Kernel SVM
+    Accuracy: 65.591%
+    Error rate: 34.409%
+    min DCF: 0.350
+
+PCA: 8, C: 1.00000, gamma: 0.00010
+  Linear SVM
+    Accuracy: 91.269%
+    Error rate: 8.731%
+    min DCF: 0.493
+
+  Quadratic SVM
+    Accuracy: 78.753%
+    Error rate: 21.247%
+    min DCF: 0.790
+
+  Polynomial Kernel SVM
+    Accuracy: 82.409%
+    Error rate: 17.591%
+    min DCF: 0.503
+
+  Radial Basis Function Kernel SVM
+    Accuracy: 93.161%
+    Error rate: 6.839%
+    min DCF: 0.408
+
+PCA: 8, C: 1.00000, gamma: 0.00100
+  Linear SVM
+    Accuracy: 91.269%
+    Error rate: 8.731%
+    min DCF: 0.493
+
+  Quadratic SVM
+    Accuracy: 78.753%
+    Error rate: 21.247%
+    min DCF: 0.790
+
+  Polynomial Kernel SVM
+    Accuracy: 82.409%
+    Error rate: 17.591%
+    min DCF: 0.503
+
+  Radial Basis Function Kernel SVM
+    Accuracy: 95.527%
+    Error rate: 4.473%
+    min DCF: 0.274
+
+PCA: 8, C: 1.00000, gamma: 0.01000
+  Linear SVM
+    Accuracy: 91.269%
+    Error rate: 8.731%
+    min DCF: 0.493
+
+  Quadratic SVM
+    Accuracy: 78.753%
+    Error rate: 21.247%
+    min DCF: 0.790
+
+  Polynomial Kernel SVM
+    Accuracy: 82.409%
+    Error rate: 17.591%
+    min DCF: 0.503
+
+  Radial Basis Function Kernel SVM
+    Accuracy: 96.774%
+    Error rate: 3.226%
+    min DCF: 0.260
+
+PCA: 8, C: 1.00000, gamma: 0.10000
+  Linear SVM
+    Accuracy: 91.269%
+    Error rate: 8.731%
+    min DCF: 0.493
+
+  Quadratic SVM
+    Accuracy: 78.753%
+    Error rate: 21.247%
+    min DCF: 0.790
+
+  Polynomial Kernel SVM
+    Accuracy: 82.409%
+    Error rate: 17.591%
+    min DCF: 0.503
+
+  Radial Basis Function Kernel SVM
+    Accuracy: 87.054%
+    Error rate: 12.946%
+    min DCF: 0.217
+
+PCA: 8, C: 1.00000, gamma: 1.00000
+  Linear SVM
+    Accuracy: 91.269%
+    Error rate: 8.731%
+    min DCF: 0.493
+
+  Quadratic SVM
+    Accuracy: 78.753%
+    Error rate: 21.247%
+    min DCF: 0.790
+
+  Polynomial Kernel SVM
+    Accuracy: 82.409%
+    Error rate: 17.591%
+    min DCF: 0.503
+
+  Radial Basis Function Kernel SVM
+    Accuracy: 86.280%
+    Error rate: 13.720%
+    min DCF: 0.341
+
+PCA: 7, C: 0.00010, gamma: 0.00010
+  Linear SVM
+    Accuracy: 88.430%
+    Error rate: 11.570%
+    min DCF: 0.564
+
+  Quadratic SVM
+    Accuracy: 95.140%
+    Error rate: 4.860%
+    min DCF: 0.294
+
+  Polynomial Kernel SVM
+    Accuracy: 95.140%
+    Error rate: 4.860%
+    min DCF: 0.285
+
+  Radial Basis Function Kernel SVM
+    Accuracy: 65.591%
+    Error rate: 34.409%
+    min DCF: 0.926
+
+PCA: 7, C: 0.00010, gamma: 0.00100
+  Linear SVM
+    Accuracy: 88.430%
+    Error rate: 11.570%
+    min DCF: 0.564
+
+  Quadratic SVM
+    Accuracy: 95.140%
+    Error rate: 4.860%
+    min DCF: 0.294
+
+  Polynomial Kernel SVM
+    Accuracy: 95.140%
+    Error rate: 4.860%
+    min DCF: 0.285
+
+  Radial Basis Function Kernel SVM
+    Accuracy: 65.591%
+    Error rate: 34.409%
+    min DCF: 0.439
+
+PCA: 7, C: 0.00010, gamma: 0.01000
+  Linear SVM
+    Accuracy: 88.430%
+    Error rate: 11.570%
+    min DCF: 0.564
+
+  Quadratic SVM
+    Accuracy: 95.140%
+    Error rate: 4.860%
+    min DCF: 0.294
+
+  Polynomial Kernel SVM
+    Accuracy: 95.140%
+    Error rate: 4.860%
+    min DCF: 0.285
+
+  Radial Basis Function Kernel SVM
+    Accuracy: 65.591%
+    Error rate: 34.409%
+    min DCF: 0.393
+
+PCA: 7, C: 0.00010, gamma: 0.10000
+  Linear SVM
+    Accuracy: 88.430%
+    Error rate: 11.570%
+    min DCF: 0.564
+
+  Quadratic SVM
+    Accuracy: 95.140%
+    Error rate: 4.860%
+    min DCF: 0.294
+
+  Polynomial Kernel SVM
+    Accuracy: 95.140%
+    Error rate: 4.860%
+    min DCF: 0.285
+
+  Radial Basis Function Kernel SVM
+    Accuracy: 65.591%
+    Error rate: 34.409%
+    min DCF: 0.804
+
+PCA: 7, C: 0.00010, gamma: 1.00000
+  Linear SVM
+    Accuracy: 88.430%
+    Error rate: 11.570%
+    min DCF: 0.564
+
+  Quadratic SVM
+    Accuracy: 95.140%
+    Error rate: 4.860%
+    min DCF: 0.294
+
+  Polynomial Kernel SVM
+    Accuracy: 95.140%
+    Error rate: 4.860%
+    min DCF: 0.285
+
+  Radial Basis Function Kernel SVM
+    Accuracy: 65.591%
+    Error rate: 34.409%
+    min DCF: 0.332
+
+PCA: 7, C: 0.00100, gamma: 0.00010
+  Linear SVM
+    Accuracy: 90.753%
+    Error rate: 9.247%
+    min DCF: 0.486
+
+  Quadratic SVM
+    Accuracy: 95.183%
+    Error rate: 4.817%
+    min DCF: 0.292
+
+  Polynomial Kernel SVM
+    Accuracy: 95.226%
+    Error rate: 4.774%
+    min DCF: 0.260
+
+  Radial Basis Function Kernel SVM
+    Accuracy: 65.591%
+    Error rate: 34.409%
+    min DCF: 0.585
+
+PCA: 7, C: 0.00100, gamma: 0.00100
+  Linear SVM
+    Accuracy: 90.753%
+    Error rate: 9.247%
+    min DCF: 0.486
+
+  Quadratic SVM
+    Accuracy: 95.183%
+    Error rate: 4.817%
+    min DCF: 0.292
+
+  Polynomial Kernel SVM
+    Accuracy: 95.226%
+    Error rate: 4.774%
+    min DCF: 0.260
+
+  Radial Basis Function Kernel SVM
+    Accuracy: 65.591%
+    Error rate: 34.409%
+    min DCF: 0.462
+
+PCA: 7, C: 0.00100, gamma: 0.01000
+  Linear SVM
+    Accuracy: 90.753%
+    Error rate: 9.247%
+    min DCF: 0.486
+
+  Quadratic SVM
+    Accuracy: 95.183%
+    Error rate: 4.817%
+    min DCF: 0.292
+
+  Polynomial Kernel SVM
+    Accuracy: 95.226%
+    Error rate: 4.774%
+    min DCF: 0.260
+
+  Radial Basis Function Kernel SVM
+    Accuracy: 65.591%
+    Error rate: 34.409%
+    min DCF: 0.431
+
+PCA: 7, C: 0.00100, gamma: 0.10000
+  Linear SVM
+    Accuracy: 90.753%
+    Error rate: 9.247%
+    min DCF: 0.486
+
+  Quadratic SVM
+    Accuracy: 95.183%
+    Error rate: 4.817%
+    min DCF: 0.292
+
+  Polynomial Kernel SVM
+    Accuracy: 95.226%
+    Error rate: 4.774%
+    min DCF: 0.260
+
+  Radial Basis Function Kernel SVM
+    Accuracy: 65.591%
+    Error rate: 34.409%
+    min DCF: 0.854
+
+PCA: 7, C: 0.00100, gamma: 1.00000
+  Linear SVM
+    Accuracy: 90.753%
+    Error rate: 9.247%
+    min DCF: 0.486
+
+  Quadratic SVM
+    Accuracy: 95.183%
+    Error rate: 4.817%
+    min DCF: 0.292
+
+  Polynomial Kernel SVM
+    Accuracy: 95.226%
+    Error rate: 4.774%
+    min DCF: 0.260
+
+  Radial Basis Function Kernel SVM
+    Accuracy: 65.591%
+    Error rate: 34.409%
+    min DCF: 0.323
+
+PCA: 7, C: 0.01000, gamma: 0.00010
+  Linear SVM
+    Accuracy: 90.968%
+    Error rate: 9.032%
+    min DCF: 0.463
+
+  Quadratic SVM
+    Accuracy: 91.527%
+    Error rate: 8.473%
+    min DCF: 0.266
+
+  Polynomial Kernel SVM
+    Accuracy: 91.957%
+    Error rate: 8.043%
+    min DCF: 0.242
+
+  Radial Basis Function Kernel SVM
+    Accuracy: 65.591%
+    Error rate: 34.409%
+    min DCF: 0.594
+
+PCA: 7, C: 0.01000, gamma: 0.00100
+  Linear SVM
+    Accuracy: 90.968%
+    Error rate: 9.032%
+    min DCF: 0.463
+
+  Quadratic SVM
+    Accuracy: 91.527%
+    Error rate: 8.473%
+    min DCF: 0.266
+
+  Polynomial Kernel SVM
+    Accuracy: 91.957%
+    Error rate: 8.043%
+    min DCF: 0.242
+
+  Radial Basis Function Kernel SVM
+    Accuracy: 90.667%
+    Error rate: 9.333%
+    min DCF: 0.379
+
+PCA: 7, C: 0.01000, gamma: 0.01000
+  Linear SVM
+    Accuracy: 90.968%
+    Error rate: 9.032%
+    min DCF: 0.463
+
+  Quadratic SVM
+    Accuracy: 91.527%
+    Error rate: 8.473%
+    min DCF: 0.266
+
+  Polynomial Kernel SVM
+    Accuracy: 91.957%
+    Error rate: 8.043%
+    min DCF: 0.242
+
+  Radial Basis Function Kernel SVM
+    Accuracy: 80.817%
+    Error rate: 19.183%
+    min DCF: 0.418
+
+PCA: 7, C: 0.01000, gamma: 0.10000
+  Linear SVM
+    Accuracy: 90.968%
+    Error rate: 9.032%
+    min DCF: 0.463
+
+  Quadratic SVM
+    Accuracy: 91.527%
+    Error rate: 8.473%
+    min DCF: 0.266
+
+  Polynomial Kernel SVM
+    Accuracy: 91.957%
+    Error rate: 8.043%
+    min DCF: 0.242
+
+  Radial Basis Function Kernel SVM
+    Accuracy: 65.591%
+    Error rate: 34.409%
+    min DCF: 0.238
+
+PCA: 7, C: 0.01000, gamma: 1.00000
+  Linear SVM
+    Accuracy: 90.968%
+    Error rate: 9.032%
+    min DCF: 0.463
+
+  Quadratic SVM
+    Accuracy: 91.527%
+    Error rate: 8.473%
+    min DCF: 0.266
+
+  Polynomial Kernel SVM
+    Accuracy: 91.957%
+    Error rate: 8.043%
+    min DCF: 0.242
+
+  Radial Basis Function Kernel SVM
+    Accuracy: 65.591%
+    Error rate: 34.409%
+    min DCF: 0.321
+
+PCA: 7, C: 0.10000, gamma: 0.00010
+  Linear SVM
+    Accuracy: 90.882%
+    Error rate: 9.118%
+    min DCF: 0.482
+
+  Quadratic SVM
+    Accuracy: 85.634%
+    Error rate: 14.366%
+    min DCF: 0.257
+
+  Polynomial Kernel SVM
+    Accuracy: 86.753%
+    Error rate: 13.247%
+    min DCF: 0.253
+
+  Radial Basis Function Kernel SVM
+    Accuracy: 89.763%
+    Error rate: 10.237%
+    min DCF: 0.433
+
+PCA: 7, C: 0.10000, gamma: 0.00100
+  Linear SVM
+    Accuracy: 90.882%
+    Error rate: 9.118%
+    min DCF: 0.482
+
+  Quadratic SVM
+    Accuracy: 85.634%
+    Error rate: 14.366%
+    min DCF: 0.257
+
+  Polynomial Kernel SVM
+    Accuracy: 86.753%
+    Error rate: 13.247%
+    min DCF: 0.253
+
+  Radial Basis Function Kernel SVM
+    Accuracy: 94.667%
+    Error rate: 5.333%
+    min DCF: 0.309
+
+PCA: 7, C: 0.10000, gamma: 0.01000
+  Linear SVM
+    Accuracy: 90.882%
+    Error rate: 9.118%
+    min DCF: 0.482
+
+  Quadratic SVM
+    Accuracy: 85.634%
+    Error rate: 14.366%
+    min DCF: 0.257
+
+  Polynomial Kernel SVM
+    Accuracy: 86.753%
+    Error rate: 13.247%
+    min DCF: 0.253
+
+  Radial Basis Function Kernel SVM
+    Accuracy: 94.839%
+    Error rate: 5.161%
+    min DCF: 0.326
+
+PCA: 7, C: 0.10000, gamma: 0.10000
+  Linear SVM
+    Accuracy: 90.882%
+    Error rate: 9.118%
+    min DCF: 0.482
+
+  Quadratic SVM
+    Accuracy: 85.634%
+    Error rate: 14.366%
+    min DCF: 0.257
+
+  Polynomial Kernel SVM
+    Accuracy: 86.753%
+    Error rate: 13.247%
+    min DCF: 0.253
+
+  Radial Basis Function Kernel SVM
+    Accuracy: 65.591%
+    Error rate: 34.409%
+    min DCF: 0.802
+
+PCA: 7, C: 0.10000, gamma: 1.00000
+  Linear SVM
+    Accuracy: 90.882%
+    Error rate: 9.118%
+    min DCF: 0.482
+
+  Quadratic SVM
+    Accuracy: 85.634%
+    Error rate: 14.366%
+    min DCF: 0.257
+
+  Polynomial Kernel SVM
+    Accuracy: 86.753%
+    Error rate: 13.247%
+    min DCF: 0.253
+
+  Radial Basis Function Kernel SVM
+    Accuracy: 65.591%
+    Error rate: 34.409%
+    min DCF: 0.322
+
+PCA: 7, C: 1.00000, gamma: 0.00010
+  Linear SVM
+    Accuracy: 91.011%
+    Error rate: 8.989%
+    min DCF: 0.484
+
+  Quadratic SVM
+    Accuracy: 82.925%
+    Error rate: 17.075%
+    min DCF: 0.566
+
+  Polynomial Kernel SVM
+    Accuracy: 79.097%
+    Error rate: 20.903%
+    min DCF: 0.666
+
+  Radial Basis Function Kernel SVM
+    Accuracy: 93.118%
+    Error rate: 6.882%
+    min DCF: 0.399
+
+PCA: 7, C: 1.00000, gamma: 0.00100
+  Linear SVM
+    Accuracy: 91.011%
+    Error rate: 8.989%
+    min DCF: 0.484
+
+  Quadratic SVM
+    Accuracy: 82.925%
+    Error rate: 17.075%
+    min DCF: 0.566
+
+  Polynomial Kernel SVM
+    Accuracy: 79.097%
+    Error rate: 20.903%
+    min DCF: 0.666
+
+  Radial Basis Function Kernel SVM
+    Accuracy: 95.656%
+    Error rate: 4.344%
+    min DCF: 0.282
+
+PCA: 7, C: 1.00000, gamma: 0.01000
+  Linear SVM
+    Accuracy: 91.011%
+    Error rate: 8.989%
+    min DCF: 0.484
+
+  Quadratic SVM
+    Accuracy: 82.925%
+    Error rate: 17.075%
+    min DCF: 0.566
+
+  Polynomial Kernel SVM
+    Accuracy: 79.097%
+    Error rate: 20.903%
+    min DCF: 0.666
+
+  Radial Basis Function Kernel SVM
+    Accuracy: 96.301%
+    Error rate: 3.699%
+    min DCF: 0.269
+
+PCA: 7, C: 1.00000, gamma: 0.10000
+  Linear SVM
+    Accuracy: 91.011%
+    Error rate: 8.989%
+    min DCF: 0.484
+
+  Quadratic SVM
+    Accuracy: 82.925%
+    Error rate: 17.075%
+    min DCF: 0.566
+
+  Polynomial Kernel SVM
+    Accuracy: 79.097%
+    Error rate: 20.903%
+    min DCF: 0.666
+
+  Radial Basis Function Kernel SVM
+    Accuracy: 89.247%
+    Error rate: 10.753%
+    min DCF: 0.234
+
+PCA: 7, C: 1.00000, gamma: 1.00000
+  Linear SVM
+    Accuracy: 91.011%
+    Error rate: 8.989%
+    min DCF: 0.484
+
+  Quadratic SVM
+    Accuracy: 82.925%
+    Error rate: 17.075%
+    min DCF: 0.566
+
+  Polynomial Kernel SVM
+    Accuracy: 79.097%
+    Error rate: 20.903%
+    min DCF: 0.666
+
+  Radial Basis Function Kernel SVM
+    Accuracy: 86.280%
+    Error rate: 13.720%
+    min DCF: 0.321
+
+PCA: 6, C: 0.00010, gamma: 0.00010
+  Linear SVM
+    Accuracy: 89.032%
+    Error rate: 10.968%
+    min DCF: 0.562
+
+  Quadratic SVM
+    Accuracy: 95.269%
+    Error rate: 4.731%
+    min DCF: 0.286
+
+  Polynomial Kernel SVM
+    Accuracy: 95.398%
+    Error rate: 4.602%
+    min DCF: 0.286
+
+  Radial Basis Function Kernel SVM
+    Accuracy: 65.591%
+    Error rate: 34.409%
+    min DCF: 0.923
+
+PCA: 6, C: 0.00010, gamma: 0.00100
+  Linear SVM
+    Accuracy: 89.032%
+    Error rate: 10.968%
+    min DCF: 0.562
+
+  Quadratic SVM
+    Accuracy: 95.269%
+    Error rate: 4.731%
+    min DCF: 0.286
+
+  Polynomial Kernel SVM
+    Accuracy: 95.398%
+    Error rate: 4.602%
+    min DCF: 0.286
+
+  Radial Basis Function Kernel SVM
+    Accuracy: 65.591%
+    Error rate: 34.409%
+    min DCF: 0.442
+
+PCA: 6, C: 0.00010, gamma: 0.01000
+  Linear SVM
+    Accuracy: 89.032%
+    Error rate: 10.968%
+    min DCF: 0.562
+
+  Quadratic SVM
+    Accuracy: 95.269%
+    Error rate: 4.731%
+    min DCF: 0.286
+
+  Polynomial Kernel SVM
+    Accuracy: 95.398%
+    Error rate: 4.602%
+    min DCF: 0.286
+
+  Radial Basis Function Kernel SVM
+    Accuracy: 65.591%
+    Error rate: 34.409%
+    min DCF: 0.366
+
+PCA: 6, C: 0.00010, gamma: 0.10000
+  Linear SVM
+    Accuracy: 89.032%
+    Error rate: 10.968%
+    min DCF: 0.562
+
+  Quadratic SVM
+    Accuracy: 95.269%
+    Error rate: 4.731%
+    min DCF: 0.286
+
+  Polynomial Kernel SVM
+    Accuracy: 95.398%
+    Error rate: 4.602%
+    min DCF: 0.286
+
+  Radial Basis Function Kernel SVM
+    Accuracy: 65.591%
+    Error rate: 34.409%
+    min DCF: 0.796
+
+PCA: 6, C: 0.00010, gamma: 1.00000
+  Linear SVM
+    Accuracy: 89.032%
+    Error rate: 10.968%
+    min DCF: 0.562
+
+  Quadratic SVM
+    Accuracy: 95.269%
+    Error rate: 4.731%
+    min DCF: 0.286
+
+  Polynomial Kernel SVM
+    Accuracy: 95.398%
+    Error rate: 4.602%
+    min DCF: 0.286
+
+  Radial Basis Function Kernel SVM
+    Accuracy: 65.591%
+    Error rate: 34.409%
+    min DCF: 0.303
+
+PCA: 6, C: 0.00100, gamma: 0.00010
+  Linear SVM
+    Accuracy: 90.710%
+    Error rate: 9.290%
+    min DCF: 0.489
+
+  Quadratic SVM
+    Accuracy: 95.011%
+    Error rate: 4.989%
+    min DCF: 0.285
+
+  Polynomial Kernel SVM
+    Accuracy: 95.140%
+    Error rate: 4.860%
+    min DCF: 0.275
+
+  Radial Basis Function Kernel SVM
+    Accuracy: 65.591%
+    Error rate: 34.409%
+    min DCF: 0.608
+
+PCA: 6, C: 0.00100, gamma: 0.00100
+  Linear SVM
+    Accuracy: 90.710%
+    Error rate: 9.290%
+    min DCF: 0.489
+
+  Quadratic SVM
+    Accuracy: 95.011%
+    Error rate: 4.989%
+    min DCF: 0.285
+
+  Polynomial Kernel SVM
+    Accuracy: 95.140%
+    Error rate: 4.860%
+    min DCF: 0.275
+
+  Radial Basis Function Kernel SVM
+    Accuracy: 65.591%
+    Error rate: 34.409%
+    min DCF: 0.465
+
+PCA: 6, C: 0.00100, gamma: 0.01000
+  Linear SVM
+    Accuracy: 90.710%
+    Error rate: 9.290%
+    min DCF: 0.489
+
+  Quadratic SVM
+    Accuracy: 95.011%
+    Error rate: 4.989%
+    min DCF: 0.285
+
+  Polynomial Kernel SVM
+    Accuracy: 95.140%
+    Error rate: 4.860%
+    min DCF: 0.275
+
+  Radial Basis Function Kernel SVM
+    Accuracy: 65.591%
+    Error rate: 34.409%
+    min DCF: 0.410
+
+PCA: 6, C: 0.00100, gamma: 0.10000
+  Linear SVM
+    Accuracy: 90.710%
+    Error rate: 9.290%
+    min DCF: 0.489
+
+  Quadratic SVM
+    Accuracy: 95.011%
+    Error rate: 4.989%
+    min DCF: 0.285
+
+  Polynomial Kernel SVM
+    Accuracy: 95.140%
+    Error rate: 4.860%
+    min DCF: 0.275
+
+  Radial Basis Function Kernel SVM
+    Accuracy: 65.591%
+    Error rate: 34.409%
+    min DCF: 0.241
+
+PCA: 6, C: 0.00100, gamma: 1.00000
+  Linear SVM
+    Accuracy: 90.710%
+    Error rate: 9.290%
+    min DCF: 0.489
+
+  Quadratic SVM
+    Accuracy: 95.011%
+    Error rate: 4.989%
+    min DCF: 0.285
+
+  Polynomial Kernel SVM
+    Accuracy: 95.140%
+    Error rate: 4.860%
+    min DCF: 0.275
+
+  Radial Basis Function Kernel SVM
+    Accuracy: 65.591%
+    Error rate: 34.409%
+    min DCF: 0.301
+
+PCA: 6, C: 0.01000, gamma: 0.00010
+  Linear SVM
+    Accuracy: 91.097%
+    Error rate: 8.903%
+    min DCF: 0.456
+
+  Quadratic SVM
+    Accuracy: 92.043%
+    Error rate: 7.957%
+    min DCF: 0.262
+
+  Polynomial Kernel SVM
+    Accuracy: 92.172%
+    Error rate: 7.828%
+    min DCF: 0.262
+
+  Radial Basis Function Kernel SVM
+    Accuracy: 65.591%
+    Error rate: 34.409%
+    min DCF: 0.558
+
+PCA: 6, C: 0.01000, gamma: 0.00100
+  Linear SVM
+    Accuracy: 91.097%
+    Error rate: 8.903%
+    min DCF: 0.456
+
+  Quadratic SVM
+    Accuracy: 92.043%
+    Error rate: 7.957%
+    min DCF: 0.262
+
+  Polynomial Kernel SVM
+    Accuracy: 92.172%
+    Error rate: 7.828%
+    min DCF: 0.262
+
+  Radial Basis Function Kernel SVM
+    Accuracy: 91.269%
+    Error rate: 8.731%
+    min DCF: 0.368
+
+PCA: 6, C: 0.01000, gamma: 0.01000
+  Linear SVM
+    Accuracy: 91.097%
+    Error rate: 8.903%
+    min DCF: 0.456
+
+  Quadratic SVM
+    Accuracy: 92.043%
+    Error rate: 7.957%
+    min DCF: 0.262
+
+  Polynomial Kernel SVM
+    Accuracy: 92.172%
+    Error rate: 7.828%
+    min DCF: 0.262
+
+  Radial Basis Function Kernel SVM
+    Accuracy: 86.796%
+    Error rate: 13.204%
+    min DCF: 0.381
+
+PCA: 6, C: 0.01000, gamma: 0.10000
+  Linear SVM
+    Accuracy: 91.097%
+    Error rate: 8.903%
+    min DCF: 0.456
+
+  Quadratic SVM
+    Accuracy: 92.043%
+    Error rate: 7.957%
+    min DCF: 0.262
+
+  Polynomial Kernel SVM
+    Accuracy: 92.172%
+    Error rate: 7.828%
+    min DCF: 0.262
+
+  Radial Basis Function Kernel SVM
+    Accuracy: 65.591%
+    Error rate: 34.409%
+    min DCF: 0.241
+
+PCA: 6, C: 0.01000, gamma: 1.00000
+  Linear SVM
+    Accuracy: 91.097%
+    Error rate: 8.903%
+    min DCF: 0.456
+
+  Quadratic SVM
+    Accuracy: 92.043%
+    Error rate: 7.957%
+    min DCF: 0.262
+
+  Polynomial Kernel SVM
+    Accuracy: 92.172%
+    Error rate: 7.828%
+    min DCF: 0.262
+
+  Radial Basis Function Kernel SVM
+    Accuracy: 65.591%
+    Error rate: 34.409%
+    min DCF: 0.302
+
+PCA: 6, C: 0.10000, gamma: 0.00010
+  Linear SVM
+    Accuracy: 90.968%
+    Error rate: 9.032%
+    min DCF: 0.472
+
+  Quadratic SVM
+    Accuracy: 86.323%
+    Error rate: 13.677%
+    min DCF: 0.270
+
+  Polynomial Kernel SVM
+    Accuracy: 85.462%
+    Error rate: 14.538%
+    min DCF: 0.265
+
+  Radial Basis Function Kernel SVM
+    Accuracy: 89.720%
+    Error rate: 10.280%
+    min DCF: 0.441
+
+PCA: 6, C: 0.10000, gamma: 0.00100
+  Linear SVM
+    Accuracy: 90.968%
+    Error rate: 9.032%
+    min DCF: 0.472
+
+  Quadratic SVM
+    Accuracy: 86.323%
+    Error rate: 13.677%
+    min DCF: 0.270
+
+  Polynomial Kernel SVM
+    Accuracy: 85.462%
+    Error rate: 14.538%
+    min DCF: 0.265
+
+  Radial Basis Function Kernel SVM
+    Accuracy: 94.710%
+    Error rate: 5.290%
+    min DCF: 0.299
+
+PCA: 6, C: 0.10000, gamma: 0.01000
+  Linear SVM
+    Accuracy: 90.968%
+    Error rate: 9.032%
+    min DCF: 0.472
+
+  Quadratic SVM
+    Accuracy: 86.323%
+    Error rate: 13.677%
+    min DCF: 0.270
+
+  Polynomial Kernel SVM
+    Accuracy: 85.462%
+    Error rate: 14.538%
+    min DCF: 0.265
+
+  Radial Basis Function Kernel SVM
+    Accuracy: 95.398%
+    Error rate: 4.602%
+    min DCF: 0.295
+
+PCA: 6, C: 0.10000, gamma: 0.10000
+  Linear SVM
+    Accuracy: 90.968%
+    Error rate: 9.032%
+    min DCF: 0.472
+
+  Quadratic SVM
+    Accuracy: 86.323%
+    Error rate: 13.677%
+    min DCF: 0.270
+
+  Polynomial Kernel SVM
+    Accuracy: 85.462%
+    Error rate: 14.538%
+    min DCF: 0.265
+
+  Radial Basis Function Kernel SVM
+    Accuracy: 65.677%
+    Error rate: 34.323%
+    min DCF: 0.241
+
+PCA: 6, C: 0.10000, gamma: 1.00000
+  Linear SVM
+    Accuracy: 90.968%
+    Error rate: 9.032%
+    min DCF: 0.472
+
+  Quadratic SVM
+    Accuracy: 86.323%
+    Error rate: 13.677%
+    min DCF: 0.270
+
+  Polynomial Kernel SVM
+    Accuracy: 85.462%
+    Error rate: 14.538%
+    min DCF: 0.265
+
+  Radial Basis Function Kernel SVM
+    Accuracy: 65.591%
+    Error rate: 34.409%
+    min DCF: 0.302
+
+PCA: 6, C: 1.00000, gamma: 0.00010
+  Linear SVM
+    Accuracy: 91.097%
+    Error rate: 8.903%
+    min DCF: 0.469
+
+  Quadratic SVM
+    Accuracy: 77.978%
+    Error rate: 22.022%
+    min DCF: 0.631
+
+  Polynomial Kernel SVM
+    Accuracy: 79.226%
+    Error rate: 20.774%
+    min DCF: 0.624
+
+  Radial Basis Function Kernel SVM
+    Accuracy: 92.903%
+    Error rate: 7.097%
+    min DCF: 0.416
+
+PCA: 6, C: 1.00000, gamma: 0.00100
+  Linear SVM
+    Accuracy: 91.097%
+    Error rate: 8.903%
+    min DCF: 0.469
+
+  Quadratic SVM
+    Accuracy: 77.978%
+    Error rate: 22.022%
+    min DCF: 0.631
+
+  Polynomial Kernel SVM
+    Accuracy: 79.226%
+    Error rate: 20.774%
+    min DCF: 0.624
+
+  Radial Basis Function Kernel SVM
+    Accuracy: 95.742%
+    Error rate: 4.258%
+    min DCF: 0.278
+
+PCA: 6, C: 1.00000, gamma: 0.01000
+  Linear SVM
+    Accuracy: 91.097%
+    Error rate: 8.903%
+    min DCF: 0.469
+
+  Quadratic SVM
+    Accuracy: 77.978%
+    Error rate: 22.022%
+    min DCF: 0.631
+
+  Polynomial Kernel SVM
+    Accuracy: 79.226%
+    Error rate: 20.774%
+    min DCF: 0.624
+
+  Radial Basis Function Kernel SVM
+    Accuracy: 96.301%
+    Error rate: 3.699%
+    min DCF: 0.254
+
+PCA: 6, C: 1.00000, gamma: 0.10000
+  Linear SVM
+    Accuracy: 91.097%
+    Error rate: 8.903%
+    min DCF: 0.469
+
+  Quadratic SVM
+    Accuracy: 77.978%
+    Error rate: 22.022%
+    min DCF: 0.631
+
+  Polynomial Kernel SVM
+    Accuracy: 79.226%
+    Error rate: 20.774%
+    min DCF: 0.624
+
+  Radial Basis Function Kernel SVM
+    Accuracy: 93.118%
+    Error rate: 6.882%
+    min DCF: 0.225
+
+PCA: 6, C: 1.00000, gamma: 1.00000
+  Linear SVM
+    Accuracy: 91.097%
+    Error rate: 8.903%
+    min DCF: 0.469
+
+  Quadratic SVM
+    Accuracy: 77.978%
+    Error rate: 22.022%
+    min DCF: 0.631
+
+  Polynomial Kernel SVM
+    Accuracy: 79.226%
+    Error rate: 20.774%
+    min DCF: 0.624
+
+  Radial Basis Function Kernel SVM
+    Accuracy: 86.280%
+    Error rate: 13.720%
+    min DCF: 0.308
+
+PCA: 5, C: 0.00010, gamma: 0.00010
+  Linear SVM
+    Accuracy: 88.774%
+    Error rate: 11.226%
+    min DCF: 0.567
+
+  Quadratic SVM
+    Accuracy: 94.839%
+    Error rate: 5.161%
+    min DCF: 0.315
+
+  Polynomial Kernel SVM
+    Accuracy: 94.925%
+    Error rate: 5.075%
+    min DCF: 0.298
+
+  Radial Basis Function Kernel SVM
+    Accuracy: 65.591%
+    Error rate: 34.409%
+    min DCF: 0.930
+
+PCA: 5, C: 0.00010, gamma: 0.00100
+  Linear SVM
+    Accuracy: 88.774%
+    Error rate: 11.226%
+    min DCF: 0.567
+
+  Quadratic SVM
+    Accuracy: 94.839%
+    Error rate: 5.161%
+    min DCF: 0.315
+
+  Polynomial Kernel SVM
+    Accuracy: 94.925%
+    Error rate: 5.075%
+    min DCF: 0.298
+
+  Radial Basis Function Kernel SVM
+    Accuracy: 65.591%
+    Error rate: 34.409%
+    min DCF: 0.456
+
+PCA: 5, C: 0.00010, gamma: 0.01000
+  Linear SVM
+    Accuracy: 88.774%
+    Error rate: 11.226%
+    min DCF: 0.567
+
+  Quadratic SVM
+    Accuracy: 94.839%
+    Error rate: 5.161%
+    min DCF: 0.315
+
+  Polynomial Kernel SVM
+    Accuracy: 94.925%
+    Error rate: 5.075%
+    min DCF: 0.298
+
+  Radial Basis Function Kernel SVM
+    Accuracy: 65.591%
+    Error rate: 34.409%
+    min DCF: 0.376
+
+PCA: 5, C: 0.00010, gamma: 0.10000
+  Linear SVM
+    Accuracy: 88.774%
+    Error rate: 11.226%
+    min DCF: 0.567
+
+  Quadratic SVM
+    Accuracy: 94.839%
+    Error rate: 5.161%
+    min DCF: 0.315
+
+  Polynomial Kernel SVM
+    Accuracy: 94.925%
+    Error rate: 5.075%
+    min DCF: 0.298
+
+  Radial Basis Function Kernel SVM
+    Accuracy: 65.591%
+    Error rate: 34.409%
+    min DCF: 0.485
+
+PCA: 5, C: 0.00010, gamma: 1.00000
+  Linear SVM
+    Accuracy: 88.774%
+    Error rate: 11.226%
+    min DCF: 0.567
+
+  Quadratic SVM
+    Accuracy: 94.839%
+    Error rate: 5.161%
+    min DCF: 0.315
+
+  Polynomial Kernel SVM
+    Accuracy: 94.925%
+    Error rate: 5.075%
+    min DCF: 0.298
+
+  Radial Basis Function Kernel SVM
+    Accuracy: 65.591%
+    Error rate: 34.409%
+    min DCF: 0.292
+
+PCA: 5, C: 0.00100, gamma: 0.00010
+  Linear SVM
+    Accuracy: 90.667%
+    Error rate: 9.333%
+    min DCF: 0.497
+
+  Quadratic SVM
+    Accuracy: 94.925%
+    Error rate: 5.075%
+    min DCF: 0.302
+
+  Polynomial Kernel SVM
+    Accuracy: 94.839%
+    Error rate: 5.161%
+    min DCF: 0.293
+
+  Radial Basis Function Kernel SVM
+    Accuracy: 65.591%
+    Error rate: 34.409%
+    min DCF: 0.607
+
+PCA: 5, C: 0.00100, gamma: 0.00100
+  Linear SVM
+    Accuracy: 90.667%
+    Error rate: 9.333%
+    min DCF: 0.497
+
+  Quadratic SVM
+    Accuracy: 94.925%
+    Error rate: 5.075%
+    min DCF: 0.302
+
+  Polynomial Kernel SVM
+    Accuracy: 94.839%
+    Error rate: 5.161%
+    min DCF: 0.293
+
+  Radial Basis Function Kernel SVM
+    Accuracy: 65.591%
+    Error rate: 34.409%
+    min DCF: 0.469
+
+PCA: 5, C: 0.00100, gamma: 0.01000
+  Linear SVM
+    Accuracy: 90.667%
+    Error rate: 9.333%
+    min DCF: 0.497
+
+  Quadratic SVM
+    Accuracy: 94.925%
+    Error rate: 5.075%
+    min DCF: 0.302
+
+  Polynomial Kernel SVM
+    Accuracy: 94.839%
+    Error rate: 5.161%
+    min DCF: 0.293
+
+  Radial Basis Function Kernel SVM
+    Accuracy: 65.591%
+    Error rate: 34.409%
+    min DCF: 0.403
+
+PCA: 5, C: 0.00100, gamma: 0.10000
+  Linear SVM
+    Accuracy: 90.667%
+    Error rate: 9.333%
+    min DCF: 0.497
+
+  Quadratic SVM
+    Accuracy: 94.925%
+    Error rate: 5.075%
+    min DCF: 0.302
+
+  Polynomial Kernel SVM
+    Accuracy: 94.839%
+    Error rate: 5.161%
+    min DCF: 0.293
+
+  Radial Basis Function Kernel SVM
+    Accuracy: 65.591%
+    Error rate: 34.409%
+    min DCF: 0.281
+
+PCA: 5, C: 0.00100, gamma: 1.00000
+  Linear SVM
+    Accuracy: 90.667%
+    Error rate: 9.333%
+    min DCF: 0.497
+
+  Quadratic SVM
+    Accuracy: 94.925%
+    Error rate: 5.075%
+    min DCF: 0.302
+
+  Polynomial Kernel SVM
+    Accuracy: 94.839%
+    Error rate: 5.161%
+    min DCF: 0.293
+
+  Radial Basis Function Kernel SVM
+    Accuracy: 65.591%
+    Error rate: 34.409%
+    min DCF: 0.285
+
+PCA: 5, C: 0.01000, gamma: 0.00010
+  Linear SVM
+    Accuracy: 90.796%
+    Error rate: 9.204%
+    min DCF: 0.480
+
+  Quadratic SVM
+    Accuracy: 91.312%
+    Error rate: 8.688%
+    min DCF: 0.280
+
+  Polynomial Kernel SVM
+    Accuracy: 90.925%
+    Error rate: 9.075%
+    min DCF: 0.272
+
+  Radial Basis Function Kernel SVM
+    Accuracy: 65.591%
+    Error rate: 34.409%
+    min DCF: 0.579
+
+PCA: 5, C: 0.01000, gamma: 0.00100
+  Linear SVM
+    Accuracy: 90.796%
+    Error rate: 9.204%
+    min DCF: 0.480
+
+  Quadratic SVM
+    Accuracy: 91.312%
+    Error rate: 8.688%
+    min DCF: 0.280
+
+  Polynomial Kernel SVM
+    Accuracy: 90.925%
+    Error rate: 9.075%
+    min DCF: 0.272
+
+  Radial Basis Function Kernel SVM
+    Accuracy: 91.742%
+    Error rate: 8.258%
+    min DCF: 0.374
+
+PCA: 5, C: 0.01000, gamma: 0.01000
+  Linear SVM
+    Accuracy: 90.796%
+    Error rate: 9.204%
+    min DCF: 0.480
+
+  Quadratic SVM
+    Accuracy: 91.312%
+    Error rate: 8.688%
+    min DCF: 0.280
+
+  Polynomial Kernel SVM
+    Accuracy: 90.925%
+    Error rate: 9.075%
+    min DCF: 0.272
+
+  Radial Basis Function Kernel SVM
+    Accuracy: 90.538%
+    Error rate: 9.462%
+    min DCF: 0.367
+
+PCA: 5, C: 0.01000, gamma: 0.10000
+  Linear SVM
+    Accuracy: 90.796%
+    Error rate: 9.204%
+    min DCF: 0.480
+
+  Quadratic SVM
+    Accuracy: 91.312%
+    Error rate: 8.688%
+    min DCF: 0.280
+
+  Polynomial Kernel SVM
+    Accuracy: 90.925%
+    Error rate: 9.075%
+    min DCF: 0.272
+
+  Radial Basis Function Kernel SVM
+    Accuracy: 65.591%
+    Error rate: 34.409%
+    min DCF: 0.281
+
+PCA: 5, C: 0.01000, gamma: 1.00000
+  Linear SVM
+    Accuracy: 90.796%
+    Error rate: 9.204%
+    min DCF: 0.480
+
+  Quadratic SVM
+    Accuracy: 91.312%
+    Error rate: 8.688%
+    min DCF: 0.280
+
+  Polynomial Kernel SVM
+    Accuracy: 90.925%
+    Error rate: 9.075%
+    min DCF: 0.272
+
+  Radial Basis Function Kernel SVM
+    Accuracy: 65.591%
+    Error rate: 34.409%
+    min DCF: 0.291
+
+PCA: 5, C: 0.10000, gamma: 0.00010
+  Linear SVM
+    Accuracy: 90.495%
+    Error rate: 9.505%
+    min DCF: 0.486
+
+  Quadratic SVM
+    Accuracy: 86.839%
+    Error rate: 13.161%
+    min DCF: 0.294
+
+  Polynomial Kernel SVM
+    Accuracy: 83.656%
+    Error rate: 16.344%
+    min DCF: 0.348
+
+  Radial Basis Function Kernel SVM
+    Accuracy: 89.806%
+    Error rate: 10.194%
+    min DCF: 0.437
+
+PCA: 5, C: 0.10000, gamma: 0.00100
+  Linear SVM
+    Accuracy: 90.495%
+    Error rate: 9.505%
+    min DCF: 0.486
+
+  Quadratic SVM
+    Accuracy: 86.839%
+    Error rate: 13.161%
+    min DCF: 0.294
+
+  Polynomial Kernel SVM
+    Accuracy: 83.656%
+    Error rate: 16.344%
+    min DCF: 0.348
+
+  Radial Basis Function Kernel SVM
+    Accuracy: 94.753%
+    Error rate: 5.247%
+    min DCF: 0.330
+
+PCA: 5, C: 0.10000, gamma: 0.01000
+  Linear SVM
+    Accuracy: 90.495%
+    Error rate: 9.505%
+    min DCF: 0.486
+
+  Quadratic SVM
+    Accuracy: 86.839%
+    Error rate: 13.161%
+    min DCF: 0.294
+
+  Polynomial Kernel SVM
+    Accuracy: 83.656%
+    Error rate: 16.344%
+    min DCF: 0.348
+
+  Radial Basis Function Kernel SVM
+    Accuracy: 95.398%
+    Error rate: 4.602%
+    min DCF: 0.310
+
+PCA: 5, C: 0.10000, gamma: 0.10000
+  Linear SVM
+    Accuracy: 90.495%
+    Error rate: 9.505%
+    min DCF: 0.486
+
+  Quadratic SVM
+    Accuracy: 86.839%
+    Error rate: 13.161%
+    min DCF: 0.294
+
+  Polynomial Kernel SVM
+    Accuracy: 83.656%
+    Error rate: 16.344%
+    min DCF: 0.348
+
+  Radial Basis Function Kernel SVM
+    Accuracy: 68.946%
+    Error rate: 31.054%
+    min DCF: 0.281
+
+PCA: 5, C: 0.10000, gamma: 1.00000
+  Linear SVM
+    Accuracy: 90.495%
+    Error rate: 9.505%
+    min DCF: 0.486
+
+  Quadratic SVM
+    Accuracy: 86.839%
+    Error rate: 13.161%
+    min DCF: 0.294
+
+  Polynomial Kernel SVM
+    Accuracy: 83.656%
+    Error rate: 16.344%
+    min DCF: 0.348
+
+  Radial Basis Function Kernel SVM
+    Accuracy: 65.591%
+    Error rate: 34.409%
+    min DCF: 0.291
+
+PCA: 5, C: 1.00000, gamma: 0.00010
+  Linear SVM
+    Accuracy: 90.624%
+    Error rate: 9.376%
+    min DCF: 0.484
+
+  Quadratic SVM
+    Accuracy: 82.237%
+    Error rate: 17.763%
+    min DCF: 0.683
+
+  Polynomial Kernel SVM
+    Accuracy: 73.505%
+    Error rate: 26.495%
+    min DCF: 1.000
+
+  Radial Basis Function Kernel SVM
+    Accuracy: 92.215%
+    Error rate: 7.785%
+    min DCF: 0.420
+
+PCA: 5, C: 1.00000, gamma: 0.00100
+  Linear SVM
+    Accuracy: 90.624%
+    Error rate: 9.376%
+    min DCF: 0.484
+
+  Quadratic SVM
+    Accuracy: 82.237%
+    Error rate: 17.763%
+    min DCF: 0.683
+
+  Polynomial Kernel SVM
+    Accuracy: 73.505%
+    Error rate: 26.495%
+    min DCF: 1.000
+
+  Radial Basis Function Kernel SVM
+    Accuracy: 95.441%
+    Error rate: 4.559%
+    min DCF: 0.289
+
+PCA: 5, C: 1.00000, gamma: 0.01000
+  Linear SVM
+    Accuracy: 90.624%
+    Error rate: 9.376%
+    min DCF: 0.484
+
+  Quadratic SVM
+    Accuracy: 82.237%
+    Error rate: 17.763%
+    min DCF: 0.683
+
+  Polynomial Kernel SVM
+    Accuracy: 73.505%
+    Error rate: 26.495%
+    min DCF: 1.000
+
+  Radial Basis Function Kernel SVM
+    Accuracy: 95.828%
+    Error rate: 4.172%
+    min DCF: 0.264
+
+PCA: 5, C: 1.00000, gamma: 0.10000
+  Linear SVM
+    Accuracy: 90.624%
+    Error rate: 9.376%
+    min DCF: 0.484
+
+  Quadratic SVM
+    Accuracy: 82.237%
+    Error rate: 17.763%
+    min DCF: 0.683
+
+  Polynomial Kernel SVM
+    Accuracy: 73.505%
+    Error rate: 26.495%
+    min DCF: 1.000
+
+  Radial Basis Function Kernel SVM
+    Accuracy: 95.527%
+    Error rate: 4.473%
+    min DCF: 0.223
+
+PCA: 5, C: 1.00000, gamma: 1.00000
+  Linear SVM
+    Accuracy: 90.624%
+    Error rate: 9.376%
+    min DCF: 0.484
+
+  Quadratic SVM
+    Accuracy: 82.237%
+    Error rate: 17.763%
+    min DCF: 0.683
+
+  Polynomial Kernel SVM
+    Accuracy: 73.505%
+    Error rate: 26.495%
+    min DCF: 1.000
+
+  Radial Basis Function Kernel SVM
+    Accuracy: 86.280%
+    Error rate: 13.720%
+    min DCF: 0.332
+

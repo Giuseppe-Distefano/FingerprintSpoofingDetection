@@ -1,0 +1,1848 @@
+No PCA, pi: 0.100, lambda: 0.0000010
+  Linear Logistic Regression
+    Accuracy: 87.785%
+    Error rate: 12.215%
+    min DCF: 0.718
+
+  Quadratic Logistic Regression
+    Accuracy: 94.409%
+    Error rate: 5.591%
+    min DCF: 0.512
+
+No PCA, pi: 0.100, lambda: 0.0001000
+  Linear Logistic Regression
+    Accuracy: 87.785%
+    Error rate: 12.215%
+    min DCF: 0.718
+
+  Quadratic Logistic Regression
+    Accuracy: 94.452%
+    Error rate: 5.548%
+    min DCF: 0.511
+
+No PCA, pi: 0.100, lambda: 0.0010000
+  Linear Logistic Regression
+    Accuracy: 87.785%
+    Error rate: 12.215%
+    min DCF: 0.718
+
+  Quadratic Logistic Regression
+    Accuracy: 94.452%
+    Error rate: 5.548%
+    min DCF: 0.512
+
+No PCA, pi: 0.100, lambda: 0.1000000
+  Linear Logistic Regression
+    Accuracy: 86.925%
+    Error rate: 13.075%
+    min DCF: 0.714
+
+  Quadratic Logistic Regression
+    Accuracy: 93.935%
+    Error rate: 6.065%
+    min DCF: 0.610
+
+No PCA, pi: 0.100, lambda: 1.0000000
+  Linear Logistic Regression
+    Accuracy: 79.570%
+    Error rate: 20.430%
+    min DCF: 0.701
+
+  Quadratic Logistic Regression
+    Accuracy: 93.247%
+    Error rate: 6.753%
+    min DCF: 0.629
+
+No PCA, pi: 0.100, lambda: 10.0000000
+  Linear Logistic Regression
+    Accuracy: 65.591%
+    Error rate: 34.409%
+    min DCF: 0.731
+
+  Quadratic Logistic Regression
+    Accuracy: 92.344%
+    Error rate: 7.656%
+    min DCF: 0.609
+
+No PCA, pi: 0.100, lambda: 100.0000000
+  Linear Logistic Regression
+    Accuracy: 65.591%
+    Error rate: 34.409%
+    min DCF: 0.746
+
+  Quadratic Logistic Regression
+    Accuracy: 89.161%
+    Error rate: 10.839%
+    min DCF: 0.637
+
+No PCA, pi: 0.500, lambda: 0.0000010
+  Linear Logistic Regression
+    Accuracy: 90.796%
+    Error rate: 9.204%
+    min DCF: 0.468
+
+  Quadratic Logistic Regression
+    Accuracy: 95.613%
+    Error rate: 4.387%
+    min DCF: 0.263
+
+No PCA, pi: 0.500, lambda: 0.0001000
+  Linear Logistic Regression
+    Accuracy: 90.796%
+    Error rate: 9.204%
+    min DCF: 0.468
+
+  Quadratic Logistic Regression
+    Accuracy: 95.613%
+    Error rate: 4.387%
+    min DCF: 0.261
+
+No PCA, pi: 0.500, lambda: 0.0010000
+  Linear Logistic Regression
+    Accuracy: 90.796%
+    Error rate: 9.204%
+    min DCF: 0.468
+
+  Quadratic Logistic Regression
+    Accuracy: 95.656%
+    Error rate: 4.344%
+    min DCF: 0.261
+
+No PCA, pi: 0.500, lambda: 0.1000000
+  Linear Logistic Regression
+    Accuracy: 90.753%
+    Error rate: 9.247%
+    min DCF: 0.467
+
+  Quadratic Logistic Regression
+    Accuracy: 95.742%
+    Error rate: 4.258%
+    min DCF: 0.290
+
+No PCA, pi: 0.500, lambda: 1.0000000
+  Linear Logistic Regression
+    Accuracy: 90.065%
+    Error rate: 9.935%
+    min DCF: 0.484
+
+  Quadratic Logistic Regression
+    Accuracy: 95.699%
+    Error rate: 4.301%
+    min DCF: 0.310
+
+No PCA, pi: 0.500, lambda: 10.0000000
+  Linear Logistic Regression
+    Accuracy: 88.989%
+    Error rate: 11.011%
+    min DCF: 0.539
+
+  Quadratic Logistic Regression
+    Accuracy: 95.484%
+    Error rate: 4.516%
+    min DCF: 0.327
+
+No PCA, pi: 0.500, lambda: 100.0000000
+  Linear Logistic Regression
+    Accuracy: 88.258%
+    Error rate: 11.742%
+    min DCF: 0.567
+
+  Quadratic Logistic Regression
+    Accuracy: 95.097%
+    Error rate: 4.903%
+    min DCF: 0.355
+
+No PCA, pi: 0.900, lambda: 0.0000010
+  Linear Logistic Regression
+    Accuracy: 81.161%
+    Error rate: 18.839%
+    min DCF: 0.192
+
+  Quadratic Logistic Regression
+    Accuracy: 93.118%
+    Error rate: 6.882%
+    min DCF: 0.096
+
+No PCA, pi: 0.900, lambda: 0.0001000
+  Linear Logistic Regression
+    Accuracy: 81.118%
+    Error rate: 18.882%
+    min DCF: 0.192
+
+  Quadratic Logistic Regression
+    Accuracy: 93.075%
+    Error rate: 6.925%
+    min DCF: 0.094
+
+No PCA, pi: 0.900, lambda: 0.0010000
+  Linear Logistic Regression
+    Accuracy: 81.075%
+    Error rate: 18.925%
+    min DCF: 0.192
+
+  Quadratic Logistic Regression
+    Accuracy: 93.118%
+    Error rate: 6.882%
+    min DCF: 0.094
+
+No PCA, pi: 0.900, lambda: 0.1000000
+  Linear Logistic Regression
+    Accuracy: 79.785%
+    Error rate: 20.215%
+    min DCF: 0.194
+
+  Quadratic Logistic Regression
+    Accuracy: 92.043%
+    Error rate: 7.957%
+    min DCF: 0.102
+
+No PCA, pi: 0.900, lambda: 1.0000000
+  Linear Logistic Regression
+    Accuracy: 68.903%
+    Error rate: 31.097%
+    min DCF: 0.196
+
+  Quadratic Logistic Regression
+    Accuracy: 90.710%
+    Error rate: 9.290%
+    min DCF: 0.103
+
+No PCA, pi: 0.900, lambda: 10.0000000
+  Linear Logistic Regression
+    Accuracy: 34.452%
+    Error rate: 65.548%
+    min DCF: 0.198
+
+  Quadratic Logistic Regression
+    Accuracy: 89.634%
+    Error rate: 10.366%
+    min DCF: 0.103
+
+No PCA, pi: 0.900, lambda: 100.0000000
+  Linear Logistic Regression
+    Accuracy: 34.409%
+    Error rate: 65.591%
+    min DCF: 0.209
+
+  Quadratic Logistic Regression
+    Accuracy: 83.828%
+    Error rate: 16.172%
+    min DCF: 0.112
+
+No PCA, pi: 0.091, lambda: 0.0000010
+  Linear Logistic Regression
+    Accuracy: 87.398%
+    Error rate: 12.602%
+    min DCF: 0.723
+
+  Quadratic Logistic Regression
+    Accuracy: 94.323%
+    Error rate: 5.677%
+    min DCF: 0.519
+
+No PCA, pi: 0.091, lambda: 0.0001000
+  Linear Logistic Regression
+    Accuracy: 87.398%
+    Error rate: 12.602%
+    min DCF: 0.723
+
+  Quadratic Logistic Regression
+    Accuracy: 94.366%
+    Error rate: 5.634%
+    min DCF: 0.523
+
+No PCA, pi: 0.091, lambda: 0.0010000
+  Linear Logistic Regression
+    Accuracy: 87.398%
+    Error rate: 12.602%
+    min DCF: 0.722
+
+  Quadratic Logistic Regression
+    Accuracy: 94.323%
+    Error rate: 5.677%
+    min DCF: 0.516
+
+No PCA, pi: 0.091, lambda: 0.1000000
+  Linear Logistic Regression
+    Accuracy: 86.667%
+    Error rate: 13.333%
+    min DCF: 0.714
+
+  Quadratic Logistic Regression
+    Accuracy: 93.849%
+    Error rate: 6.151%
+    min DCF: 0.607
+
+No PCA, pi: 0.091, lambda: 1.0000000
+  Linear Logistic Regression
+    Accuracy: 78.366%
+    Error rate: 21.634%
+    min DCF: 0.696
+
+  Quadratic Logistic Regression
+    Accuracy: 93.032%
+    Error rate: 6.968%
+    min DCF: 0.641
+
+No PCA, pi: 0.091, lambda: 10.0000000
+  Linear Logistic Regression
+    Accuracy: 65.591%
+    Error rate: 34.409%
+    min DCF: 0.731
+
+  Quadratic Logistic Regression
+    Accuracy: 91.871%
+    Error rate: 8.129%
+    min DCF: 0.620
+
+No PCA, pi: 0.091, lambda: 100.0000000
+  Linear Logistic Regression
+    Accuracy: 65.591%
+    Error rate: 34.409%
+    min DCF: 0.746
+
+  Quadratic Logistic Regression
+    Accuracy: 88.559%
+    Error rate: 11.441%
+    min DCF: 0.658
+
+PCA: 9, pi: 0.100, lambda: 0.0000010
+  Linear Logistic Regression
+    Accuracy: 87.785%
+    Error rate: 12.215%
+    min DCF: 0.710
+
+  Quadratic Logistic Regression
+    Accuracy: 94.065%
+    Error rate: 5.935%
+    min DCF: 0.535
+
+PCA: 9, pi: 0.100, lambda: 0.0001000
+  Linear Logistic Regression
+    Accuracy: 87.785%
+    Error rate: 12.215%
+    min DCF: 0.710
+
+  Quadratic Logistic Regression
+    Accuracy: 94.065%
+    Error rate: 5.935%
+    min DCF: 0.534
+
+PCA: 9, pi: 0.100, lambda: 0.0010000
+  Linear Logistic Regression
+    Accuracy: 87.785%
+    Error rate: 12.215%
+    min DCF: 0.710
+
+  Quadratic Logistic Regression
+    Accuracy: 94.237%
+    Error rate: 5.763%
+    min DCF: 0.539
+
+PCA: 9, pi: 0.100, lambda: 0.1000000
+  Linear Logistic Regression
+    Accuracy: 86.710%
+    Error rate: 13.290%
+    min DCF: 0.698
+
+  Quadratic Logistic Regression
+    Accuracy: 93.720%
+    Error rate: 6.280%
+    min DCF: 0.575
+
+PCA: 9, pi: 0.100, lambda: 1.0000000
+  Linear Logistic Regression
+    Accuracy: 79.398%
+    Error rate: 20.602%
+    min DCF: 0.688
+
+  Quadratic Logistic Regression
+    Accuracy: 93.032%
+    Error rate: 6.968%
+    min DCF: 0.629
+
+PCA: 9, pi: 0.100, lambda: 10.0000000
+  Linear Logistic Regression
+    Accuracy: 65.591%
+    Error rate: 34.409%
+    min DCF: 0.719
+
+  Quadratic Logistic Regression
+    Accuracy: 92.000%
+    Error rate: 8.000%
+    min DCF: 0.599
+
+PCA: 9, pi: 0.100, lambda: 100.0000000
+  Linear Logistic Regression
+    Accuracy: 65.591%
+    Error rate: 34.409%
+    min DCF: 0.751
+
+  Quadratic Logistic Regression
+    Accuracy: 89.032%
+    Error rate: 10.968%
+    min DCF: 0.634
+
+PCA: 9, pi: 0.500, lambda: 0.0000010
+  Linear Logistic Regression
+    Accuracy: 90.710%
+    Error rate: 9.290%
+    min DCF: 0.489
+
+  Quadratic Logistic Regression
+    Accuracy: 95.312%
+    Error rate: 4.688%
+    min DCF: 0.260
+
+PCA: 9, pi: 0.500, lambda: 0.0001000
+  Linear Logistic Regression
+    Accuracy: 90.710%
+    Error rate: 9.290%
+    min DCF: 0.489
+
+  Quadratic Logistic Regression
+    Accuracy: 95.226%
+    Error rate: 4.774%
+    min DCF: 0.260
+
+PCA: 9, pi: 0.500, lambda: 0.0010000
+  Linear Logistic Regression
+    Accuracy: 90.710%
+    Error rate: 9.290%
+    min DCF: 0.487
+
+  Quadratic Logistic Regression
+    Accuracy: 95.312%
+    Error rate: 4.688%
+    min DCF: 0.266
+
+PCA: 9, pi: 0.500, lambda: 0.1000000
+  Linear Logistic Regression
+    Accuracy: 90.538%
+    Error rate: 9.462%
+    min DCF: 0.493
+
+  Quadratic Logistic Regression
+    Accuracy: 95.398%
+    Error rate: 4.602%
+    min DCF: 0.285
+
+PCA: 9, pi: 0.500, lambda: 1.0000000
+  Linear Logistic Regression
+    Accuracy: 89.849%
+    Error rate: 10.151%
+    min DCF: 0.505
+
+  Quadratic Logistic Regression
+    Accuracy: 95.699%
+    Error rate: 4.301%
+    min DCF: 0.315
+
+PCA: 9, pi: 0.500, lambda: 10.0000000
+  Linear Logistic Regression
+    Accuracy: 89.075%
+    Error rate: 10.925%
+    min DCF: 0.535
+
+  Quadratic Logistic Regression
+    Accuracy: 95.441%
+    Error rate: 4.559%
+    min DCF: 0.340
+
+PCA: 9, pi: 0.500, lambda: 100.0000000
+  Linear Logistic Regression
+    Accuracy: 88.473%
+    Error rate: 11.527%
+    min DCF: 0.569
+
+  Quadratic Logistic Regression
+    Accuracy: 94.968%
+    Error rate: 5.032%
+    min DCF: 0.360
+
+PCA: 9, pi: 0.900, lambda: 0.0000010
+  Linear Logistic Regression
+    Accuracy: 81.118%
+    Error rate: 18.882%
+    min DCF: 0.192
+
+  Quadratic Logistic Regression
+    Accuracy: 92.989%
+    Error rate: 7.011%
+    min DCF: 0.099
+
+PCA: 9, pi: 0.900, lambda: 0.0001000
+  Linear Logistic Regression
+    Accuracy: 81.118%
+    Error rate: 18.882%
+    min DCF: 0.192
+
+  Quadratic Logistic Regression
+    Accuracy: 92.989%
+    Error rate: 7.011%
+    min DCF: 0.099
+
+PCA: 9, pi: 0.900, lambda: 0.0010000
+  Linear Logistic Regression
+    Accuracy: 81.118%
+    Error rate: 18.882%
+    min DCF: 0.192
+
+  Quadratic Logistic Regression
+    Accuracy: 92.903%
+    Error rate: 7.097%
+    min DCF: 0.097
+
+PCA: 9, pi: 0.900, lambda: 0.1000000
+  Linear Logistic Regression
+    Accuracy: 79.226%
+    Error rate: 20.774%
+    min DCF: 0.192
+
+  Quadratic Logistic Regression
+    Accuracy: 91.656%
+    Error rate: 8.344%
+    min DCF: 0.101
+
+PCA: 9, pi: 0.900, lambda: 1.0000000
+  Linear Logistic Regression
+    Accuracy: 68.645%
+    Error rate: 31.355%
+    min DCF: 0.197
+
+  Quadratic Logistic Regression
+    Accuracy: 90.366%
+    Error rate: 9.634%
+    min DCF: 0.105
+
+PCA: 9, pi: 0.900, lambda: 10.0000000
+  Linear Logistic Regression
+    Accuracy: 34.452%
+    Error rate: 65.548%
+    min DCF: 0.198
+
+  Quadratic Logistic Regression
+    Accuracy: 89.204%
+    Error rate: 10.796%
+    min DCF: 0.102
+
+PCA: 9, pi: 0.900, lambda: 100.0000000
+  Linear Logistic Regression
+    Accuracy: 34.409%
+    Error rate: 65.591%
+    min DCF: 0.208
+
+  Quadratic Logistic Regression
+    Accuracy: 83.914%
+    Error rate: 16.086%
+    min DCF: 0.109
+
+PCA: 9, pi: 0.091, lambda: 0.0000010
+  Linear Logistic Regression
+    Accuracy: 87.312%
+    Error rate: 12.688%
+    min DCF: 0.713
+
+  Quadratic Logistic Regression
+    Accuracy: 93.978%
+    Error rate: 6.022%
+    min DCF: 0.556
+
+PCA: 9, pi: 0.091, lambda: 0.0001000
+  Linear Logistic Regression
+    Accuracy: 87.312%
+    Error rate: 12.688%
+    min DCF: 0.713
+
+  Quadratic Logistic Regression
+    Accuracy: 94.151%
+    Error rate: 5.849%
+    min DCF: 0.555
+
+PCA: 9, pi: 0.091, lambda: 0.0010000
+  Linear Logistic Regression
+    Accuracy: 87.312%
+    Error rate: 12.688%
+    min DCF: 0.713
+
+  Quadratic Logistic Regression
+    Accuracy: 94.065%
+    Error rate: 5.935%
+    min DCF: 0.551
+
+PCA: 9, pi: 0.091, lambda: 0.1000000
+  Linear Logistic Regression
+    Accuracy: 86.237%
+    Error rate: 13.763%
+    min DCF: 0.696
+
+  Quadratic Logistic Regression
+    Accuracy: 93.462%
+    Error rate: 6.538%
+    min DCF: 0.584
+
+PCA: 9, pi: 0.091, lambda: 1.0000000
+  Linear Logistic Regression
+    Accuracy: 78.065%
+    Error rate: 21.935%
+    min DCF: 0.688
+
+  Quadratic Logistic Regression
+    Accuracy: 92.731%
+    Error rate: 7.269%
+    min DCF: 0.637
+
+PCA: 9, pi: 0.091, lambda: 10.0000000
+  Linear Logistic Regression
+    Accuracy: 65.591%
+    Error rate: 34.409%
+    min DCF: 0.719
+
+  Quadratic Logistic Regression
+    Accuracy: 91.828%
+    Error rate: 8.172%
+    min DCF: 0.610
+
+PCA: 9, pi: 0.091, lambda: 100.0000000
+  Linear Logistic Regression
+    Accuracy: 65.591%
+    Error rate: 34.409%
+    min DCF: 0.752
+
+  Quadratic Logistic Regression
+    Accuracy: 88.172%
+    Error rate: 11.828%
+    min DCF: 0.647
+
+PCA: 8, pi: 0.100, lambda: 0.0000010
+  Linear Logistic Regression
+    Accuracy: 87.484%
+    Error rate: 12.516%
+    min DCF: 0.702
+
+  Quadratic Logistic Regression
+    Accuracy: 94.194%
+    Error rate: 5.806%
+    min DCF: 0.492
+
+PCA: 8, pi: 0.100, lambda: 0.0001000
+  Linear Logistic Regression
+    Accuracy: 87.441%
+    Error rate: 12.559%
+    min DCF: 0.702
+
+  Quadratic Logistic Regression
+    Accuracy: 94.194%
+    Error rate: 5.806%
+    min DCF: 0.490
+
+PCA: 8, pi: 0.100, lambda: 0.0010000
+  Linear Logistic Regression
+    Accuracy: 87.441%
+    Error rate: 12.559%
+    min DCF: 0.702
+
+  Quadratic Logistic Regression
+    Accuracy: 94.151%
+    Error rate: 5.849%
+    min DCF: 0.487
+
+PCA: 8, pi: 0.100, lambda: 0.1000000
+  Linear Logistic Regression
+    Accuracy: 86.925%
+    Error rate: 13.075%
+    min DCF: 0.696
+
+  Quadratic Logistic Regression
+    Accuracy: 93.763%
+    Error rate: 6.237%
+    min DCF: 0.512
+
+PCA: 8, pi: 0.100, lambda: 1.0000000
+  Linear Logistic Regression
+    Accuracy: 79.441%
+    Error rate: 20.559%
+    min DCF: 0.682
+
+  Quadratic Logistic Regression
+    Accuracy: 93.075%
+    Error rate: 6.925%
+    min DCF: 0.574
+
+PCA: 8, pi: 0.100, lambda: 10.0000000
+  Linear Logistic Regression
+    Accuracy: 65.591%
+    Error rate: 34.409%
+    min DCF: 0.718
+
+  Quadratic Logistic Regression
+    Accuracy: 92.258%
+    Error rate: 7.742%
+    min DCF: 0.602
+
+PCA: 8, pi: 0.100, lambda: 100.0000000
+  Linear Logistic Regression
+    Accuracy: 65.591%
+    Error rate: 34.409%
+    min DCF: 0.751
+
+  Quadratic Logistic Regression
+    Accuracy: 89.075%
+    Error rate: 10.925%
+    min DCF: 0.639
+
+PCA: 8, pi: 0.500, lambda: 0.0000010
+  Linear Logistic Regression
+    Accuracy: 90.882%
+    Error rate: 9.118%
+    min DCF: 0.480
+
+  Quadratic Logistic Regression
+    Accuracy: 95.226%
+    Error rate: 4.774%
+    min DCF: 0.261
+
+PCA: 8, pi: 0.500, lambda: 0.0001000
+  Linear Logistic Regression
+    Accuracy: 90.882%
+    Error rate: 9.118%
+    min DCF: 0.480
+
+  Quadratic Logistic Regression
+    Accuracy: 95.183%
+    Error rate: 4.817%
+    min DCF: 0.260
+
+PCA: 8, pi: 0.500, lambda: 0.0010000
+  Linear Logistic Regression
+    Accuracy: 90.882%
+    Error rate: 9.118%
+    min DCF: 0.480
+
+  Quadratic Logistic Regression
+    Accuracy: 95.226%
+    Error rate: 4.774%
+    min DCF: 0.263
+
+PCA: 8, pi: 0.500, lambda: 0.1000000
+  Linear Logistic Regression
+    Accuracy: 90.667%
+    Error rate: 9.333%
+    min DCF: 0.483
+
+  Quadratic Logistic Regression
+    Accuracy: 95.441%
+    Error rate: 4.559%
+    min DCF: 0.300
+
+PCA: 8, pi: 0.500, lambda: 1.0000000
+  Linear Logistic Regression
+    Accuracy: 90.065%
+    Error rate: 9.935%
+    min DCF: 0.493
+
+  Quadratic Logistic Regression
+    Accuracy: 95.441%
+    Error rate: 4.559%
+    min DCF: 0.334
+
+PCA: 8, pi: 0.500, lambda: 10.0000000
+  Linear Logistic Regression
+    Accuracy: 89.204%
+    Error rate: 10.796%
+    min DCF: 0.540
+
+  Quadratic Logistic Regression
+    Accuracy: 95.226%
+    Error rate: 4.774%
+    min DCF: 0.340
+
+PCA: 8, pi: 0.500, lambda: 100.0000000
+  Linear Logistic Regression
+    Accuracy: 88.559%
+    Error rate: 11.441%
+    min DCF: 0.568
+
+  Quadratic Logistic Regression
+    Accuracy: 94.882%
+    Error rate: 5.118%
+    min DCF: 0.357
+
+PCA: 8, pi: 0.900, lambda: 0.0000010
+  Linear Logistic Regression
+    Accuracy: 81.419%
+    Error rate: 18.581%
+    min DCF: 0.189
+
+  Quadratic Logistic Regression
+    Accuracy: 92.473%
+    Error rate: 7.527%
+    min DCF: 0.100
+
+PCA: 8, pi: 0.900, lambda: 0.0001000
+  Linear Logistic Regression
+    Accuracy: 81.419%
+    Error rate: 18.581%
+    min DCF: 0.189
+
+  Quadratic Logistic Regression
+    Accuracy: 92.559%
+    Error rate: 7.441%
+    min DCF: 0.100
+
+PCA: 8, pi: 0.900, lambda: 0.0010000
+  Linear Logistic Regression
+    Accuracy: 81.419%
+    Error rate: 18.581%
+    min DCF: 0.189
+
+  Quadratic Logistic Regression
+    Accuracy: 92.473%
+    Error rate: 7.527%
+    min DCF: 0.097
+
+PCA: 8, pi: 0.900, lambda: 0.1000000
+  Linear Logistic Regression
+    Accuracy: 79.054%
+    Error rate: 20.946%
+    min DCF: 0.189
+
+  Quadratic Logistic Regression
+    Accuracy: 91.570%
+    Error rate: 8.430%
+    min DCF: 0.101
+
+PCA: 8, pi: 0.900, lambda: 1.0000000
+  Linear Logistic Regression
+    Accuracy: 68.516%
+    Error rate: 31.484%
+    min DCF: 0.194
+
+  Quadratic Logistic Regression
+    Accuracy: 90.409%
+    Error rate: 9.591%
+    min DCF: 0.101
+
+PCA: 8, pi: 0.900, lambda: 10.0000000
+  Linear Logistic Regression
+    Accuracy: 34.452%
+    Error rate: 65.548%
+    min DCF: 0.200
+
+  Quadratic Logistic Regression
+    Accuracy: 88.860%
+    Error rate: 11.140%
+    min DCF: 0.103
+
+PCA: 8, pi: 0.900, lambda: 100.0000000
+  Linear Logistic Regression
+    Accuracy: 34.409%
+    Error rate: 65.591%
+    min DCF: 0.209
+
+  Quadratic Logistic Regression
+    Accuracy: 83.785%
+    Error rate: 16.215%
+    min DCF: 0.113
+
+PCA: 8, pi: 0.091, lambda: 0.0000010
+  Linear Logistic Regression
+    Accuracy: 87.226%
+    Error rate: 12.774%
+    min DCF: 0.706
+
+  Quadratic Logistic Regression
+    Accuracy: 93.935%
+    Error rate: 6.065%
+    min DCF: 0.494
+
+PCA: 8, pi: 0.091, lambda: 0.0001000
+  Linear Logistic Regression
+    Accuracy: 87.226%
+    Error rate: 12.774%
+    min DCF: 0.706
+
+  Quadratic Logistic Regression
+    Accuracy: 93.978%
+    Error rate: 6.022%
+    min DCF: 0.487
+
+PCA: 8, pi: 0.091, lambda: 0.0010000
+  Linear Logistic Regression
+    Accuracy: 87.226%
+    Error rate: 12.774%
+    min DCF: 0.706
+
+  Quadratic Logistic Regression
+    Accuracy: 94.151%
+    Error rate: 5.849%
+    min DCF: 0.483
+
+PCA: 8, pi: 0.091, lambda: 0.1000000
+  Linear Logistic Regression
+    Accuracy: 86.624%
+    Error rate: 13.376%
+    min DCF: 0.696
+
+  Quadratic Logistic Regression
+    Accuracy: 93.462%
+    Error rate: 6.538%
+    min DCF: 0.514
+
+PCA: 8, pi: 0.091, lambda: 1.0000000
+  Linear Logistic Regression
+    Accuracy: 77.978%
+    Error rate: 22.022%
+    min DCF: 0.682
+
+  Quadratic Logistic Regression
+    Accuracy: 92.731%
+    Error rate: 7.269%
+    min DCF: 0.576
+
+PCA: 8, pi: 0.091, lambda: 10.0000000
+  Linear Logistic Regression
+    Accuracy: 65.591%
+    Error rate: 34.409%
+    min DCF: 0.716
+
+  Quadratic Logistic Regression
+    Accuracy: 91.871%
+    Error rate: 8.129%
+    min DCF: 0.612
+
+PCA: 8, pi: 0.091, lambda: 100.0000000
+  Linear Logistic Regression
+    Accuracy: 65.591%
+    Error rate: 34.409%
+    min DCF: 0.752
+
+  Quadratic Logistic Regression
+    Accuracy: 88.258%
+    Error rate: 11.742%
+    min DCF: 0.652
+
+PCA: 7, pi: 0.100, lambda: 0.0000010
+  Linear Logistic Regression
+    Accuracy: 87.613%
+    Error rate: 12.387%
+    min DCF: 0.709
+
+  Quadratic Logistic Regression
+    Accuracy: 93.849%
+    Error rate: 6.151%
+    min DCF: 0.496
+
+PCA: 7, pi: 0.100, lambda: 0.0001000
+  Linear Logistic Regression
+    Accuracy: 87.613%
+    Error rate: 12.387%
+    min DCF: 0.709
+
+  Quadratic Logistic Regression
+    Accuracy: 93.892%
+    Error rate: 6.108%
+    min DCF: 0.496
+
+PCA: 7, pi: 0.100, lambda: 0.0010000
+  Linear Logistic Regression
+    Accuracy: 87.613%
+    Error rate: 12.387%
+    min DCF: 0.709
+
+  Quadratic Logistic Regression
+    Accuracy: 93.935%
+    Error rate: 6.065%
+    min DCF: 0.495
+
+PCA: 7, pi: 0.100, lambda: 0.1000000
+  Linear Logistic Regression
+    Accuracy: 87.011%
+    Error rate: 12.989%
+    min DCF: 0.703
+
+  Quadratic Logistic Regression
+    Accuracy: 93.677%
+    Error rate: 6.323%
+    min DCF: 0.577
+
+PCA: 7, pi: 0.100, lambda: 1.0000000
+  Linear Logistic Regression
+    Accuracy: 79.484%
+    Error rate: 20.516%
+    min DCF: 0.689
+
+  Quadratic Logistic Regression
+    Accuracy: 92.774%
+    Error rate: 7.226%
+    min DCF: 0.590
+
+PCA: 7, pi: 0.100, lambda: 10.0000000
+  Linear Logistic Regression
+    Accuracy: 65.591%
+    Error rate: 34.409%
+    min DCF: 0.715
+
+  Quadratic Logistic Regression
+    Accuracy: 92.172%
+    Error rate: 7.828%
+    min DCF: 0.590
+
+PCA: 7, pi: 0.100, lambda: 100.0000000
+  Linear Logistic Regression
+    Accuracy: 65.591%
+    Error rate: 34.409%
+    min DCF: 0.749
+
+  Quadratic Logistic Regression
+    Accuracy: 88.989%
+    Error rate: 11.011%
+    min DCF: 0.644
+
+PCA: 7, pi: 0.500, lambda: 0.0000010
+  Linear Logistic Regression
+    Accuracy: 90.839%
+    Error rate: 9.161%
+    min DCF: 0.475
+
+  Quadratic Logistic Regression
+    Accuracy: 95.226%
+    Error rate: 4.774%
+    min DCF: 0.245
+
+PCA: 7, pi: 0.500, lambda: 0.0001000
+  Linear Logistic Regression
+    Accuracy: 90.839%
+    Error rate: 9.161%
+    min DCF: 0.475
+
+  Quadratic Logistic Regression
+    Accuracy: 95.226%
+    Error rate: 4.774%
+    min DCF: 0.246
+
+PCA: 7, pi: 0.500, lambda: 0.0010000
+  Linear Logistic Regression
+    Accuracy: 90.839%
+    Error rate: 9.161%
+    min DCF: 0.475
+
+  Quadratic Logistic Regression
+    Accuracy: 95.226%
+    Error rate: 4.774%
+    min DCF: 0.250
+
+PCA: 7, pi: 0.500, lambda: 0.1000000
+  Linear Logistic Regression
+    Accuracy: 90.667%
+    Error rate: 9.333%
+    min DCF: 0.470
+
+  Quadratic Logistic Regression
+    Accuracy: 95.398%
+    Error rate: 4.602%
+    min DCF: 0.296
+
+PCA: 7, pi: 0.500, lambda: 1.0000000
+  Linear Logistic Regression
+    Accuracy: 90.323%
+    Error rate: 9.677%
+    min DCF: 0.485
+
+  Quadratic Logistic Regression
+    Accuracy: 95.355%
+    Error rate: 4.645%
+    min DCF: 0.326
+
+PCA: 7, pi: 0.500, lambda: 10.0000000
+  Linear Logistic Regression
+    Accuracy: 89.290%
+    Error rate: 10.710%
+    min DCF: 0.539
+
+  Quadratic Logistic Regression
+    Accuracy: 94.968%
+    Error rate: 5.032%
+    min DCF: 0.338
+
+PCA: 7, pi: 0.500, lambda: 100.0000000
+  Linear Logistic Regression
+    Accuracy: 88.516%
+    Error rate: 11.484%
+    min DCF: 0.568
+
+  Quadratic Logistic Regression
+    Accuracy: 94.710%
+    Error rate: 5.290%
+    min DCF: 0.356
+
+PCA: 7, pi: 0.900, lambda: 0.0000010
+  Linear Logistic Regression
+    Accuracy: 81.290%
+    Error rate: 18.710%
+    min DCF: 0.187
+
+  Quadratic Logistic Regression
+    Accuracy: 92.301%
+    Error rate: 7.699%
+    min DCF: 0.100
+
+PCA: 7, pi: 0.900, lambda: 0.0001000
+  Linear Logistic Regression
+    Accuracy: 81.290%
+    Error rate: 18.710%
+    min DCF: 0.187
+
+  Quadratic Logistic Regression
+    Accuracy: 92.301%
+    Error rate: 7.699%
+    min DCF: 0.099
+
+PCA: 7, pi: 0.900, lambda: 0.0010000
+  Linear Logistic Regression
+    Accuracy: 81.290%
+    Error rate: 18.710%
+    min DCF: 0.187
+
+  Quadratic Logistic Regression
+    Accuracy: 92.215%
+    Error rate: 7.785%
+    min DCF: 0.099
+
+PCA: 7, pi: 0.900, lambda: 0.1000000
+  Linear Logistic Regression
+    Accuracy: 79.011%
+    Error rate: 20.989%
+    min DCF: 0.188
+
+  Quadratic Logistic Regression
+    Accuracy: 91.613%
+    Error rate: 8.387%
+    min DCF: 0.101
+
+PCA: 7, pi: 0.900, lambda: 1.0000000
+  Linear Logistic Regression
+    Accuracy: 68.258%
+    Error rate: 31.742%
+    min DCF: 0.193
+
+  Quadratic Logistic Regression
+    Accuracy: 90.323%
+    Error rate: 9.677%
+    min DCF: 0.106
+
+PCA: 7, pi: 0.900, lambda: 10.0000000
+  Linear Logistic Regression
+    Accuracy: 34.452%
+    Error rate: 65.548%
+    min DCF: 0.200
+
+  Quadratic Logistic Regression
+    Accuracy: 88.817%
+    Error rate: 11.183%
+    min DCF: 0.107
+
+PCA: 7, pi: 0.900, lambda: 100.0000000
+  Linear Logistic Regression
+    Accuracy: 34.409%
+    Error rate: 65.591%
+    min DCF: 0.209
+
+  Quadratic Logistic Regression
+    Accuracy: 83.742%
+    Error rate: 16.258%
+    min DCF: 0.116
+
+PCA: 7, pi: 0.091, lambda: 0.0000010
+  Linear Logistic Regression
+    Accuracy: 87.398%
+    Error rate: 12.602%
+    min DCF: 0.716
+
+  Quadratic Logistic Regression
+    Accuracy: 93.849%
+    Error rate: 6.151%
+    min DCF: 0.510
+
+PCA: 7, pi: 0.091, lambda: 0.0001000
+  Linear Logistic Regression
+    Accuracy: 87.398%
+    Error rate: 12.602%
+    min DCF: 0.715
+
+  Quadratic Logistic Regression
+    Accuracy: 93.849%
+    Error rate: 6.151%
+    min DCF: 0.509
+
+PCA: 7, pi: 0.091, lambda: 0.0010000
+  Linear Logistic Regression
+    Accuracy: 87.398%
+    Error rate: 12.602%
+    min DCF: 0.715
+
+  Quadratic Logistic Regression
+    Accuracy: 93.892%
+    Error rate: 6.108%
+    min DCF: 0.507
+
+PCA: 7, pi: 0.091, lambda: 0.1000000
+  Linear Logistic Regression
+    Accuracy: 86.581%
+    Error rate: 13.419%
+    min DCF: 0.701
+
+  Quadratic Logistic Regression
+    Accuracy: 93.505%
+    Error rate: 6.495%
+    min DCF: 0.582
+
+PCA: 7, pi: 0.091, lambda: 1.0000000
+  Linear Logistic Regression
+    Accuracy: 77.978%
+    Error rate: 22.022%
+    min DCF: 0.688
+
+  Quadratic Logistic Regression
+    Accuracy: 92.516%
+    Error rate: 7.484%
+    min DCF: 0.609
+
+PCA: 7, pi: 0.091, lambda: 10.0000000
+  Linear Logistic Regression
+    Accuracy: 65.591%
+    Error rate: 34.409%
+    min DCF: 0.716
+
+  Quadratic Logistic Regression
+    Accuracy: 91.699%
+    Error rate: 8.301%
+    min DCF: 0.603
+
+PCA: 7, pi: 0.091, lambda: 100.0000000
+  Linear Logistic Regression
+    Accuracy: 65.591%
+    Error rate: 34.409%
+    min DCF: 0.749
+
+  Quadratic Logistic Regression
+    Accuracy: 88.344%
+    Error rate: 11.656%
+    min DCF: 0.657
+
+PCA: 6, pi: 0.100, lambda: 0.0000010
+  Linear Logistic Regression
+    Accuracy: 87.484%
+    Error rate: 12.516%
+    min DCF: 0.710
+
+  Quadratic Logistic Regression
+    Accuracy: 93.892%
+    Error rate: 6.108%
+    min DCF: 0.539
+
+PCA: 6, pi: 0.100, lambda: 0.0001000
+  Linear Logistic Regression
+    Accuracy: 87.484%
+    Error rate: 12.516%
+    min DCF: 0.710
+
+  Quadratic Logistic Regression
+    Accuracy: 93.892%
+    Error rate: 6.108%
+    min DCF: 0.541
+
+PCA: 6, pi: 0.100, lambda: 0.0010000
+  Linear Logistic Regression
+    Accuracy: 87.484%
+    Error rate: 12.516%
+    min DCF: 0.710
+
+  Quadratic Logistic Regression
+    Accuracy: 93.978%
+    Error rate: 6.022%
+    min DCF: 0.534
+
+PCA: 6, pi: 0.100, lambda: 0.1000000
+  Linear Logistic Regression
+    Accuracy: 87.226%
+    Error rate: 12.774%
+    min DCF: 0.706
+
+  Quadratic Logistic Regression
+    Accuracy: 93.806%
+    Error rate: 6.194%
+    min DCF: 0.594
+
+PCA: 6, pi: 0.100, lambda: 1.0000000
+  Linear Logistic Regression
+    Accuracy: 79.398%
+    Error rate: 20.602%
+    min DCF: 0.696
+
+  Quadratic Logistic Regression
+    Accuracy: 92.989%
+    Error rate: 7.011%
+    min DCF: 0.603
+
+PCA: 6, pi: 0.100, lambda: 10.0000000
+  Linear Logistic Regression
+    Accuracy: 65.591%
+    Error rate: 34.409%
+    min DCF: 0.718
+
+  Quadratic Logistic Regression
+    Accuracy: 92.043%
+    Error rate: 7.957%
+    min DCF: 0.577
+
+PCA: 6, pi: 0.100, lambda: 100.0000000
+  Linear Logistic Regression
+    Accuracy: 65.591%
+    Error rate: 34.409%
+    min DCF: 0.755
+
+  Quadratic Logistic Regression
+    Accuracy: 88.946%
+    Error rate: 11.054%
+    min DCF: 0.642
+
+PCA: 6, pi: 0.500, lambda: 0.0000010
+  Linear Logistic Regression
+    Accuracy: 90.925%
+    Error rate: 9.075%
+    min DCF: 0.471
+
+  Quadratic Logistic Regression
+    Accuracy: 95.269%
+    Error rate: 4.731%
+    min DCF: 0.250
+
+PCA: 6, pi: 0.500, lambda: 0.0001000
+  Linear Logistic Regression
+    Accuracy: 90.925%
+    Error rate: 9.075%
+    min DCF: 0.471
+
+  Quadratic Logistic Regression
+    Accuracy: 95.269%
+    Error rate: 4.731%
+    min DCF: 0.251
+
+PCA: 6, pi: 0.500, lambda: 0.0010000
+  Linear Logistic Regression
+    Accuracy: 90.925%
+    Error rate: 9.075%
+    min DCF: 0.471
+
+  Quadratic Logistic Regression
+    Accuracy: 95.269%
+    Error rate: 4.731%
+    min DCF: 0.251
+
+PCA: 6, pi: 0.500, lambda: 0.1000000
+  Linear Logistic Regression
+    Accuracy: 90.753%
+    Error rate: 9.247%
+    min DCF: 0.470
+
+  Quadratic Logistic Regression
+    Accuracy: 95.398%
+    Error rate: 4.602%
+    min DCF: 0.292
+
+PCA: 6, pi: 0.500, lambda: 1.0000000
+  Linear Logistic Regression
+    Accuracy: 90.323%
+    Error rate: 9.677%
+    min DCF: 0.482
+
+  Quadratic Logistic Regression
+    Accuracy: 95.355%
+    Error rate: 4.645%
+    min DCF: 0.324
+
+PCA: 6, pi: 0.500, lambda: 10.0000000
+  Linear Logistic Regression
+    Accuracy: 89.247%
+    Error rate: 10.753%
+    min DCF: 0.534
+
+  Quadratic Logistic Regression
+    Accuracy: 95.054%
+    Error rate: 4.946%
+    min DCF: 0.335
+
+PCA: 6, pi: 0.500, lambda: 100.0000000
+  Linear Logistic Regression
+    Accuracy: 88.473%
+    Error rate: 11.527%
+    min DCF: 0.568
+
+  Quadratic Logistic Regression
+    Accuracy: 94.710%
+    Error rate: 5.290%
+    min DCF: 0.361
+
+PCA: 6, pi: 0.900, lambda: 0.0000010
+  Linear Logistic Regression
+    Accuracy: 81.333%
+    Error rate: 18.667%
+    min DCF: 0.187
+
+  Quadratic Logistic Regression
+    Accuracy: 92.215%
+    Error rate: 7.785%
+    min DCF: 0.098
+
+PCA: 6, pi: 0.900, lambda: 0.0001000
+  Linear Logistic Regression
+    Accuracy: 81.333%
+    Error rate: 18.667%
+    min DCF: 0.187
+
+  Quadratic Logistic Regression
+    Accuracy: 92.215%
+    Error rate: 7.785%
+    min DCF: 0.098
+
+PCA: 6, pi: 0.900, lambda: 0.0010000
+  Linear Logistic Regression
+    Accuracy: 81.290%
+    Error rate: 18.710%
+    min DCF: 0.187
+
+  Quadratic Logistic Regression
+    Accuracy: 92.172%
+    Error rate: 7.828%
+    min DCF: 0.098
+
+PCA: 6, pi: 0.900, lambda: 0.1000000
+  Linear Logistic Regression
+    Accuracy: 79.011%
+    Error rate: 20.989%
+    min DCF: 0.189
+
+  Quadratic Logistic Regression
+    Accuracy: 91.527%
+    Error rate: 8.473%
+    min DCF: 0.100
+
+PCA: 6, pi: 0.900, lambda: 1.0000000
+  Linear Logistic Regression
+    Accuracy: 68.344%
+    Error rate: 31.656%
+    min DCF: 0.192
+
+  Quadratic Logistic Regression
+    Accuracy: 90.108%
+    Error rate: 9.892%
+    min DCF: 0.105
+
+PCA: 6, pi: 0.900, lambda: 10.0000000
+  Linear Logistic Regression
+    Accuracy: 34.452%
+    Error rate: 65.548%
+    min DCF: 0.200
+
+  Quadratic Logistic Regression
+    Accuracy: 88.731%
+    Error rate: 11.269%
+    min DCF: 0.105
+
+PCA: 6, pi: 0.900, lambda: 100.0000000
+  Linear Logistic Regression
+    Accuracy: 34.409%
+    Error rate: 65.591%
+    min DCF: 0.209
+
+  Quadratic Logistic Regression
+    Accuracy: 83.914%
+    Error rate: 16.086%
+    min DCF: 0.116
+
+PCA: 6, pi: 0.091, lambda: 0.0000010
+  Linear Logistic Regression
+    Accuracy: 87.441%
+    Error rate: 12.559%
+    min DCF: 0.716
+
+  Quadratic Logistic Regression
+    Accuracy: 93.892%
+    Error rate: 6.108%
+    min DCF: 0.539
+
+PCA: 6, pi: 0.091, lambda: 0.0001000
+  Linear Logistic Regression
+    Accuracy: 87.441%
+    Error rate: 12.559%
+    min DCF: 0.716
+
+  Quadratic Logistic Regression
+    Accuracy: 93.892%
+    Error rate: 6.108%
+    min DCF: 0.551
+
+PCA: 6, pi: 0.091, lambda: 0.0010000
+  Linear Logistic Regression
+    Accuracy: 87.441%
+    Error rate: 12.559%
+    min DCF: 0.717
+
+  Quadratic Logistic Regression
+    Accuracy: 93.978%
+    Error rate: 6.022%
+    min DCF: 0.551
+
+PCA: 6, pi: 0.091, lambda: 0.1000000
+  Linear Logistic Regression
+    Accuracy: 86.538%
+    Error rate: 13.462%
+    min DCF: 0.705
+
+  Quadratic Logistic Regression
+    Accuracy: 93.376%
+    Error rate: 6.624%
+    min DCF: 0.599
+
+PCA: 6, pi: 0.091, lambda: 1.0000000
+  Linear Logistic Regression
+    Accuracy: 77.978%
+    Error rate: 22.022%
+    min DCF: 0.695
+
+  Quadratic Logistic Regression
+    Accuracy: 92.473%
+    Error rate: 7.527%
+    min DCF: 0.624
+
+PCA: 6, pi: 0.091, lambda: 10.0000000
+  Linear Logistic Regression
+    Accuracy: 65.591%
+    Error rate: 34.409%
+    min DCF: 0.719
+
+  Quadratic Logistic Regression
+    Accuracy: 91.613%
+    Error rate: 8.387%
+    min DCF: 0.594
+
+PCA: 6, pi: 0.091, lambda: 100.0000000
+  Linear Logistic Regression
+    Accuracy: 65.591%
+    Error rate: 34.409%
+    min DCF: 0.756
+
+  Quadratic Logistic Regression
+    Accuracy: 88.344%
+    Error rate: 11.656%
+    min DCF: 0.655
+
+PCA: 5, pi: 0.100, lambda: 0.0000010
+  Linear Logistic Regression
+    Accuracy: 87.484%
+    Error rate: 12.516%
+    min DCF: 0.676
+
+  Quadratic Logistic Regression
+    Accuracy: 93.763%
+    Error rate: 6.237%
+    min DCF: 0.516
+
+PCA: 5, pi: 0.100, lambda: 0.0001000
+  Linear Logistic Regression
+    Accuracy: 87.484%
+    Error rate: 12.516%
+    min DCF: 0.676
+
+  Quadratic Logistic Regression
+    Accuracy: 93.763%
+    Error rate: 6.237%
+    min DCF: 0.516
+
+PCA: 5, pi: 0.100, lambda: 0.0010000
+  Linear Logistic Regression
+    Accuracy: 87.441%
+    Error rate: 12.559%
+    min DCF: 0.676
+
+  Quadratic Logistic Regression
+    Accuracy: 93.720%
+    Error rate: 6.280%
+    min DCF: 0.534
+
+PCA: 5, pi: 0.100, lambda: 0.1000000
+  Linear Logistic Regression
+    Accuracy: 86.968%
+    Error rate: 13.032%
+    min DCF: 0.681
+
+  Quadratic Logistic Regression
+    Accuracy: 92.903%
+    Error rate: 7.097%
+    min DCF: 0.600
+
+PCA: 5, pi: 0.100, lambda: 1.0000000
+  Linear Logistic Regression
+    Accuracy: 79.269%
+    Error rate: 20.731%
+    min DCF: 0.700
+
+  Quadratic Logistic Regression
+    Accuracy: 92.215%
+    Error rate: 7.785%
+    min DCF: 0.599
+
+PCA: 5, pi: 0.100, lambda: 10.0000000
+  Linear Logistic Regression
+    Accuracy: 65.591%
+    Error rate: 34.409%
+    min DCF: 0.730
+
+  Quadratic Logistic Regression
+    Accuracy: 91.699%
+    Error rate: 8.301%
+    min DCF: 0.601
+
+PCA: 5, pi: 0.100, lambda: 100.0000000
+  Linear Logistic Regression
+    Accuracy: 65.591%
+    Error rate: 34.409%
+    min DCF: 0.766
+
+  Quadratic Logistic Regression
+    Accuracy: 88.774%
+    Error rate: 11.226%
+    min DCF: 0.638
+
+PCA: 5, pi: 0.500, lambda: 0.0000010
+  Linear Logistic Regression
+    Accuracy: 90.323%
+    Error rate: 9.677%
+    min DCF: 0.488
+
+  Quadratic Logistic Regression
+    Accuracy: 95.183%
+    Error rate: 4.817%
+    min DCF: 0.283
+
+PCA: 5, pi: 0.500, lambda: 0.0001000
+  Linear Logistic Regression
+    Accuracy: 90.323%
+    Error rate: 9.677%
+    min DCF: 0.488
+
+  Quadratic Logistic Regression
+    Accuracy: 95.183%
+    Error rate: 4.817%
+    min DCF: 0.283
+
+PCA: 5, pi: 0.500, lambda: 0.0010000
+  Linear Logistic Regression
+    Accuracy: 90.323%
+    Error rate: 9.677%
+    min DCF: 0.488
+
+  Quadratic Logistic Regression
+    Accuracy: 95.183%
+    Error rate: 4.817%
+    min DCF: 0.283
+
+PCA: 5, pi: 0.500, lambda: 0.1000000
+  Linear Logistic Regression
+    Accuracy: 90.237%
+    Error rate: 9.763%
+    min DCF: 0.493
+
+  Quadratic Logistic Regression
+    Accuracy: 95.398%
+    Error rate: 4.602%
+    min DCF: 0.311
+
+PCA: 5, pi: 0.500, lambda: 1.0000000
+  Linear Logistic Regression
+    Accuracy: 90.022%
+    Error rate: 9.978%
+    min DCF: 0.510
+
+  Quadratic Logistic Regression
+    Accuracy: 95.269%
+    Error rate: 4.731%
+    min DCF: 0.349
+
+PCA: 5, pi: 0.500, lambda: 10.0000000
+  Linear Logistic Regression
+    Accuracy: 89.204%
+    Error rate: 10.796%
+    min DCF: 0.522
+
+  Quadratic Logistic Regression
+    Accuracy: 94.796%
+    Error rate: 5.204%
+    min DCF: 0.360
+
+PCA: 5, pi: 0.500, lambda: 100.0000000
+  Linear Logistic Regression
+    Accuracy: 88.215%
+    Error rate: 11.785%
+    min DCF: 0.570
+
+  Quadratic Logistic Regression
+    Accuracy: 94.710%
+    Error rate: 5.290%
+    min DCF: 0.391
+
+PCA: 5, pi: 0.900, lambda: 0.0000010
+  Linear Logistic Regression
+    Accuracy: 81.032%
+    Error rate: 18.968%
+    min DCF: 0.198
+
+  Quadratic Logistic Regression
+    Accuracy: 91.699%
+    Error rate: 8.301%
+    min DCF: 0.098
+
+PCA: 5, pi: 0.900, lambda: 0.0001000
+  Linear Logistic Regression
+    Accuracy: 81.032%
+    Error rate: 18.968%
+    min DCF: 0.198
+
+  Quadratic Logistic Regression
+    Accuracy: 91.871%
+    Error rate: 8.129%
+    min DCF: 0.099
+
+PCA: 5, pi: 0.900, lambda: 0.0010000
+  Linear Logistic Regression
+    Accuracy: 80.989%
+    Error rate: 19.011%
+    min DCF: 0.198
+
+  Quadratic Logistic Regression
+    Accuracy: 91.742%
+    Error rate: 8.258%
+    min DCF: 0.097
+
+PCA: 5, pi: 0.900, lambda: 0.1000000
+  Linear Logistic Regression
+    Accuracy: 78.925%
+    Error rate: 21.075%
+    min DCF: 0.197
+
+  Quadratic Logistic Regression
+    Accuracy: 90.882%
+    Error rate: 9.118%
+    min DCF: 0.100
+
+PCA: 5, pi: 0.900, lambda: 1.0000000
+  Linear Logistic Regression
+    Accuracy: 68.344%
+    Error rate: 31.656%
+    min DCF: 0.200
+
+  Quadratic Logistic Regression
+    Accuracy: 89.548%
+    Error rate: 10.452%
+    min DCF: 0.108
+
+PCA: 5, pi: 0.900, lambda: 10.0000000
+  Linear Logistic Regression
+    Accuracy: 34.452%
+    Error rate: 65.548%
+    min DCF: 0.209
+
+  Quadratic Logistic Regression
+    Accuracy: 88.129%
+    Error rate: 11.871%
+    min DCF: 0.113
+
+PCA: 5, pi: 0.900, lambda: 100.0000000
+  Linear Logistic Regression
+    Accuracy: 34.409%
+    Error rate: 65.591%
+    min DCF: 0.214
+
+  Quadratic Logistic Regression
+    Accuracy: 83.097%
+    Error rate: 16.903%
+    min DCF: 0.119
+
+PCA: 5, pi: 0.091, lambda: 0.0000010
+  Linear Logistic Regression
+    Accuracy: 87.312%
+    Error rate: 12.688%
+    min DCF: 0.676
+
+  Quadratic Logistic Regression
+    Accuracy: 93.634%
+    Error rate: 6.366%
+    min DCF: 0.527
+
+PCA: 5, pi: 0.091, lambda: 0.0001000
+  Linear Logistic Regression
+    Accuracy: 87.312%
+    Error rate: 12.688%
+    min DCF: 0.676
+
+  Quadratic Logistic Regression
+    Accuracy: 93.677%
+    Error rate: 6.323%
+    min DCF: 0.529
+
+PCA: 5, pi: 0.091, lambda: 0.0010000
+  Linear Logistic Regression
+    Accuracy: 87.312%
+    Error rate: 12.688%
+    min DCF: 0.676
+
+  Quadratic Logistic Regression
+    Accuracy: 93.677%
+    Error rate: 6.323%
+    min DCF: 0.541
+
+PCA: 5, pi: 0.091, lambda: 0.1000000
+  Linear Logistic Regression
+    Accuracy: 86.366%
+    Error rate: 13.634%
+    min DCF: 0.676
+
+  Quadratic Logistic Regression
+    Accuracy: 92.688%
+    Error rate: 7.312%
+    min DCF: 0.619
+
+PCA: 5, pi: 0.091, lambda: 1.0000000
+  Linear Logistic Regression
+    Accuracy: 77.720%
+    Error rate: 22.280%
+    min DCF: 0.700
+
+  Quadratic Logistic Regression
+    Accuracy: 92.000%
+    Error rate: 8.000%
+    min DCF: 0.610
+
+PCA: 5, pi: 0.091, lambda: 10.0000000
+  Linear Logistic Regression
+    Accuracy: 65.591%
+    Error rate: 34.409%
+    min DCF: 0.731
+
+  Quadratic Logistic Regression
+    Accuracy: 91.398%
+    Error rate: 8.602%
+    min DCF: 0.610
+
+PCA: 5, pi: 0.091, lambda: 100.0000000
+  Linear Logistic Regression
+    Accuracy: 65.591%
+    Error rate: 34.409%
+    min DCF: 0.766
+
+  Quadratic Logistic Regression
+    Accuracy: 88.387%
+    Error rate: 11.613%
+    min DCF: 0.651
+

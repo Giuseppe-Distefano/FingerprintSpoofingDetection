@@ -1,0 +1,252 @@
+No PCA, G0: 4, G1: 2
+  GMM Full Covariance
+    Accuracy: 95.785%
+    Error rate: 4.215%
+    min DCF: 0.250
+
+  GMM Diagonal Covariance
+    Accuracy: 95.484%
+    Error rate: 4.516%
+    min DCF: 0.264
+
+  GMM Tied Covariance
+    Accuracy: 95.226%
+    Error rate: 4.774%
+    min DCF: 0.261
+
+  GMM Tied Diagonal Covariance
+    Accuracy: 95.226%
+    Error rate: 4.774%
+    min DCF: 0.281
+
+No PCA, G0: 8, G1: 2
+  GMM Full Covariance
+    Accuracy: 95.699%
+    Error rate: 4.301%
+    min DCF: 0.252
+
+  GMM Diagonal Covariance
+    Accuracy: 95.699%
+    Error rate: 4.301%
+    min DCF: 0.239
+
+  GMM Tied Covariance
+    Accuracy: 95.957%
+    Error rate: 4.043%
+    min DCF: 0.249
+
+  GMM Tied Diagonal Covariance
+    Accuracy: 95.656%
+    Error rate: 4.344%
+    min DCF: 0.250
+
+No PCA, G0: 8, G1: 4
+  GMM Full Covariance
+    Accuracy: 95.742%
+    Error rate: 4.258%
+    min DCF: 0.252
+
+  GMM Diagonal Covariance
+    Accuracy: 95.699%
+    Error rate: 4.301%
+    min DCF: 0.242
+
+  GMM Tied Covariance
+    Accuracy: 96.000%
+    Error rate: 4.000%
+    min DCF: 0.233
+
+  GMM Tied Diagonal Covariance
+    Accuracy: 95.871%
+    Error rate: 4.129%
+    min DCF: 0.249
+
+PCA: 9, G0: 4, G1: 2
+  GMM Full Covariance
+    Accuracy: 95.398%
+    Error rate: 4.602%
+    min DCF: 0.264
+
+  GMM Diagonal Covariance
+    Accuracy: 95.570%
+    Error rate: 4.430%
+    min DCF: 0.251
+
+  GMM Tied Covariance
+    Accuracy: 95.011%
+    Error rate: 4.989%
+    min DCF: 0.267
+
+  GMM Tied Diagonal Covariance
+    Accuracy: 95.398%
+    Error rate: 4.602%
+    min DCF: 0.271
+
+PCA: 9, G0: 8, G1: 2
+  GMM Full Covariance
+    Accuracy: 95.613%
+    Error rate: 4.387%
+    min DCF: 0.274
+
+  GMM Diagonal Covariance
+    Accuracy: 95.828%
+    Error rate: 4.172%
+    min DCF: 0.244
+
+  GMM Tied Covariance
+    Accuracy: 95.613%
+    Error rate: 4.387%
+    min DCF: 0.247
+
+  GMM Tied Diagonal Covariance
+    Accuracy: 95.613%
+    Error rate: 4.387%
+    min DCF: 0.247
+
+PCA: 9, G0: 8, G1: 4
+  GMM Full Covariance
+    Accuracy: 95.699%
+    Error rate: 4.301%
+    min DCF: 0.263
+
+  GMM Diagonal Covariance
+    Accuracy: 95.871%
+    Error rate: 4.129%
+    min DCF: 0.247
+
+  GMM Tied Covariance
+    Accuracy: 95.699%
+    Error rate: 4.301%
+    min DCF: 0.242
+
+  GMM Tied Diagonal Covariance
+    Accuracy: 95.527%
+    Error rate: 4.473%
+    min DCF: 0.247
+
+PCA: 7, G0: 4, G1: 2
+  GMM Full Covariance
+    Accuracy: 95.441%
+    Error rate: 4.559%
+    min DCF: 0.252
+
+  GMM Diagonal Covariance
+    Accuracy: 95.699%
+    Error rate: 4.301%
+    min DCF: 0.255
+
+  GMM Tied Covariance
+    Accuracy: 95.097%
+    Error rate: 4.903%
+    min DCF: 0.268
+
+  GMM Tied Diagonal Covariance
+    Accuracy: 95.398%
+    Error rate: 4.602%
+    min DCF: 0.280
+
+PCA: 7, G0: 8, G1: 2
+  GMM Full Covariance
+    Accuracy: 95.656%
+    Error rate: 4.344%
+    min DCF: 0.248
+
+  GMM Diagonal Covariance
+    Accuracy: 95.914%
+    Error rate: 4.086%
+    min DCF: 0.247
+
+  GMM Tied Covariance
+    Accuracy: 95.613%
+    Error rate: 4.387%
+    min DCF: 0.239
+
+  GMM Tied Diagonal Covariance
+    Accuracy: 95.656%
+    Error rate: 4.344%
+    min DCF: 0.253
+
+PCA: 7, G0: 8, G1: 4
+  GMM Full Covariance
+    Accuracy: 95.742%
+    Error rate: 4.258%
+    min DCF: 0.246
+
+  GMM Diagonal Covariance
+    Accuracy: 95.742%
+    Error rate: 4.258%
+    min DCF: 0.246
+
+  GMM Tied Covariance
+    Accuracy: 95.699%
+    Error rate: 4.301%
+    min DCF: 0.236
+
+  GMM Tied Diagonal Covariance
+    Accuracy: 95.570%
+    Error rate: 4.430%
+    min DCF: 0.256
+
+PCA: 5, G0: 4, G1: 2
+  GMM Full Covariance
+    Accuracy: 95.484%
+    Error rate: 4.516%
+    min DCF: 0.266
+
+  GMM Diagonal Covariance
+    Accuracy: 95.570%
+    Error rate: 4.430%
+    min DCF: 0.265
+
+  GMM Tied Covariance
+    Accuracy: 95.140%
+    Error rate: 4.860%
+    min DCF: 0.290
+
+  GMM Tied Diagonal Covariance
+    Accuracy: 95.011%
+    Error rate: 4.989%
+    min DCF: 0.298
+
+PCA: 5, G0: 8, G1: 2
+  GMM Full Covariance
+    Accuracy: 95.699%
+    Error rate: 4.301%
+    min DCF: 0.265
+
+  GMM Diagonal Covariance
+    Accuracy: 95.785%
+    Error rate: 4.215%
+    min DCF: 0.250
+
+  GMM Tied Covariance
+    Accuracy: 95.355%
+    Error rate: 4.645%
+    min DCF: 0.256
+
+  GMM Tied Diagonal Covariance
+    Accuracy: 95.484%
+    Error rate: 4.516%
+    min DCF: 0.265
+
+PCA: 5, G0: 8, G1: 4
+  GMM Full Covariance
+    Accuracy: 96.043%
+    Error rate: 3.957%
+    min DCF: 0.256
+
+  GMM Diagonal Covariance
+    Accuracy: 96.043%
+    Error rate: 3.957%
+    min DCF: 0.258
+
+  GMM Tied Covariance
+    Accuracy: 95.484%
+    Error rate: 4.516%
+    min DCF: 0.252
+
+  GMM Tied Diagonal Covariance
+    Accuracy: 95.656%
+    Error rate: 4.344%
+    min DCF: 0.258
+
