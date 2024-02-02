@@ -247,3 +247,22 @@ def train_qlr (D, L, K, pca_value, z_value, pi_value, lambda_value):
         labels.append(LTE)
     
     return numpy.hstack(ll_ratios)
+
+
+# ----- Model evaluation -----
+def qlr_eval (DTR, LTR, DTE, LTE, pca_value, z_value, lambda_value, pi_value):
+    ll_ratios = []
+
+    # Apply ZNorm if necessary
+    if z_value!=0:
+        DTR,DTE = utility.compute_znorm(DTR, DTE)
+    
+    # Apply PCA if necessary
+    if pca_value!=0:
+        P = dr.apply_pca(DTR, LTR, pca_value)
+        DTR,DTE = numpy.dot(P.T, DTR), numpy.dot(P.T, DTE)
+    
+    _, score = quadratic_logistic_regression(DTR, LTR, DTE, LTE, lambda_value, pi_value)
+    ll_ratios.append(score)
+
+    return numpy.hstack(ll_ratios)

@@ -136,8 +136,8 @@ def train_top3_models (D, L):
     sort_training_results()
 
     # ---- Quadratic Logistic Regression ----
-    # --- PCA=8, ZNorm, pi=effective_prior, lambda=1e-2 ---
-    qlr_scores = dis.train_qlr(D, L, 5, 8, 1, effective_prior, 1e-2)
+    # --- No PCA, ZNorm, pi=effective_prior, lambda=1e-2 ---
+    qlr_scores = dis.train_qlr(D, L, 5, 0, 1, effective_prior, 1e-2)
     
     # ---- Polynomial Kernel SVM ----
     # --- No PCA, No ZNorm, C=1, gamma=1e-3 ---
@@ -153,8 +153,8 @@ def train_top3_models (D, L):
 # ----- Calibrate scores -----
 def scores_calibration (L, qlr_scores, svm_scores, gmm_scores):
     qlr_scores = calfus.calibrate_scores(qlr_scores, L, 'QLR')
-    svm_scores = numpy.hstack(numpy.array([]),numpy.array([]))#calfus.calibrate_scores(svm_scores, L, 'SVM')
-    gmm_scores = numpy.hstack(numpy.array([]),numpy.array([]))#calfus.calibrate_scores(gmm_scores, L, 'GMM')
+    svm_scores = calfus.calibrate_scores(svm_scores, L, 'SVM')
+    gmm_scores = calfus.calibrate_scores(gmm_scores, L, 'GMM')
 
     return qlr_scores, svm_scores, gmm_scores
 
@@ -169,8 +169,45 @@ def models_fusion (L, qlr_scores, svm_scores, gmm_scores):
 
 
 # ----- Evaluate model -----
-def model_evaluation (DTR, LTR, DTE, LTE):
-    pass
+def model_evaluation (DTR, LTR, DTE, LTE, training_results):
+    # ---- QLR ----
+    # -- No PCA, ZNorm, pi=effective_prior, lambda=1e-2 --
+    qlr_s = numpy.hstack(training_results[0])
+    qlr_e = numpy.hstack(dis.qlr_eval(DTR, LTR, DTE, LTE, 0, 0, 5, 1, 1e-2))
+    qlr_c = calfus.calibrate_evaluated_scores(utility.column_to_row(qlr_s), LTR, utility.column_to_row(qlr_e), LTE, 0, 0, 0.5, 1e-3)
+    calfus.bayes_error_plot(qlr_c, LTE, 'QLR_eval')
+
+    # --- SVM ---
+    # -- No PCA, No ZNorm, C=1, gamma=1e-3 --
+    svm_s = numpy.hstack(training_results[1])
+    svm_e = numpy.hstack(svm.svm_eval(DTR, LTR, DTE, LTE, 0, 0, 5, 1, 1e-3))
+    svm_c = calfus.calibrate_evaluated_scores(utility.column_to_row(svm_s), LTR, utility.column_to_row(svm_e), LTE, 0, 0, 0.5, 1e-3)
+    calfus.bayes_error_plot(svm_c, LTE, 'SVM_eval')
+    
+    # --- GMM ---
+    # -- No PCA, No ZNorm, G0=8, G1=2 --
+    gmm_s = numpy.hstack(training_results[2])
+    gmm_e = numpy.hstack(gmm.gmm_eval(DTR, LTR, DTE, LTE, 0, 0, 8, 2))
+    gmm_c = calfus.calibrate_evaluated_scores(utility.column_to_row(gmm_s), LTR, utility.column_to_row(gmm_e), LTE, 0, 0, 0.5, 1e-3)
+    calfus.bayes_error_plot(gmm_c, LTE, 'GMM_eval')
+
+    # --- QLR + SVM ---
+    qlr_svm_dtr = numpy.vstack([qlr_c, svm_c])
+    qlr_svm_dte = numpy.vstack([qlr_s, svm_s])
+    qlr_svm_c = calfus.calibrate_evaluated_scores(qlr_svm_dtr, LTR, qlr_svm_dte, LTE, 0, 0, 0.5, 1e-3)
+    calfus.bayes_error_plot(numpy.hstack(qlr_svm_c), LTE, 'QLR_SVM_eval')
+
+    # --- QLR + GMM ---
+    qlr_gmm_dtr = numpy.vstack([qlr_c, gmm_c])
+    qlr_gmm_dte = numpy.vstack([qlr_s, gmm_s])
+    qlr_gmm_c = calfus.calibrate_evaluated_scores(qlr_gmm_dtr, LTR, qlr_gmm_dte, LTE, 0, 0, 0.5, 1e-3)
+    calfus.bayes_error_plot(numpy.hstack(qlr_gmm_c), LTE, 'QLR_GMM_eval')
+
+    # --- SVM + GMM ---
+    svm_gmm_dtr = numpy.vstack([qlr_c, svm_c])
+    svm_gmm_dte = numpy.vstack([qlr_s, svm_s])
+    svm_gmm_c = calfus.calibrate_evaluated_scores(svm_gmm_dtr, LTR, svm_gmm_dte, LTE, 0, 0, 0.5, 1e-3)
+    calfus.bayes_error_plot(numpy.hstack(svm_gmm_c), LTE, 'SVM_GMM_eval')
 
 
 ###############################
@@ -196,4 +233,5 @@ if __name__ == "__main__":
     qlr_svm_scores, qlr_gmm_scores, svm_gmm_scores = models_fusion(LTR, qlr_scores_cal, svm_scores_cal, gmm_scores_cal)
 
     # ---- Evaluation ----
-    model_evaluation(DTR, LTR, DTE, LTE)
+    training_scores = (qlr_scores, svm_scores, gmm_scores)
+    model_evaluation(DTR, LTR, DTE, LTE, training_scores)

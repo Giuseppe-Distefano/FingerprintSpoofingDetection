@@ -392,3 +392,22 @@ def train_diagonal_gmm (D, L, K, pca_value, z_value, g0_value, g1_value):
         labels.append(LTE)
 
     return numpy.hstack(scores)
+
+
+# ----- Model evaluation -----
+def gmm_eval (DTR, LTR, DTE, LTE, pca_value, z_value, g0_value, g1_value):
+    scores = []
+
+    # Apply ZNorm if necessary
+    if z_value!=0:
+        DTR,DTE = utility.compute_znorm(DTR, DTE)
+    
+    # Apply PCA if necessary
+    if pca_value!=0:
+        P = dr.apply_pca(DTR, LTR, pca_value)
+        DTR,DTE = numpy.dot(P.T, DTR), numpy.dot(P.T, DTE)
+    
+    _, score = gmm_diagonal_covariance(DTR, LTR, DTE, LTE, g0_value, g1_value)
+    scores.append(score)
+
+    return numpy.hstack(scores)

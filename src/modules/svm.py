@@ -288,3 +288,22 @@ def train_pol_svm (D, L, K, pca_value, z_value, C_value, gamma_value):
         ll_ratios.append(scores)
 
     return numpy.hstack(ll_ratios)
+
+
+# ----- Model evaluation -----
+def svm_eval (DTR, LTR, DTE, LTE, pca_value, z_value, K, C_value, gamma_value):
+    scores = []
+
+    # Apply ZNorm if necessary
+    if z_value!=0:
+        DTR,DTE = utility.compute_znorm(DTR, DTE)
+    
+    # Apply PCA if necessary
+    if pca_value!=0:
+        P = dr.apply_pca(DTR, LTR, pca_value)
+        DTR,DTE = numpy.dot(P.T, DTR), numpy.dot(P.T, DTE)
+    
+    _, score = polynomial_kernel_svm(DTR, LTR, DTE, LTE, K, C_value, gamma_value)
+    scores.append(score)
+
+    return numpy.hstack(scores)

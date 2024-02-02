@@ -6,6 +6,7 @@ import matplotlib.pyplot as plt
 import modules.utility as utility
 import modules.discriminative as disc
 import modules.costs as dcf
+import modules.pca_lda as dr
 
 
 ###########################
@@ -135,3 +136,22 @@ def fuse_models (model1, scores1, model2, scores2, labels):
     bayes_error_plot(numpy.hstack(calibrated), numpy.hstack(lab), model1+'_'+model2)
 
     return calibrated
+
+
+# ----- Scores calibration during evaluation -----
+def calibrate_evaluated_scores (DTR, LTR, DTE, LTE, pca_value, z_value, pi_value, lambda_value):
+    ll_ratios = []
+
+    # Apply ZNorm if necessary
+    if z_value!=0:
+        DTR,DTE = utility.compute_znorm(DTR, DTE)
+    
+    # Apply PCA if necessary
+    if pca_value!=0:
+        P = dr.apply_pca(DTR, LTR, pca_value)
+        DTR,DTE = numpy.dot(P.T, DTR), numpy.dot(P.T, DTE)
+
+    _,score = class_calibration(DTR, LTR, DTE, LTE, pi_value, lambda_value)
+    ll_ratios.append(score)
+
+    return ll_ratios
